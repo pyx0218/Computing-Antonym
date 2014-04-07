@@ -85,20 +85,38 @@ public class AntonymChecker
 	//Use WordNet to find antonyms
 	public boolean answerByWordnet(GREQuestion q) {
 		String qStr = q.getQuestion();
-		String[] ants = wordnet.getAllAntonyms(qStr, RiWordnet.ADJ);
+		HashSet<String> set = new HashSet<String>();	
+		
+		String[] partsofspeech = wordnet.getPos(qStr);
+		
+        for (int i = 0; i < partsofspeech.length; i++) {
+            //System.out.println("POS for "+qStr+" : " +partsofspeech[i]);
+    		String[] defs = wordnet.getAllGlosses(qStr, partsofspeech[i] );
+    		//System.out.println("Definition :"+  Arrays.toString(defs) );
+    		
+    		String[] ans= wordnet.getAllAntonyms(qStr,partsofspeech[i]);
+    		if(ans!=null)
+    		{
+        		for(String an : ans)
+        		{
+            		set.add(an);
+        		}
+    		}
+        }
+        
 
-		if(ants != null) {
-			HashSet<String> set = new HashSet<String>(Arrays.asList(ants));	
-			for(String candidate:q.getOptions())
+		System.out.println("Looking Up:"+qStr +" --> " +set);
+
+		for(String candidate:q.getOptions())
+		{
+			if(set.contains(candidate))
 			{
-				if(set.contains(candidate))
-				{
-					System.out.println(qStr+":"+candidate);
-					questionsAnswered++;
-					return q.checkAnswer(candidate);
-				}
+				System.out.println("Answering:"+qStr+":"+candidate);
+				questionsAnswered++;
+				return q.checkAnswer(candidate);
 			}
 		}
+		
 		questionsSkipped ++;
 		return false;
 	}
