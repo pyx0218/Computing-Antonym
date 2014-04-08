@@ -82,34 +82,112 @@ public class AntonymChecker
 		System.out.println("F1=\t"+f1);
 	}
 	
+	public Set<String> getSyms(Set<String> inputWords)
+	{
+		HashSet<String> similarWords = new HashSet<String>();	
+		for(String qStr: inputWords)
+		{
+			similarWords.add(qStr);
+			
+			String[] partsofspeech = wordnet.getPos(qStr);
+	        for (int i = 0; i < partsofspeech.length; i++) {
+	            //System.out.println("POS for "+qStr+" : " +partsofspeech[i]);
+	        	
+	    		//String[] defs = wordnet.getAllGlosses(qStr, partsofspeech[i] );
+	    		//System.out.println("Definition :"+  Arrays.toString(defs) );
+	        	
+	        	//System.out.println("Synnet for "+qStr+" : " + Arrays.toString(wordnet.getSynset(qStr,partsofspeech[i])));
+	    		
+	        	String[] synset = wordnet.getSynset(qStr, partsofspeech[i]);
+	        	if(synset!=null)
+	        	{
+	        		similarWords.addAll(Arrays.asList(synset));
+	        	}
+
+	        	String[] synset2 = wordnet.getSynonyms(qStr, partsofspeech[i]);
+	        	if(synset2!=null)
+	        	{
+	        		similarWords.addAll(Arrays.asList(synset2));
+	        	}
+	        	
+	        }
+		}
+		
+        return similarWords;
+	}
+	
+	public Set<String> getAntonyms(Set<String> similarWords)
+	{
+		Set<String> set =  new HashSet<String>();
+		
+        for(String qStr2 : similarWords)
+        {
+        	String[] pos = wordnet.getPos(qStr2);
+        	for (int i = 0; i < pos.length; i++)
+        	{
+        		String[] ans= wordnet.getAllAntonyms(qStr2,pos[i]);
+        		if(ans!=null)
+        		{
+            		for(String an : ans)
+            		{
+                		set.add(an);
+            		}
+        		}
+        	}
+        }
+        
+        return set;
+	}
+	
+	private final static int QUESTION_EXPANSION_LEVEL = 1;
+	private final static int ANSWEr_EXPANSION_LEVEL = 1;
+	
 	//Use WordNet to find antonyms
 	public boolean answerByWordnet(GREQuestion q) {
 		String qStr = q.getQuestion();
-		HashSet<String> set = new HashSet<String>();	
-		
-		String[] partsofspeech = wordnet.getPos(qStr);
-		
-        for (int i = 0; i < partsofspeech.length; i++) {
-            //System.out.println("POS for "+qStr+" : " +partsofspeech[i]);
-    		String[] defs = wordnet.getAllGlosses(qStr, partsofspeech[i] );
-    		//System.out.println("Definition :"+  Arrays.toString(defs) );
-    		
-    		String[] ans= wordnet.getAllAntonyms(qStr,partsofspeech[i]);
-    		if(ans!=null)
-    		{
-        		for(String an : ans)
-        		{
-            		set.add(an);
-        		}
-    		}
-        }
-        
 
-		System.out.println("Looking Up:"+qStr +" --> " +set);
+		Set<String> allSimilarWords = new HashSet<String>();
+		Set<String> similarWords = new HashSet<String>();
+		similarWords.add(qStr);
+		allSimilarWords.add(qStr);
+		
+		for(int i=0;i<QUESTION_EXPANSION_LEVEL;i++)
+		{
+			Set<String> similarWords2=getSyms(similarWords);
+			for(String s:allSimilarWords)
+			{
+				similarWords2.remove(s);
+			}
+			allSimilarWords.addAll(similarWords2);
+			similarWords= similarWords2;
+		}
+
+		System.out.println("Similar:"+qStr +" --> " +allSimilarWords);
+		
+		Set<String> answerSet =  getAntonyms(allSimilarWords);
+        
+		System.out.println("Looking Up:"+qStr +" --> " +answerSet);
 
 		for(String candidate:q.getOptions())
 		{
-			if(set.contains(candidate))
+			Set<String> dummyCandidateSet = new HashSet<String>();
+			dummyCandidateSet.add(candidate);
+			Set<String> allCandidateAnsSet =  new HashSet<String>();
+			allCandidateAnsSet.add(candidate);
+			
+			for(int i=0;i<ANSWEr_EXPANSION_LEVEL;i++)
+			{
+				Set<String> dummyCandidateSet2=getSyms(dummyCandidateSet);
+				for(String s:allCandidateAnsSet)
+				{
+					dummyCandidateSet2.remove(s);
+				}
+				allCandidateAnsSet.addAll(dummyCandidateSet2);
+				dummyCandidateSet= dummyCandidateSet2;
+			}
+			
+			//if(set.contains(candidate))
+			if(hasOverlap(allCandidateAnsSet, answerSet))
 			{
 				System.out.println("Answering:"+qStr+":"+candidate);
 				questionsAnswered++;
@@ -118,6 +196,19 @@ public class AntonymChecker
 		}
 		
 		questionsSkipped ++;
+		return false;
+	}
+	
+	public boolean hasOverlap(Set<String> s1, Set<String> s2)
+	{
+		for(String e1:s1)
+		{
+			for(String e2:s2)
+			{
+				if(e1.equals(e2))
+					return true;
+			}
+		}
 		return false;
 	}
 	
