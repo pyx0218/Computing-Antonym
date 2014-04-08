@@ -64,6 +64,7 @@ public class AntonymChecker
 		for(GREQuestion q:questions)
 		{
 			questionsTotal++;
+			//if(answerByAntlexicon(q))
 			if(answerByWordnet(q))
 			{
 				questionsCorrect++;
@@ -162,12 +163,20 @@ public class AntonymChecker
 			similarWords= similarWords2;
 		}
 
+		System.out.println("========================================");
+		System.out.println("Question["+qStr+"] Options["+q.getOptions()+"] Answer["+q.getAnswer() +"]");
 		System.out.println("Similar:"+qStr +" --> " +allSimilarWords);
 		
 		Set<String> answerSet =  getAntonyms(allSimilarWords);
         
-		System.out.println("Looking Up:"+qStr +" --> " +answerSet);
+		System.out.println("Antonyms:"+qStr +" --> " +answerSet);
 
+
+		Set<String> aaa= new HashSet<String>();
+		aaa.add(q.getAnswer());
+		System.out.println("Anaswer Sym:"+q.getAnswer() +" --> " +getSyms(aaa));
+		System.out.println("Anaswer Ant:"+q.getAnswer() +" --> " +getAntonyms(getSyms(aaa)));
+		
 		for(String candidate:q.getOptions())
 		{
 			Set<String> dummyCandidateSet = new HashSet<String>();

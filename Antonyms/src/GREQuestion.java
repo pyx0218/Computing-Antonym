@@ -48,6 +48,13 @@ public class GREQuestion
 	{
 		this.options = options;
 	}
+	
+	
+
+	public String getAnswer()
+	{
+		return answer;
+	}
 
 	@Override
 	public String toString()
