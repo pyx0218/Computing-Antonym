@@ -198,9 +198,10 @@ public class AntonymChecker
 			//if(set.contains(candidate))
 			if(hasOverlap(allCandidateAnsSet, answerSet))
 			{
-				System.out.println("Answering:"+qStr+":"+candidate);
 				questionsAnswered++;
-				return q.checkAnswer(candidate);
+				boolean correct =  q.checkAnswer(candidate);
+				System.out.println("[X] Answering:"+qStr+":"+candidate +" "+(correct?"[Correct]":"[Wrong]"));
+				return correct;
 			}
 		}
 		
