@@ -1,7 +1,6 @@
 import java.util.*;
 import java.io.*;
 import java.net.*;
-
 import org.json.*;
 
 public class Jobim_Fetcher {
@@ -96,7 +95,6 @@ public class Jobim_Fetcher {
 		while(it.hasNext()){
 			System.out.println(it.next());
 		}
-        
         
     }
 
