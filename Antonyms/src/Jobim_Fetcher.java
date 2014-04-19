@@ -4,7 +4,7 @@ import java.net.*;
 import org.json.*;
 
 public class Jobim_Fetcher {
-	public void process_sentence(String s) throws Exception {
+	public JSONObject process_sentence(String s) throws Exception {
 		String url = "http://maggie.lt.informatik.tu-darmstadt.de:10080/jobim/ws/holing?s="+URLEncoder.encode(s, "UTF-8");
 		URL jobim_web_demo = new URL(url);
         HttpURLConnection connection = (HttpURLConnection) jobim_web_demo.openConnection();
@@ -21,16 +21,13 @@ public class Jobim_Fetcher {
  
 		//print result
 		JSONObject jo = new JSONObject(response.toString());
-		Iterator<?> keys = jo.keys();
-		while(keys.hasNext()){
-			String key = (String) keys.next();
-			System.out.println(key);
-		}
-		//JSONObject testjo = jo.getJSONObject("holings");
-		JSONArray testja = jo.getJSONArray("holings");
-		//testja.get("values");
-		System.out.println(testja.toString());
-		System.out.println(response.toString());
+		return jo;
+		//Iterator<?> keys = jo.keys();
+		//while(keys.hasNext()){
+		//	String key = (String) keys.next();
+		//	System.out.println(key);
+		//}
+		
 		
 	}
 	public ArrayList<String> process_word(String w) throws Exception {
@@ -88,6 +85,8 @@ public class Jobim_Fetcher {
 	public static void main(String[] args) throws Exception {
 		Jobim_Fetcher jf = new Jobim_Fetcher();		
 		String s = "a huge matrix";
+		JSONObject jo = jf.process_sentence(s);
+		System.out.print(jo);
 		String w = "huge";
 		ArrayList<String> word_string;
 		word_string = jf.process_word(w);
