@@ -83,6 +83,97 @@ public class AntonymChecker
 		System.out.println("F1=\t"+f1);
 	}
 	
+	
+	public void runTest2(String testPath) throws Exception
+	{
+
+		String wordList = "resources/google-10000-english.txt";
+		String stopWordList = "resources/stopwords";
+		DefMatrixMaker maker = new DefMatrixMaker();
+		maker.doWork(wordList,stopWordList);
+		
+		GREDataSetParser p=new GREDataSetParser();
+		List<GREQuestion> questions = p.parse(testPath);
+
+		questionsTotal=0;
+		questionsCorrect=0;
+		int[] stats=new int[]{0,0};//stat: 0 answered; 1 answered correctly
+		for(GREQuestion q:questions)
+		{
+			questionsTotal++;
+			maker.answerGREQuestion(q,stats);
+		}
+		questionsCorrect= stats[1];
+		questionsAnswered = stats[0];
+		questionsSkipped = questionsTotal - questionsAnswered;
+		
+		precision = (double)questionsCorrect/questionsAnswered;
+		recall = (double)questionsCorrect/questionsTotal;
+		f1 = 2*(precision*recall)/(precision+recall);
+		
+		System.out.println("questionsTotal=\t"+questionsTotal);
+		System.out.println("questionsCorrect=\t"+questionsCorrect);
+		System.out.println("questionsSkipped=\t"+questionsSkipped);
+		System.out.println("questionsAnswered=\t"+questionsAnswered);
+		System.out.println("precision=\t"+precision);
+		System.out.println("recall=\t"+recall);
+		System.out.println("F1=\t"+f1);
+		
+		//
+		maker.populteWeights();
+		questionsTotal=0;
+		questionsCorrect=0;
+		stats=new int[]{0,0};//stat: 0 answered; 1 answered correctly
+		for(GREQuestion q:questions)
+		{
+			questionsTotal++;
+			maker.answerGREQuestion(q,stats);
+		}
+		questionsCorrect= stats[1];
+		questionsAnswered = stats[0];
+		questionsSkipped = questionsTotal - questionsAnswered;
+		
+		precision = (double)questionsCorrect/questionsAnswered;
+		recall = (double)questionsCorrect/questionsTotal;
+		f1 = 2*(precision*recall)/(precision+recall);
+		
+		System.out.println("questionsTotal=\t"+questionsTotal);
+		System.out.println("questionsCorrect=\t"+questionsCorrect);
+		System.out.println("questionsSkipped=\t"+questionsSkipped);
+		System.out.println("questionsAnswered=\t"+questionsAnswered);
+		System.out.println("precision=\t"+precision);
+		System.out.println("recall=\t"+recall);
+		System.out.println("F1=\t"+f1);
+
+		
+		//
+
+		maker.populteWeights();
+		questionsTotal=0;
+		questionsCorrect=0;
+		stats=new int[]{0,0};//stat: 0 answered; 1 answered correctly
+		for(GREQuestion q:questions)
+		{
+			questionsTotal++;
+			maker.answerGREQuestion(q,stats);
+		}
+		questionsCorrect= stats[1];
+		questionsAnswered = stats[0];
+		questionsSkipped = questionsTotal - questionsAnswered;
+		
+		precision = (double)questionsCorrect/questionsAnswered;
+		recall = (double)questionsCorrect/questionsTotal;
+		f1 = 2*(precision*recall)/(precision+recall);
+		
+		System.out.println("questionsTotal=\t"+questionsTotal);
+		System.out.println("questionsCorrect=\t"+questionsCorrect);
+		System.out.println("questionsSkipped=\t"+questionsSkipped);
+		System.out.println("questionsAnswered=\t"+questionsAnswered);
+		System.out.println("precision=\t"+precision);
+		System.out.println("recall=\t"+recall);
+		System.out.println("F1=\t"+f1);
+	}
+	
 	public Set<String> getSyms(Set<String> inputWords)
 	{
 		HashSet<String> similarWords = new HashSet<String>();	
@@ -251,7 +342,10 @@ public class AntonymChecker
 		AntonymChecker t=new AntonymChecker();
 		//t.initAntLexicon(dictPath);
 		t.initWordnet(wordnetPath);
-		t.runTest(testPath);
+		
+		//t.runTest(testPath);    //
+		t.runTest2(testPath);     //Matrix's method
 	}
 
 }
+
