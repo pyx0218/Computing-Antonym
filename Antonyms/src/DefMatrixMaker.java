@@ -1,5 +1,10 @@
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -335,30 +340,57 @@ public class DefMatrixMaker
 	
 	public void populteWeights()
 	{
-		for(int i=0;i<wordList.length;i++)
+		try
 		{
-			float[] newWeights =  new float[wordList.length];
-			//String w=wordList[i];
-			for(int j=0;j<wordList.length;j++)
+			String path = "/tmp/defMatrix.dat";
+			DataOutputStream os=new DataOutputStream(new BufferedOutputStream(new FileOutputStream(path)));
+			
+			for(int i=0;i<wordList.length;i++)
 			{
-				float val = matrix[i][j];
-				if(val!=0)
+				float[] newWeights =  new float[wordList.length];
+				//String w=wordList[i];
+				for(int j=0;j<wordList.length;j++)
 				{
-					for(int k=0;k<wordList.length;k++)
+					float val = matrix[i][j];
+					if(val!=0)
 					{
-						newWeights[k]= (float)( matrix[j][k]*0.3* val);
+						for(int k=0;k<wordList.length;k++)
+						{
+							newWeights[k] += (float)( matrix[j][k]*0.1* val);
+						}
+						newWeights[j] += val;
 					}
-					newWeights[j] += val;
+					
 				}
-				
+				for(int k=0;k<wordList.length;k++)
+				{
+					os.writeFloat(newWeights[k]);
+				}
+				if(i%1000==0)
+					System.out.println("Updating row "+ i);
 			}
-			for(int k=0;k<wordList.length;k++)
+			
+			os.flush();
+			os.close();
+
+			DataInputStream is=new DataInputStream(new BufferedInputStream(new FileInputStream(path)));
+			for(int i=0;i<wordList.length;i++)
 			{
-				 matrix[i][k]= newWeights[k];
+				for(int j=0;j<wordList.length;j++)
+				{
+					matrix[i][j] = is.readFloat();
+				}
 			}
-			if(i%1000==0)
-				System.out.println("Updating row "+ i);
+			System.out.println("is.available() = "+ (is.available()));
+			is.close();
+			
+			
+		} catch (Exception e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+		
 	}
 	
 	private void setWeights(String w, List<String> words, float weight)
