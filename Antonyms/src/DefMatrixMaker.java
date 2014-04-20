@@ -356,7 +356,7 @@ public class DefMatrixMaker
 					{
 						for(int k=0;k<wordList.length;k++)
 						{
-							newWeights[k] += (float)( matrix[j][k]*0.1* val);
+							newWeights[k] += (float)( matrix[j][k]*0.3* val);
 						}
 						newWeights[j] += val;
 					}
