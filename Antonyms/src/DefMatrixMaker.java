@@ -337,6 +337,11 @@ public class DefMatrixMaker
 		System.out.println();
 		
 	}
+
+	private static double logistic(double x)
+	{
+		return ( 2.0/(1 + Math.exp(-1f*x)) ) - 1 ;
+	}
 	
 	public void populteWeights()
 	{
@@ -349,6 +354,7 @@ public class DefMatrixMaker
 			{
 				float[] newWeights =  new float[wordList.length];
 				//String w=wordList[i];
+				
 				for(int j=0;j<wordList.length;j++)
 				{
 					float val = matrix[i][j];
@@ -356,15 +362,16 @@ public class DefMatrixMaker
 					{
 						for(int k=0;k<wordList.length;k++)
 						{
-							newWeights[k] += (float)( matrix[j][k]*0.3* val);
+							newWeights[k] += (float)( matrix[j][k]*0.3f* val);
 						}
 						newWeights[j] += val;
 					}
-					
 				}
+				
 				for(int k=0;k<wordList.length;k++)
 				{
-					os.writeFloat(newWeights[k]);
+					float log = (float) logistic(newWeights[k]);
+					os.writeFloat(log);
 				}
 				if(i%1000==0)
 					System.out.println("Updating row "+ i);
@@ -412,9 +419,14 @@ public class DefMatrixMaker
 		Integer wordIdx1 = this.indices.get(w1);
 		Integer wordIdx2 = this.indices.get(w2);
 		
-		if(wordIdx1 ==null || wordIdx2 ==null )
+		if(wordIdx1 ==null )
 		{
-			//System.err.println("Words ["+w1 +" or "+ w2 +"] not covered.");
+			System.err.println("Words ["+w1 +"] not covered.");
+			return 0;
+		}
+		if( wordIdx2 ==null )
+		{
+			System.err.println("Words ["+ w2 +"] not covered.");
 			return 0;
 		}
 		double dot=0;
@@ -426,8 +438,8 @@ public class DefMatrixMaker
 			normX += Math.pow( this.matrix[wordIdx1][i], 2);
 			normY += Math.pow( this.matrix[wordIdx2][i], 2);
 		}
-		normX = Math.pow(normX, 1/this.wordList.length);
-		normY = Math.pow(normY, 1/this.wordList.length);
+		normX = Math.pow(normX, 0.5);
+		normY = Math.pow(normY, 0.5);
 		
 		return dot/(normX*normY);
 	}
