@@ -84,12 +84,13 @@ public class AntonymChecker
 	}
 	
 	
-	public void runTest2(String testPath) throws Exception
+	public void runTest2(String testPath, boolean expand) throws Exception
 	{
 
 		String wordList = "resources/google-10000-english.txt";
 		String stopWordList = "resources/stopwords";
 		DefMatrixMaker maker = new DefMatrixMaker();
+		maker.setExpand(expand);
 		maker.doWork(wordList,stopWordList);
 		
 		GREDataSetParser p=new GREDataSetParser();
@@ -344,7 +345,7 @@ public class AntonymChecker
 		t.initWordnet(wordnetPath);
 		
 		//t.runTest(testPath);    //
-		t.runTest2(testPath);     //Matrix's method
+		t.runTest2(testPath, true);     //Matrix's method
 	}
 
 }
