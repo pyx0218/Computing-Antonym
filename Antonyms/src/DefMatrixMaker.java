@@ -434,7 +434,9 @@ public class DefMatrixMaker
 		double normY=0;
 		for(int i=0;i<this.wordList.length;i++)
 		{
-			dot += this.matrix[wordIdx1][i] * this.matrix[wordIdx2][i];
+			double dotProd = this.matrix[wordIdx1][i] * this.matrix[wordIdx2][i];
+			if(dotProd<0)
+				dot += dotProd;
 			normX += Math.pow( this.matrix[wordIdx1][i], 2);
 			normY += Math.pow( this.matrix[wordIdx2][i], 2);
 		}
