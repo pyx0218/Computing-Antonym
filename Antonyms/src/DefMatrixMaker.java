@@ -12,11 +12,13 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.zip.GZIPInputStream;
 
 import rita.wordnet.RiWordnet;
 
@@ -28,6 +30,8 @@ public class DefMatrixMaker
 	private float[][] matrix;
 	private String[] wordList;
 	boolean expand = true;
+	private Map<String,List<String>> dict=new HashMap<String,List<String>>();
+	private Set<String> dictWords=new HashSet<String>();
 	
 	public DefMatrixMaker()
 	{
@@ -46,20 +50,20 @@ public class DefMatrixMaker
 		return words;
 	}
 	
-	private LinkedList<String> getToekns(String[] defs)
-	{
-		LinkedList<String> list=new LinkedList<String>();
-		for(String dd:defs)
-		{
-			Matcher m2=wordPattern.matcher(dd);
-			while (m2.find()) 
-			{ // find next match
-			    String match = m2.group();
-				list.add(match.toLowerCase());
-			}
-		}
-		return list;
-	}
+//	private LinkedList<String> getToekns(String[] defs)
+//	{
+//		LinkedList<String> list=new LinkedList<String>();
+//		for(String dd:defs)
+//		{
+//			Matcher m2=wordPattern.matcher(dd);
+//			while (m2.find()) 
+//			{ // find next match
+//			    String match = m2.group();
+//				list.add(match.toLowerCase());
+//			}
+//		}
+//		return list;
+//	}
 	
 	
 	public boolean isExpand()
@@ -72,18 +76,51 @@ public class DefMatrixMaker
 		this.expand = expand;
 	}
 
+	public void loadSeedFile(String path) throws Exception
+	{	
+		Scanner s=new Scanner(new GZIPInputStream(new FileInputStream(path)));
+		int lineCount = 0;
+		while(s.hasNext())
+		{
+			String line=s.nextLine();
+			String[] tokens=line.split(" ");
+			lineCount++;
+
+			String w1=tokens[0];
+			String w2=tokens[1];
+			List<String> set=dict.get(w1);
+			if(set==null)
+			{
+				set=new LinkedList<String>();
+				dictWords.add(w1);
+				dict.put(w1, set);
+			}
+			set.add(w2);
+			dictWords.add(w2);
+			
+			if(lineCount%1000000==0)
+			{
+				System.out.println("Line:"+lineCount);
+			}
+		}
+		s.close();
+		System.out.println("Line:"+lineCount);
+		System.out.println("Dictionary Built.");
+	}
 
 	private Pattern wordPattern = Pattern.compile("[a-zA-Z]+");
+	private Set<String> words ;
 	
 	public void doWork(String wordListPath, String stopWordListPath) throws Exception
 	{
-		Set<String> words = readAllWords(wordListPath);
+		words = readAllWords(wordListPath);
+		//words.addAll(dictWords);
 		Set<String> stopWords = readAllWords(stopWordListPath);
 		for(String w:stopWords)
 		{
 			words.remove(w);
 		}
-		
+		///
 		/////
 		if(expand)
 		{
@@ -120,9 +157,9 @@ public class DefMatrixMaker
 				}
 			}
 			words.addAll(words2);
-			System.out.println("Word list size:"+words.size());
 		}
-		
+
+		System.out.println("Word list size:"+words.size());
 		/////
 
 		wordList=new String[words.size()];
@@ -135,14 +172,19 @@ public class DefMatrixMaker
 			indices.put(w, i);
 		}
 		
-
-		
 		matrix = new float[wordList.length][wordList.length];
 		for(int i=0;i<wordList.length;i++)
 		{
 			matrix[i][i]=1;
 		}
 		
+		initWeights();
+		
+		
+	}
+	
+	public void initWeights()
+	{
 		for(String w:words)
 		{
 			for(String pos:wordnet.getPos(w))
@@ -177,7 +219,7 @@ public class DefMatrixMaker
 					
 				if(b!=null)
 				{
-					List<String> list = getToekns(b); 
+					List<String> list =  Arrays.asList(b); 
 					setWeights(w, list, 1F);
 				}
 					
@@ -269,17 +311,40 @@ public class DefMatrixMaker
 //			System.out.println(sim);
 //		}
 //		
-		
-		
+	}
+	
+	
+	public void patchSeeds()
+	{
+		for(Map.Entry<String,List<String>> entry :dict.entrySet())
+		{
+			String key = entry.getKey(); 
+			List<String> list = entry.getValue();
+			setWeights(key, list, -1F);
+			
+			for(String v:list)
+			{
+				LinkedList<String> ll=new LinkedList<String>();
+				ll.add(key);
+				setWeights(v, ll, -1F);
+			}
+		}
 	}
 	
 	public void output() throws Exception
 	{
-		System.out.println("Outputting to : /tmp/wordMatrix.txt");
+		String contrastLinks ="/tmp/contrast-links.txt";
+		String wordMatrix ="/tmp/wordMatrix.dat";
+		System.out.println("Outputting to : /tmp/wordMatrix.dat");
 		System.out.println("Outputting to : /tmp/wordList.txt");
+		System.out.println("Outputting to : "+ contrastLinks);
 		
 		//output
-		PrintWriter p2= new PrintWriter("/tmp/wordList.txt");
+		//PrintWriter p2= new PrintWriter("/tmp/wordMatrix.txt");
+		DataOutputStream os=new DataOutputStream(
+				new BufferedOutputStream(new FileOutputStream(wordMatrix)));
+		DataOutputStream p3= new DataOutputStream(
+				new BufferedOutputStream(new FileOutputStream(contrastLinks)));
 		
 		for(int i=0;i<wordList.length;i++)
 		{
@@ -287,11 +352,21 @@ public class DefMatrixMaker
 			for(int j=0;j<wordList.length;j++)
 			{
 				//String w2=wordList[j];	
-				p2.print(matrix[i][j]+" ");
+				//p2.print(matrix[i][j]+" ");
+				os.writeFloat(matrix[i][j]);
+				if(matrix[i][j]!=0)
+				{
+					p3.writeFloat(i);
+					p3.writeFloat(j);
+					p3.writeFloat(matrix[i][j]);
+				}
 			}
-			p2.println();
+			//p2.println();
 		}
-		p2.close();
+		//p2.close();
+		p3.close();
+		os.close();
+		
 		
 
 		PrintWriter p1= new PrintWriter("/tmp/wordList.txt");
@@ -302,7 +377,7 @@ public class DefMatrixMaker
 		}
 		p1.close();
 	}
-	public void answerGREQuestion(GREQuestion q, int[] stats)//stat: 0 answered; 1 answered correctly
+	public int answerGREQuestion(GREQuestion q)//stat: 0 answered; 1 answered correctly
 	{
 		String qStr = q.getQuestion();
 		System.out.print("Questions: "+qStr);
@@ -321,20 +396,15 @@ public class DefMatrixMaker
 		}
 		if(smallestSim <0 )
 		{
-			stats[0]++;
-
-			System.out.print("\t-->Guess["+ans+"]\tCorrctAns["+q.getAnswer()+"]");
+			System.out.print("\t-->Guess["+ans+"]\tCorrctAns["+q.getAnswer()+"]\n");
 			boolean isCorrect =  q.checkAnswer(ans);
-			if(isCorrect)
-			{
-				stats[1]++;
-			}
+			return isCorrect?AntonymChecker.ANSWER_CORRECT:AntonymChecker.ANSWER_WRONG;
 		}
 		else
 		{
-			System.out.print("\tSkipping\tCorrctAns["+q.getAnswer()+"]");
+			System.out.print("\tSkipping\tCorrctAns["+q.getAnswer()+"]\n");
+			return AntonymChecker.ANSWER_SKIPPED;
 		}
-		System.out.println();
 		
 	}
 
@@ -436,7 +506,9 @@ public class DefMatrixMaker
 		{
 			double dotProd = this.matrix[wordIdx1][i] * this.matrix[wordIdx2][i];
 			if(dotProd<0)
+			{
 				dot += dotProd;
+			}
 			normX += Math.pow( this.matrix[wordIdx1][i], 2);
 			normY += Math.pow( this.matrix[wordIdx2][i], 2);
 		}
@@ -451,8 +523,10 @@ public class DefMatrixMaker
 		String wordList = "resources/google-10000-english.txt";
 		String stopWordList = "resources/stopwords";
 		DefMatrixMaker m=new DefMatrixMaker();
+		m.loadSeedFile("resources/AntonymsLexicon-OppCats-Affixes.gz");
 		m.setExpand(false);
 		m.doWork(wordList,stopWordList);
+		m.populteWeights();
 		m.output();
 	}
 

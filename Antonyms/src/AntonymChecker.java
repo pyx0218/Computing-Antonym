@@ -10,7 +10,6 @@ public class AntonymChecker
 	private RiWordnet wordnet;
 	
 	private int questionsCorrect  = 0;
-	private int questionsSkipped  = 0;
 	private int questionsAnswered = 0;
 	private int questionsTotal    = 0;
 	private double precision = 0;
@@ -65,9 +64,18 @@ public class AntonymChecker
 		{
 			questionsTotal++;
 			//if(answerByAntlexicon(q))
-			if(answerByWordnet(q))
+			int result = answerByWordnet(q);
+			if(result ==ANSWER_SKIPPED)
 			{
-				questionsCorrect++;
+			}
+			else
+			{
+				questionsAnswered++;
+
+				if(result ==ANSWER_CORRECT)
+				{
+					questionsCorrect++;
+				}
 			}
 		}
 		precision = (double)questionsCorrect/questionsAnswered;
@@ -76,14 +84,49 @@ public class AntonymChecker
 		
 		System.out.println("questionsTotal=\t"+questionsTotal);
 		System.out.println("questionsCorrect=\t"+questionsCorrect);
-		System.out.println("questionsSkipped=\t"+questionsSkipped);
+		System.out.println("questionsSkipped=\t"+(questionsTotal-questionsAnswered));
 		System.out.println("questionsAnswered=\t"+questionsAnswered);
 		System.out.println("precision=\t"+precision);
 		System.out.println("recall=\t"+recall);
 		System.out.println("F1=\t"+f1);
 	}
 	
-	
+	private void runTest2(DefMatrixMaker maker, List<GREQuestion> questions )
+	{
+		questionsTotal=0;
+		questionsCorrect=0;
+		questionsAnswered =0;
+		//int[] stats=new int[]{0,0};//stat: 0 answered; 1 answered correctly
+		for(GREQuestion q:questions)
+		{
+			questionsTotal++;
+			//answerByWordnet(GREQuestion q) ;
+			int result = maker.answerGREQuestion(q);
+
+			if(result != AntonymChecker.ANSWER_SKIPPED)
+			{
+				questionsAnswered++;
+				if(result == AntonymChecker.ANSWER_CORRECT)
+				{
+					questionsCorrect ++;
+				}
+			}
+		}
+		double questionsSkipped = questionsTotal - questionsAnswered;
+		
+		precision = (double)questionsCorrect/questionsAnswered;
+		recall = (double)questionsCorrect/questionsTotal;
+		f1 = 2*(precision*recall)/(precision+recall);
+		
+		System.out.println("questionsTotal=\t"+questionsTotal);
+		System.out.println("questionsCorrect=\t"+questionsCorrect);
+		System.out.println("questionsSkipped=\t"+questionsSkipped);
+		System.out.println("questionsAnswered=\t"+questionsAnswered);
+		System.out.println("precision=\t"+precision);
+		System.out.println("recall=\t"+recall);
+		System.out.println("F1=\t"+f1);
+		
+	}
 	public void runTest2(String testPath, boolean expand) throws Exception
 	{
 
@@ -91,88 +134,27 @@ public class AntonymChecker
 		String stopWordList = "resources/stopwords";
 		DefMatrixMaker maker = new DefMatrixMaker();
 		maker.setExpand(expand);
+		maker.loadSeedFile("resources/AntonymsLexicon-OppCats-Affixes.gz");
 		maker.doWork(wordList,stopWordList);
+		//maker.patchSeeds();
 		
 		GREDataSetParser p=new GREDataSetParser();
 		List<GREQuestion> questions = p.parse(testPath);
 
-		questionsTotal=0;
-		questionsCorrect=0;
-		int[] stats=new int[]{0,0};//stat: 0 answered; 1 answered correctly
-		for(GREQuestion q:questions)
-		{
-			questionsTotal++;
-			maker.answerGREQuestion(q,stats);
-		}
-		questionsCorrect= stats[1];
-		questionsAnswered = stats[0];
-		questionsSkipped = questionsTotal - questionsAnswered;
-		
-		precision = (double)questionsCorrect/questionsAnswered;
-		recall = (double)questionsCorrect/questionsTotal;
-		f1 = 2*(precision*recall)/(precision+recall);
-		
-		System.out.println("questionsTotal=\t"+questionsTotal);
-		System.out.println("questionsCorrect=\t"+questionsCorrect);
-		System.out.println("questionsSkipped=\t"+questionsSkipped);
-		System.out.println("questionsAnswered=\t"+questionsAnswered);
-		System.out.println("precision=\t"+precision);
-		System.out.println("recall=\t"+recall);
-		System.out.println("F1=\t"+f1);
-		
+		runTest2(maker,  questions );
 		//
 		maker.populteWeights();
-		questionsTotal=0;
-		questionsCorrect=0;
-		stats=new int[]{0,0};//stat: 0 answered; 1 answered correctly
-		for(GREQuestion q:questions)
-		{
-			questionsTotal++;
-			maker.answerGREQuestion(q,stats);
-		}
-		questionsCorrect= stats[1];
-		questionsAnswered = stats[0];
-		questionsSkipped = questionsTotal - questionsAnswered;
-		
-		precision = (double)questionsCorrect/questionsAnswered;
-		recall = (double)questionsCorrect/questionsTotal;
-		f1 = 2*(precision*recall)/(precision+recall);
-		
-		System.out.println("questionsTotal=\t"+questionsTotal);
-		System.out.println("questionsCorrect=\t"+questionsCorrect);
-		System.out.println("questionsSkipped=\t"+questionsSkipped);
-		System.out.println("questionsAnswered=\t"+questionsAnswered);
-		System.out.println("precision=\t"+precision);
-		System.out.println("recall=\t"+recall);
-		System.out.println("F1=\t"+f1);
-
+		runTest2(maker,  questions );
 		
 		//
-
+		System.out.println("Patching....");
+		maker.initWeights();
+		maker.patchSeeds();
 		maker.populteWeights();
-		questionsTotal=0;
-		questionsCorrect=0;
-		stats=new int[]{0,0};//stat: 0 answered; 1 answered correctly
-		for(GREQuestion q:questions)
-		{
-			questionsTotal++;
-			maker.answerGREQuestion(q,stats);
-		}
-		questionsCorrect= stats[1];
-		questionsAnswered = stats[0];
-		questionsSkipped = questionsTotal - questionsAnswered;
-		
-		precision = (double)questionsCorrect/questionsAnswered;
-		recall = (double)questionsCorrect/questionsTotal;
-		f1 = 2*(precision*recall)/(precision+recall);
-		
-		System.out.println("questionsTotal=\t"+questionsTotal);
-		System.out.println("questionsCorrect=\t"+questionsCorrect);
-		System.out.println("questionsSkipped=\t"+questionsSkipped);
-		System.out.println("questionsAnswered=\t"+questionsAnswered);
-		System.out.println("precision=\t"+precision);
-		System.out.println("recall=\t"+recall);
-		System.out.println("F1=\t"+f1);
+		maker.initWeights();
+		maker.patchSeeds();
+
+		runTest2(maker,  questions );
 	}
 	
 	public Set<String> getSyms(Set<String> inputWords)
@@ -235,8 +217,12 @@ public class AntonymChecker
 	private final static int QUESTION_EXPANSION_LEVEL = 1;
 	private final static int ANSWEr_EXPANSION_LEVEL = 1;
 	
+	public final static int ANSWER_SKIPPED = 1;
+	public final static int ANSWER_CORRECT = 2;
+	public final static int ANSWER_WRONG = 3;
+	
 	//Use WordNet to find antonyms
-	public boolean answerByWordnet(GREQuestion q) {
+	public int answerByWordnet(GREQuestion q) {
 		String qStr = q.getQuestion();
 
 		Set<String> allSimilarWords = new HashSet<String>();
@@ -290,15 +276,13 @@ public class AntonymChecker
 			//if(set.contains(candidate))
 			if(hasOverlap(allCandidateAnsSet, answerSet))
 			{
-				questionsAnswered++;
 				boolean correct =  q.checkAnswer(candidate);
 				System.out.println("[X] Answering:"+qStr+":"+candidate +" "+(correct?"[Correct]":"[Wrong]"));
-				return correct;
+				return correct?ANSWER_CORRECT:ANSWER_WRONG;
 			}
 		}
 		
-		questionsSkipped ++;
-		return false;
+		return ANSWER_SKIPPED;
 	}
 	
 	public boolean hasOverlap(Set<String> s1, Set<String> s2)
@@ -330,7 +314,6 @@ public class AntonymChecker
 				}
 			}
 		}
-		questionsSkipped ++;
 		return false;
 	}
 	
