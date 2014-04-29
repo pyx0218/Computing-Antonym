@@ -27,31 +27,47 @@ public class MaxFlow
 {
 	private RiWordnet wordnet;
 	private HashMap<String,Integer> indices ;
-	private int indices_num;
+	private int indice_num;
 	
-	const int max_words=80000;
-	const int max_edges=7000000;
+	final int max_words=80000;
+	final int max_edges=14000000;
 	private int[] head;
 	private int[] next;
 	private int[] tow;
-	private int[] lnk;
-	private int[] tak;
-	private float[] val;
+	private int[] c;
+	private int[] h;
+	private int[] vh;
+	private int[] la;
+	private double[] val;
 	private int total_edges;
 
 	public MaxFlow()
 	{
 		wordnet = new RiWordnet();
 		indices =new HashMap<String,Integer>();
-		total_edge=0;
+		total_edges=0;
 		head=new int[max_words];
 		for(int i=0;i<max_words;i++){
 			head[i]=-1;
 		}
-		indices_num=0;
+		indice_num=0;
 		next=new int[max_edges];
 		tow=new int[max_edges];
-		val=new int[max_edges];
+		c=new int[max_edges];
+		h=new int[max_words];
+		vh=new int[max_words];
+		la=new int[max_words];
+		val=new double[max_edges];
+	}
+
+	private void initMap(){
+		for(int i=0;i<max_words;i++){
+			la[i]=head[i];
+			h[i]=vh[i]=0;
+		}
+		for(int i=0;i<max_edges;i++){
+			c[i]=1;
+		}
 	}
 	
 	private Set<String> readAllWords(String path) throws Exception
@@ -66,19 +82,17 @@ public class MaxFlow
 		return words;
 	}
 	
-	public void AddEdge(int a, int b,float v){
-		next[total_edge]=head[a];
-		tow[total_edge]=b;
-		val[total_edge]=v;
-		lnk[total_edge]=1;
-		head[a]=total_edge;
-		total_edge++;
-		next[total_edge]=head[b];
-		tow[total_edge]=a;
-		val[total_edge]=v;
-		lnk[total_edge]=1;
-		head[b]=total_edge;
-		total_edge++;
+	public void AddEdge(int a, int b,double v){
+		next[total_edges]=head[a];
+		tow[total_edges]=b;
+		val[total_edges]=v;
+		head[a]=total_edges;
+		total_edges++;
+		next[total_edges]=head[b];
+		tow[total_edges]=a;
+		val[total_edges]=v;
+		head[b]=total_edges;
+		total_edges++;
 	}
 
 	public void loadSeedFile(String path) throws Exception
@@ -96,7 +110,7 @@ public class MaxFlow
 			if(indices.containsKey(w1)==false)indices.put(w1,indice_num++);
 			if(indices.containsKey(w2)==false)indices.put(w2,indice_num++);
 
-			AddEdge(indices.get(w1),indices.get(w2),-0.9);
+			AddEdge(indices.get(w1),indices.get(w2),-0.4);
 			
 			if(lineCount%1000000==0)
 			{
@@ -122,26 +136,41 @@ public class MaxFlow
 		}
 		///
 		/////
-		if(expand)
+		for(String w:words)
 		{
-			for(String w:words)
+			if(indices.containsKey(w)==false)indices.put(w,indice_num++);
+			for(String pos:wordnet.getPos(w))
 			{
-				if(indices.containsKey(w)==false)indices.put(w,indice_num++);
-				for(String pos:wordnet.getPos(w))
+				String[] a =wordnet.getAllAntonyms(w, pos);
+				if(a!=null)
 				{
-					String[] a =wordnet.getAllAntonyms(w, pos);
 					for(String ant:a)
 					{
 						if(indices.containsKey(ant)==false)indices.put(ant,indice_num++);
-						AddEdge(indices.get(w),indices.get(ant),-0.9);
+						AddEdge(indices.get(w),indices.get(ant),-0.8);
 					}
-					String[] b =wordnet.getSynonyms(w, pos);
-					for(String syn:b)
+				}
+				String[] b =wordnet.getSynonyms(w, pos);
+				String[] c =wordnet.getSynset(w, pos);
+				Set<String>bb;
+				if(b!=null){
+					bb=new HashSet(Arrays.asList(b));
+					if(c!=null)
+						for(String ww:c){
+							bb.remove(ww);
+						}
+					for(String syn:bb)
+					{
+						if(indices.containsKey(syn)==false)indices.put(syn,indice_num++);
+						AddEdge(indices.get(w),indices.get(syn),0.5);
+					}
+				}
+				if(c!=null)
+					for(String syn:c)
 					{
 						if(indices.containsKey(syn)==false)indices.put(syn,indice_num++);
 						AddEdge(indices.get(w),indices.get(syn),0.9);
 					}
-				}
 			}
 		}
 
@@ -150,12 +179,51 @@ public class MaxFlow
 	}
 	
 	
+	private double findFlow(int x,int st,int ed){
+		if(x==ed)return 1;
+		int mi=indice_num,i=la[x];
+		double now;
+		if(i!=-1)
+		{
+			do{
+				if(c[i]!=0){
+					if(h[x]==h[tow[i]]+1){
+						if((now=findFlow(tow[i],st,ed))!=0){
+							c[i]--;c[i^1]++;
+							now*=val[i];
+							la[x]=i;return now;
+						}
+						if(h[st]>ed)return 0;
+					}
+					if(mi>h[tow[i]])mi=h[tow[i]];
+				}
+				i=next[i]>-1?next[i]:head[x];
+			}while(i!=la[x]);
+		}
+		if(--vh[h[x]]==0)h[st]=indice_num+1;
+		h[x]=mi+1;++vh[h[x]];
+		return 0;
+	}
+
+	private double FindDiff(int st,int ed){
+		double ans=0;
+		int cnt=0;
+		double quote=0;
+		initMap();
+		while(h[st]<=indice_num){
+			ans+=findFlow(st,st,ed)/h[st];
+			quote+=1.0/h[st];
+			cnt++;
+		}
+		return ans/quote;
+	}
 	
 	public int answerGREQuestion(GREQuestion q)//stat: 0 answered; 1 answered correctly
 	{
 		String qStr = q.getQuestion();
 		System.out.print("Questions: "+qStr);
 		double smallestSim = 100;
+		double lastSmallest = 100;
 		String ans=null;
 		for(String o:q.getOptions())
 		{
@@ -165,10 +233,13 @@ public class MaxFlow
 			if(smallestSim>sim)
 			{
 				ans = o;
+				lastSmallest=smallestSim;
 				smallestSim=sim;
+			}else if(lastSmallest>sim){
+				lastSmallest=sim;
 			}
 		}
-		if(smallestSim <0 )
+		if(smallestSim <0 && (smallestSim/lastSmallest>1.3 || lastSmallest>0))
 		{
 			System.out.print("\t-->Guess["+ans+"]\tCorrctAns["+q.getAnswer()+"]\n");
 			boolean isCorrect =  q.checkAnswer(ans);
@@ -203,23 +274,7 @@ public class MaxFlow
 			System.err.println("Words ["+ w2 +"] not covered.");
 			return 0;
 		}
-		double dot=0;
-		double normX=0;
-		double normY=0;
-		for(int i=0;i<this.wordList.length;i++)
-		{
-			double dotProd = this.matrix[wordIdx1][i] * this.matrix[wordIdx2][i];
-			if(dotProd<0)
-			{
-				dot += dotProd;
-			}
-			normX += Math.pow( this.matrix[wordIdx1][i], 2);
-			normY += Math.pow( this.matrix[wordIdx2][i], 2);
-		}
-		normX = Math.pow(normX, 0.5);
-		normY = Math.pow(normY, 0.5);
-		
-		return dot/(normX*normY);
+		return FindDiff(wordIdx1,wordIdx2);
 	}
 	
 	public static void main(String[] args) throws Exception
@@ -228,10 +283,7 @@ public class MaxFlow
 		String stopWordList = "resources/stopwords";
 		MaxFlow m=new MaxFlow();
 		m.loadSeedFile("resources/AntonymsLexicon-OppCats-Affixes.gz");
-		m.setExpand(false);
 		m.doWork(wordList,stopWordList);
-		m.populteWeights();
-		m.output();
 	}
 
 }
