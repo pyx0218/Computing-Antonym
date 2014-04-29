@@ -134,9 +134,10 @@ public class AntonymChecker
 		String stopWordList = "resources/stopwords";
 		DefMatrixMaker maker = new DefMatrixMaker();
 		maker.setExpand(expand);
-		maker.loadSeedFile("resources/AntonymsLexicon-OppCats-Affixes.gz");
+		maker.loadSeedFile("resources/AntonymsLexicon-OppCats.gz");
+		//maker.loadSeedFile("resources/AntonymsLexicon-OppCats-Affixes.gz");
 		maker.doWork(wordList,stopWordList);
-		//maker.patchSeeds();
+		maker.patchSeeds();
 		
 		GREDataSetParser p=new GREDataSetParser();
 		List<GREQuestion> questions = p.parse(testPath);
@@ -148,11 +149,9 @@ public class AntonymChecker
 		
 		//
 		System.out.println("Patching....");
-		maker.initWeights();
+		//maker.initWeights();
 		maker.patchSeeds();
 		maker.populteWeights();
-		maker.initWeights();
-		maker.patchSeeds();
 
 		runTest2(maker,  questions );
 	}
@@ -215,7 +214,7 @@ public class AntonymChecker
 	}
 	
 	private final static int QUESTION_EXPANSION_LEVEL = 1;
-	private final static int ANSWEr_EXPANSION_LEVEL = 1;
+	private final static int ANSWEr_EXPANSION_LEVEL = 2;
 	
 	public final static int ANSWER_SKIPPED = 1;
 	public final static int ANSWER_CORRECT = 2;

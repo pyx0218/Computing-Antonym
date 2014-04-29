@@ -130,7 +130,7 @@ public class DefMatrixMaker
 				for(String pos:wordnet.getPos(w))
 				{
 					String[] a =wordnet.getAllAntonyms(w, pos);
-					String[] b =wordnet.getSynonyms(w, pos);
+					String[] b =wordnet.getSynset(w, pos);
 //					String[] c = wordnet.getSynset(w, pos);
 //
 //					if(c!=null)
@@ -190,7 +190,7 @@ public class DefMatrixMaker
 			for(String pos:wordnet.getPos(w))
 			{
 				String[] a =wordnet.getAllAntonyms(w, pos);
-				String[] b =wordnet.getSynonyms(w, pos);
+				String[] b =wordnet.getSynset(w, pos);
 				
 //				String[] c = wordnet.getSynset(w, pos);
 				
@@ -425,14 +425,16 @@ public class DefMatrixMaker
 				float[] newWeights =  new float[wordList.length];
 				//String w=wordList[i];
 				
+				float sum = 0;
 				for(int j=0;j<wordList.length;j++)
 				{
 					float val = matrix[i][j];
+					sum += Math.abs(val);
 					if(val!=0)
 					{
 						for(int k=0;k<wordList.length;k++)
 						{
-							newWeights[k] += (float)( matrix[j][k]*0.3f* val);
+							newWeights[k] += (float)( matrix[j][k]* val);
 						}
 						newWeights[j] += val;
 					}
@@ -440,7 +442,7 @@ public class DefMatrixMaker
 				
 				for(int k=0;k<wordList.length;k++)
 				{
-					float log = (float) logistic(newWeights[k]);
+					float log = (float) logistic(newWeights[k]/sum);
 					os.writeFloat(log);
 				}
 				if(i%1000==0)
