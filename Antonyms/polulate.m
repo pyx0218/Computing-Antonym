@@ -1,9 +1,20 @@
 
 
+mat = [1 ];
+
    a  b  c  e f
 a  1  0  -1 0 1
-b  0  1  0  0 0 
-c  0  1  01  0 0
+b  0  1  0  1 1 
+
+c  0  1  1  0 0    == 2  1/2
+
+alpha  = 0.7 
+      0.7
+      
+      0.3
+C  0  +0.5 0 +0.5 +0.5
+
+
 b  0  1  0.3  0 0
 b  0  1  0  0 0
 b  0  1  0  0 0
@@ -11,7 +22,21 @@ b  0  1  0  0 0
 
 
 w =load('/Users/homliu/Documents/workspace/Antonyms/wordMatrix.txt');
-%load('wordMatrix.mat')
+%
+
+
+w = load('/tmp/hom/wordMatrix.txt') ;
+save('/tmp/hom/wordMatrix.mat', 'w') ;
+load('/tmp/hom/wordMatrix.mat') ;
+
+l = load('/tmp/hom/wordList.txt2') ;
+
+
+[l] = textread('/tmp/hom/wordList.txt2','%s',100000);
+
+
+w =       load('/tmp/wordMatrix.txt') ;
+[l] = textread('/tmp/wordList.txt2','%s',100000);
 
 for k=1:3
 
@@ -20,12 +45,12 @@ for k=1:3
 
     for j=1:N
         row = j
-        new_row = 0;
-        t = sum(abs(w(row,:)));
+        new_row = w(row,:) *.5;
+        %t = sum(abs(w(row,:)));
         
         for i=1:N
            if w(row,i) ~= 0 
-               new_row = new_row +  w(:,i)' .* (w(row,i) / t);
+               new_row = new_row +  w(i,:) .* (w(row,i)*.5);
            end
         end
 
@@ -36,7 +61,11 @@ for k=1:3
 end
 
 
-dot( w(11477,:) ,  w(11019,:) ) / (norm(w(11477,:) ) * norm(w(11019,:)))
+l(11478)
+l(11020)
+m1=norm(w(11478,:))
+m2=norm(w(11020,:))
+dot( w(11478,:) ,  w(11020,:) ) / ( ( norm(w(11478,:)) * norm(w(11020,:))) + 1e-100)
  
  
 %$grep fluency wordList.txt 
@@ -45,24 +74,44 @@ dot( w(11477,:) ,  w(11019,:) ) / (norm(w(11477,:) ) * norm(w(11019,:)))
 %$grep hesitance wordList.txt 
 %hesitance	5131
 
-a = 4391 ;
-b = 5131 ;
+a = 4392 ;
+b = 5132 ;
+l(a)
+l(b)
+m1=norm(w(a,:))
+m2=norm(w(b,:))
  dot( w(a,:) ,  w(b,:) ) / (norm(w(a,:) ) * norm(w(b,:)))
  
-a = 4391 ;
-b = 10264 ;
+a = 4392 ;
+b = 10265 ;
+l(a)
+l(b)
+m1=norm(w(a,:))
+m2=norm(w(b,:))
  dot( w(a,:) ,  w(b,:) ) / (norm(w(a,:) ) * norm(w(b,:)))
  
-a = 4391 ;
-b = 4439 ;
+a = 4392 ;
+b = 4440 ;
+l(a)
+l(b)
+m1=norm(w(a,:))
+m2=norm(w(b,:))
  dot( w(a,:) ,  w(b,:) ) / (norm(w(a,:) ) * norm(w(b,:)))
  
-a = 4391 ;
-b = 10261 ;
+a = 4392 ;
+b = 10262 ;
+l(a)
+l(b)
+m1=norm(w(a,:))
+m2=norm(w(b,:))
  dot( w(a,:) ,  w(b,:) ) / (norm(w(a,:) ) * norm(w(b,:)))
  
-a = 4391 ;
-b = 8791 ;
+a = 4392 ;
+b = 8792 ;
+l(a)
+l(b)
+m1=norm(w(a,:))
+m2=norm(w(b,:))
  dot( w(a,:) ,  w(b,:) ) / (norm(w(a,:) ) * norm(w(b,:)))
  
  
