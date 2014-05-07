@@ -1,6 +1,7 @@
 import java.util.*;
 import java.io.*;
 import java.net.*;
+
 import org.json.*;
 
 public class Jobim_Fetcher {
@@ -33,7 +34,7 @@ public class Jobim_Fetcher {
 		System.out.println(response.toString());
 		
 	}
-	public ArrayList<String> process_word(String w) throws Exception {
+	public ArrayList<WordScorePair> process_word(String w) throws Exception {
 		w = identify_word_type(w);
 		String url = "http://maggie.lt.informatik.tu-darmstadt.de:10080/jobim/ws/api/stanford/jo/similar/"+URLEncoder.encode(w, "UTF-8");
 		URL jobim_web_demo = new URL(url);
@@ -50,14 +51,16 @@ public class Jobim_Fetcher {
 		in.close();
 		JSONObject jo = new JSONObject(response.toString());
 		JSONArray ja = jo.getJSONArray("results");
-		ArrayList<String> word_string = new ArrayList<String>();
+		ArrayList<WordScorePair> word_score_list = new ArrayList<WordScorePair>();
 		for (int i=0; i<ja.length(); i++) {
 			JSONObject jo1 = ja.getJSONObject(i);
+			int score = jo1.getInt("score");
 			String word = jo1.getString("key");
 			String trim_word = word.substring(0, word.length()-3);
-			word_string.add(trim_word);
+			WordScorePair wsp= new WordScorePair(trim_word, score);			
+			word_score_list.add(wsp);
 		}
-		return word_string;        
+		return word_score_list;        
 	}
 	// Jobim uses standard formats like "huge#JJ" to specify it as an adjective or "#NN" as noun
 	// use this method to convert a word to this standard format
@@ -85,17 +88,101 @@ public class Jobim_Fetcher {
 		return result;
 		
 	}
+	class WordScorePair {
+		public String word;
+		public int score;
+		public WordScorePair(String word, int score){
+			this.word = word;
+			this.score = score;
+		}
+	}
+	public void Parse_GRE_testset(String path) throws Exception{
+		GREDataSetParser p=new GREDataSetParser();
+		List<GREQuestion> questions = p.parse(path);
+		int count = 3;
+		PrintWriter p1= new PrintWriter("resources/jobimResult2.txt");
+		for(GREQuestion q:questions)
+		{
+			if(count == 0)
+				break;
+			else
+				count--;
+			System.out.println(count);
+			String w = q.getQuestion();
+			ArrayList<WordScorePair> word_score_list;
+			p1.print(w+": ");
+			try{
+				word_score_list = this.process_word(w);
+				Iterator it = word_score_list.iterator();
+				while(it.hasNext()){
+					WordScorePair tmp = (WordScorePair)it.next();
+					p1.print(tmp.word+ " "+ tmp.score + ";");
+				}
+			}catch (Exception e) {
+				System.out.println("not processed");
+			}finally {
+				p1.println("");
+			};
+		}
+		p1.close();
+	}
+	public void Parse_wordlist(String path) throws Exception{
+		//GREDataSetParser p=new GREDataSetParser();
+		//List<GREQuestion> questions = p.parse(path);
+		int count = 100;
+		PrintWriter p1= new PrintWriter("resources/wordlistResult.txt");
+		Scanner s=new Scanner(new FileInputStream(path));
+		while(s.hasNext())
+		{
+			String line=s.nextLine();
+		
+			if(count == 0)
+				break;
+			else
+				count--;
+			System.out.println(count);
+			String w = line.trim();
+			ArrayList<WordScorePair> word_score_list;
+			p1.print(w+": ");
+			try{
+				word_score_list = this.process_word(w);
+				Iterator it = word_score_list.iterator();
+				while(it.hasNext()){
+					WordScorePair tmp = (WordScorePair)it.next();
+					p1.print(tmp.word+ " "+ tmp.score + ";");
+				}
+			}catch (Exception e) {
+				System.out.println("not processed");
+			}finally {
+				p1.println("");
+			};
+		}
+		p1.close();
+	}
 	public static void main(String[] args) throws Exception {
 		Jobim_Fetcher jf = new Jobim_Fetcher();		
-		String s = "a huge matrix";
-		String w = "huge";
-		ArrayList<String> word_string;
-		word_string = jf.process_word(w);
-		Iterator it = word_string.iterator();
-		while(it.hasNext()){
-			System.out.println(it.next());
+		//String s = "a huge matrix";
+		//String w = "huge";
+		
+		String GRE_path = "resources/testset.txt";
+		String wordlist_path = "resources/wordlist.txt";
+		try{
+			//jf.Parse_GRE_testset(GRE_path);
+			jf.Parse_wordlist(wordlist_path);
+		} catch (Exception e){
+			System.err.println("parse error");
 		}
-        
-    }
+		
+		
+		/*
+		ArrayList<WordScorePair> word_score_list;
+		word_score_list = jf.process_word(w);
+		Iterator it = word_score_list.iterator();
+		while(it.hasNext()){
+			WordScorePair tmp = (WordScorePair)it.next();
+			System.out.println(tmp.word+ " "+ tmp.score);
+		}
+        */
+	}
 
 }

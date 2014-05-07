@@ -44,7 +44,8 @@ public class JobimParser {
 	
 	
 	public static void main(String args[]){
-		String file_path = "resources/jobimResult.txt";
+		//String file_path = "resources/jobimResult.txt";
+		String file_path = "resources/wordlistResult.txt";
 		JobimParser jp = new JobimParser();
 		List<GREQuestion> questions;
 		try{
