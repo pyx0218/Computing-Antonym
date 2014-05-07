@@ -9,6 +9,7 @@ export CLASSPATH=$CLASSPATH:./lib/supportWN.jar
 export CLASSPATH=.:$CLASSPATH
 export CLASSPATH=$CLASSPATH:./src/watson.jar
 
-echo java -Xmx10G -cp "$CLASSPATH" AntonymChecker 
-java -Xmx10G -cp "$CLASSPATH" AntonymChecker
+echo java -Xmx10G -cp "$CLASSPATH" AntonymChecker2
+java -Xmx10G -cp "$CLASSPATH" AntonymChecker2
+
 
