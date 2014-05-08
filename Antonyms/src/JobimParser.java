@@ -31,6 +31,11 @@ public class JobimParser {
 					else{
 						
 						q.addOption(l.split(" ")[0]);
+
+						if(q.getOptions().size()>=10)
+						{
+							break;
+						}
 					}
 				}
 				questions.add(q);
@@ -40,6 +45,21 @@ public class JobimParser {
 		}
 		return questions;
 		
+	}
+
+
+	public static List<GREQuestion> getJobimQuestions()
+	{
+		String file_path = "resources/jobimResult2.txt";
+		JobimParser jp = new JobimParser();
+		List<GREQuestion> questions=null;
+		try{
+			questions = jp.parse(file_path);
+			
+		}catch (Exception e){
+			System.out.println("parse failure");
+		}
+		return questions;
 	}
 	
 	

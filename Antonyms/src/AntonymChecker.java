@@ -142,18 +142,8 @@ public class AntonymChecker
 		GREDataSetParser p=new GREDataSetParser();
 		List<GREQuestion> questions = p.parse(testPath);
 
-		runTest2(maker,  questions );
-		//
-		maker.populteWeights();
-		runTest2(maker,  questions );
-		
-		//
-		System.out.println("Patching....");
-		//maker.initWeights();
-		maker.patchSeeds();
-		maker.populteWeights();
-
-		runTest2(maker,  questions );
+		System.out.println("do svd...");
+		maker.doSVD();
 	}
 	
 	public Set<String> getSyms(Set<String> inputWords)
@@ -331,4 +321,5 @@ public class AntonymChecker
 	}
 
 }
+
 

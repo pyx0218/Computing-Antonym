@@ -20,6 +20,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.zip.GZIPInputStream;
 
+import com.aliasi.matrix.SvdMatrix;
+
 import rita.wordnet.RiWordnet;
 
 
@@ -27,7 +29,7 @@ public class DefMatrixMaker
 {
 	private RiWordnet wordnet;
 	private HashMap<String,Integer> indices ;
-	private float[][] matrix;
+	private double[][] matrix;
 	private String[] wordList;
 	boolean expand = true;
 	private Map<String,List<String>> dict=new HashMap<String,List<String>>();
@@ -172,7 +174,7 @@ public class DefMatrixMaker
 			indices.put(w, i);
 		}
 		
-		matrix = new float[wordList.length][wordList.length];
+		matrix = new double[wordList.length][wordList.length];
 		for(int i=0;i<wordList.length;i++)
 		{
 			matrix[i][i]=1;
@@ -353,12 +355,12 @@ public class DefMatrixMaker
 			{
 				//String w2=wordList[j];	
 				//p2.print(matrix[i][j]+" ");
-				os.writeFloat(matrix[i][j]);
+				os.writeDouble(matrix[i][j]);
 				if(matrix[i][j]!=0)
 				{
 					p3.writeFloat(i);
 					p3.writeFloat(j);
-					p3.writeFloat(matrix[i][j]);
+					p3.writeDouble(matrix[i][j]);
 				}
 			}
 			//p2.println();
@@ -408,6 +410,38 @@ public class DefMatrixMaker
 		
 	}
 
+	public void doSVD()
+	{
+		 int maxFactors = 300;
+		    double featureInit = 0.01;
+		    double initialLearningRate = 0.005;
+		    int annealingRate = 1000;
+		    double regularization = 0.00;
+		    double minImprovement = 0.0000;
+		    int minEpochs = 10;
+		    int maxEpochs = 20;
+
+		    
+		    SvdMatrix m
+		        = SvdMatrix.svd(matrix,
+		                        maxFactors,
+		                        featureInit,
+		                        initialLearningRate,
+		                        annealingRate,
+		                        regularization,
+		                        null,
+		                        minImprovement,
+		                        minEpochs,
+		                        maxEpochs);
+		    double[] scales = m.singularValues();
+	        double[][] termVectors = m.leftSingularVectors();
+	        double[][] docVectors = m.rightSingularVectors();
+	        
+	        for(int i=0; i<scales.length; i++) {
+	        	System.out.println(scales[i]);
+	        }
+
+	}
 	private static double logistic(double x)
 	{
 		return ( 2.0/(1 + Math.exp(-1f*x)) ) - 1 ;
@@ -428,7 +462,7 @@ public class DefMatrixMaker
 				float sum = 0;
 				for(int j=0;j<wordList.length;j++)
 				{
-					float val = matrix[i][j];
+					float val = (float)matrix[i][j];
 					sum += Math.abs(val);
 					if(val!=0)
 					{
@@ -533,4 +567,5 @@ public class DefMatrixMaker
 	}
 
 }
+
 
