@@ -142,8 +142,8 @@ public class AntonymChecker
 		GREDataSetParser p=new GREDataSetParser();
 		List<GREQuestion> questions = p.parse(testPath);
 
-		System.out.println("do svd...");
-		maker.doSVD();
+		//System.out.println("do svd...");
+		//maker.doSVD();
 	}
 	
 	public Set<String> getSyms(Set<String> inputWords)

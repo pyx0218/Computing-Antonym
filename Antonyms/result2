@@ -1,4 +1,0 @@
-java -Xmx10G -cp .::./lib/RiTaWN.jar:./lib/RiTaWN.zip:./lib/core.jar../lib/java-json.jar:./lib/jaws-bin.jar:./lib/supportWN.jar:./src/watson.jar AntonymChecker
-[INFO] RiTa.WordNet.version [034]
-[INFO] RiTa.Wordnet.home=jar:/rita/wordnet/WordNet3.1
-[INFO] RiTa.Wordnet.home=jar:/rita/wordnet/WordNet3.1

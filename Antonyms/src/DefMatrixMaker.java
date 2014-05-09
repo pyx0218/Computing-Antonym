@@ -20,7 +20,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.zip.GZIPInputStream;
 
-import com.aliasi.matrix.SvdMatrix;
 
 import rita.wordnet.RiWordnet;
 
@@ -410,38 +409,6 @@ public class DefMatrixMaker
 		
 	}
 
-	public void doSVD()
-	{
-		 int maxFactors = 300;
-		    double featureInit = 0.01;
-		    double initialLearningRate = 0.005;
-		    int annealingRate = 1000;
-		    double regularization = 0.00;
-		    double minImprovement = 0.0000;
-		    int minEpochs = 10;
-		    int maxEpochs = 20;
-
-		    
-		    SvdMatrix m
-		        = SvdMatrix.svd(matrix,
-		                        maxFactors,
-		                        featureInit,
-		                        initialLearningRate,
-		                        annealingRate,
-		                        regularization,
-		                        null,
-		                        minImprovement,
-		                        minEpochs,
-		                        maxEpochs);
-		    double[] scales = m.singularValues();
-	        double[][] termVectors = m.leftSingularVectors();
-	        double[][] docVectors = m.rightSingularVectors();
-	        
-	        for(int i=0; i<scales.length; i++) {
-	        	System.out.println(scales[i]);
-	        }
-
-	}
 	private static double logistic(double x)
 	{
 		return ( 2.0/(1 + Math.exp(-1f*x)) ) - 1 ;
