@@ -183,7 +183,7 @@ public class MaxFlow
 	
 	private double findFlow(int x,int st,int ed){
 		if(x==ed){
-			//System.out.print(track_back[ed]);
+//			System.out.print(track_back[ed]);
 			return 1;
 		}
 		int mi=indice_num,i=la[x];
@@ -194,7 +194,7 @@ public class MaxFlow
 				if(c[i]!=0){
 					if(h[x]==h[tow[i]]+1){
 						if((now=findFlow(tow[i],st,ed))!=0){
-							//System.out.print("<-"+track_back[x]+"("+val[i]+")");
+//							System.out.print("("+val[i]+")"+"->"+track_back[x]);
 							c[i]--;c[i^1]++;
 							now*=val[i];
 							la[x]=i;return now;
@@ -221,11 +221,11 @@ public class MaxFlow
 		int [] dy = new int [MAXLEN];
 		while(h[st]<=MAXLEN){
 			tmp=findFlow(st,st,ed);
-			if(h[st]>MAXLEN)break;
+			if(h[st]>=MAXLEN)break;
 			if(tmp!=0){
 				if(tmp<0)dx[h[st]]+=tmp;
 				dy[h[st]]++;
-				//System.out.println("");
+//				System.out.println("");
 				cnt++;
 			}
 		}
@@ -304,8 +304,10 @@ public class MaxFlow
 		MaxFlow m=new MaxFlow();
 		m.loadSeedFile("resources/AntonymsLexicon-OppCats.gz");
 		m.doWork(wordList,stopWordList);
-		System.out.println(m.getSimilarity("abstruse","detained"));
-		System.out.println(m.getSimilarity("abstruse","obvious"));
+		String s="good";
+		String t[]={"poor","bad","tough","excellent","outstanding","decent","strong","solid","terrific","great"};
+		for(int i=0;i<10;i++)
+			System.out.printf("===>%s\t[%.3f]\n",t[i],m.getSimilarity(s,t[i]));
 	}
 
 }
