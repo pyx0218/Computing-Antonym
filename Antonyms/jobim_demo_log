@@ -1,0 +1,3474 @@
+java -Xmx10G -cp .::./lib/RiTaWN.jar:./lib/RiTaWN.zip:./lib/core.jar../lib/java-json.jar:./lib/jaws-bin.jar:./lib/supportWN.jar:./lib/ejml-0.24.jar:./src/watson.jar AntonymChecker
+Use cosine similarity: false
+Use useMohammadSeeds:  true
+[INFO] RiTa.WordNet.version [034]
+[INFO] RiTa.Wordnet.home=jar:/rita/wordnet/WordNet3.1
+Line:1000000
+Line:2000000
+Line:3000000
+Line:3490421
+Dictionary Built.
+Word list size:30556
+[good and bad]:
+	<bad	-0.1000	1.0000>
+	<badly	-0.1000	1.0000>
+	<badness	-0.1000	1.0000>
+	<good	1.0000	-0.1000>
+	<well	1.0000	-0.1000>
+====
+
+[good and excellent]:
+====
+
+[good and decent]:
+====
+
+[good and great]:
+====
+
+[good and solid]:
+====
+
+[good and strong]:
+	<good	1.0000	-0.1000>
+	<strong	-0.1000	1.0000>
+	<well	1.0000	-0.1000>
+====
+
+[good and poor]:
+	<good	1.0000	-0.1000>
+	<miserable	-0.1000	1.0000>
+	<pathetic	-0.1000	1.0000>
+	<pitiful	-0.1000	1.0000>
+	<poor	-0.1000	1.0000>
+	<well	1.0000	-0.1000>
+	<wretched	-0.1000	1.0000>
+====
+
+[good and tough]:
+	<well	1.0000	-0.1000>
+====
+
+[good and outstanding]:
+====
+
+[good and terrific]:
+====
+
+===> Questions: good
+===>poor	[-0.0488]
+===>bad	[-0.0379]
+===>strong	[-0.0261]
+===>tough	[-0.0130]
+===>excellent	[0.0000]
+===>decent	[0.0000]
+===>great	[0.0000]
+===>solid	[0.0000]
+===>outstanding	[0.0000]
+===>terrific	[0.0000]
+[fine and penalty]:
+====
+
+[fine and fee]:
+====
+
+[fine and probation]:
+====
+
+[fine and sentence]:
+====
+
+[fine and punishment]:
+====
+
+[fine and restitution]:
+====
+
+[fine and suspension]:
+====
+
+[fine and taxis]:
+====
+
+[fine and reprimand]:
+	<okay	1.0000	-0.1000>
+====
+
+[fine and surcharge]:
+	<fine	1.0000	-0.1000>
+	<surcharge	-0.1000	1.0000>
+====
+
+===> Questions: fine
+===>surcharge	[-0.0301]
+===>reprimand	[-0.0077]
+===>penalty	[0.0000]
+===>fee	[0.0000]
+===>probation	[0.0000]
+===>sentence	[0.0000]
+===>punishment	[0.0000]
+===>restitution	[0.0000]
+===>suspension	[0.0000]
+===>taxis	[0.0000]
+[sure and glad]:
+====
+
+[sure and confident]:
+	<confident	-0.1000	1.0000>
+	<sure	1.0000	-0.1000>
+====
+
+[sure and wont]:
+====
+
+[sure and lead]:
+====
+
+[sure and didnt]:
+====
+
+[sure and wouldnt]:
+====
+
+[sure and cant]:
+	<certain	1.0000	-0.1000>
+	<certainly	1.0000	-0.1000>
+====
+
+[sure and hopeful]:
+====
+
+===> Questions: sure
+===>confident	[-0.0386]
+===>cant	[-0.0284]
+===>glad	[0.0000]
+===>q	[0.0000]
+===>wont	[0.0000]
+===>lead	[0.0000]
+===>didnt	[0.0000]
+===>ldquo	[0.0000]
+===>wouldnt	[0.0000]
+===>hopeful	[0.0000]
+[cold and chill]:
+====
+
+[cold and cough]:
+====
+
+[cold and flu]:
+====
+
+[cold and fever]:
+====
+
+[cold and headache]:
+====
+
+[cold and weather]:
+	<endure	-0.1000	1.0000>
+====
+
+[cold and diarrhea]:
+====
+
+[cold and bronchitis]:
+====
+
+[cold and infection]:
+====
+
+===> Questions: cold
+===>weather	[-0.0140]
+===>chill	[0.0000]
+===>cough	[0.0000]
+===>flu	[0.0000]
+===>fever	[0.0000]
+===>pneumonia	[0.0000]
+===>headache	[0.0000]
+===>diarrhea	[0.0000]
+===>bronchitis	[0.0000]
+===>infection	[0.0000]
+[authentic and genuine]:
+====
+
+[authentic and sumptuous]:
+====
+
+[authentic and exquisite]:
+====
+
+[authentic and compelling]:
+====
+
+[authentic and distinctive]:
+====
+
+[authentic and fake]:
+	<authentic	1.0000	-0.1000>
+	<bastard	-0.1000	1.0000>
+	<bogus	-0.1000	1.0000>
+	<counterfeit	-0.1000	1.0000>
+	<fake	-0.1000	1.0000>
+	<phoney	-0.1000	1.0000>
+	<reliable	1.0000	-0.1000>
+	<sham	-0.1000	1.0000>
+====
+
+[authentic and soulful]:
+====
+
+[authentic and traditional]:
+====
+
+[authentic and true]:
+====
+
+[authentic and vivid]:
+====
+
+===> Questions: authentic
+===>fake	[-0.1008]
+===>genuine	[0.0000]
+===>sumptuous	[0.0000]
+===>exquisite	[0.0000]
+===>compelling	[0.0000]
+===>distinctive	[0.0000]
+===>soulful	[0.0000]
+===>traditional	[0.0000]
+===>true	[0.0000]
+===>vivid	[0.0000]
+[hot and warm]:
+====
+
+[hot and cold]:
+	<cold	-0.1000	1.0000>
+	<hot	1.0000	-0.1000>
+====
+
+[hot and dry]:
+====
+
+[hot and cool]:
+	<chill	-0.1000	1.0000>
+	<cool	-0.1000	1.0000>
+	<hot	1.0000	-0.1000>
+====
+
+[hot and sweet]:
+====
+
+[hot and spicy]:
+====
+
+[hot and greasy]:
+====
+
+[hot and wet]:
+====
+
+[hot and fresh]:
+	<fresh	-0.1000	1.0000>
+	<freshly	-0.1000	1.0000>
+	<hot	1.0000	-0.1000>
+====
+
+===> Questions: hot
+===>cool	[-0.0602]
+===>cold	[-0.0443]
+===>fresh	[-0.0437]
+===>warm	[0.0000]
+===>dry	[0.0000]
+===>sweet	[0.0000]
+===>spicy	[0.0000]
+===>greasy	[0.0000]
+===>sizzlin	[0.0000]
+===>wet	[0.0000]
+Total=	6
+Updating row 0
+Updating row 1000
+Updating row 2000
+Updating row 3000
+Updating row 4000
+Updating row 5000
+Updating row 6000
+Updating row 7000
+Updating row 8000
+Updating row 9000
+Updating row 10000
+Updating row 11000
+Updating row 12000
+Updating row 13000
+Updating row 14000
+Updating row 15000
+Updating row 16000
+Updating row 17000
+Updating row 18000
+Updating row 19000
+Updating row 20000
+Updating row 21000
+Updating row 22000
+Updating row 23000
+Updating row 24000
+Updating row 25000
+Updating row 26000
+Updating row 27000
+Updating row 28000
+Updating row 29000
+Updating row 30000
+is.available() = 0
+[good and bad]:
+	<ability	0.0126	-0.0054>
+	<abuse	-0.0051	0.0120>
+	<accomplishment	0.0133	-0.0063>
+	<ace	0.0232	-0.0091>
+	<acme	0.0158	-0.0070>
+	<adept	0.0126	-0.0108>
+	<adeptness	0.0126	-0.0065>
+	<adroitness	0.0126	-0.0065>
+	<advance	0.0059	-0.0053>
+	<agreeableness	0.0054	-0.0052>
+	<amazing	0.0130	-0.0059>
+	<amend	0.0067	-0.0114>
+	<art	0.0130	-0.0065>
+	<artistry	0.0154	-0.0053>
+	<benevolent	0.0142	-0.0051>
+	<better	0.0204	-0.0076>
+	<blackguard	-0.0051	0.0101>
+	<blackleg	-0.0052	0.0096>
+	<blemish	-0.0068	0.0263>
+	<blessing	0.0135	-0.0059>
+	<blunder	-0.0058	0.0182>
+	<botch	-0.0105	0.0358>
+	<bully	0.0279	-0.0097>
+	<bumble	-0.0099	0.0174>
+	<bungle	-0.0105	0.0358>
+	<capability	0.0126	-0.0065>
+	<capableness	0.0126	-0.0065>
+	<champion	0.0152	-0.0079>
+	<charming	0.0123	-0.0063>
+	<choice	0.0160	-0.0080>
+	<clumsy	-0.0065	0.0321>
+	<complete	0.0158	-0.0058>
+	<contemptibility	-0.0059	0.0264>
+	<control	0.0126	-0.0052>
+	<corking	0.0130	-0.0124>
+	<cracking	0.0184	-0.0113>
+	<craft	0.0117	-0.0085>
+	<craftsmanship	0.0134	-0.0053>
+	<crappy	-0.0059	0.0177>
+	<crummy	-0.0054	0.0182>
+	<cunning	0.0100	-0.0074>
+	<deft	0.0126	-0.0054>
+	<deftness	0.0126	-0.0065>
+	<delicious	0.0067	-0.0060>
+	<delight	0.0056	-0.0063>
+	<deplorable	-0.0063	0.0182>
+	<despicability	-0.0058	0.0264>
+	<despicableness	-0.0058	0.0264>
+	<detestable	-0.0059	0.0269>
+	<dexterous	0.0126	-0.0054>
+	<dire	-0.0060	0.0272>
+	<direful	-0.0053	0.0182>
+	<elan	0.0117	-0.0065>
+	<evil	-0.0122	0.0338>
+	<evilness	-0.0277	0.0108>
+	<execrable	-0.0059	0.0269>
+	<expert	0.0132	-0.0072>
+	<expertise	0.0129	-0.0052>
+	<expertness	0.0129	-0.0052>
+	<facility	0.0149	-0.0070>
+	<fairly	0.0128	-0.0057>
+	<fineness	0.0278	-0.0054>
+	<finish	0.0265	-0.0058>
+	<fitting	0.0070	-0.0059>
+	<flair	0.0117	-0.0064>
+	<flourish	0.0057	-0.0052>
+	<flower	0.0154	-0.0056>
+	<flub	-0.0099	0.0174>
+	<fluff	-0.0083	0.0176>
+	<fumble	-0.0117	0.0174>
+	<gawk	-0.0051	0.0175>
+	<gem	0.0130	-0.0059>
+	<genius	0.0135	-0.0094>
+	<gifted	0.0126	-0.0054>
+	<glorious	0.0150	-0.0071>
+	<goon	-0.0067	0.0066>
+	<grasp	0.0119	-0.0052>
+	<grim	-0.0056	0.0125>
+	<healthful	0.0147	-0.0051>
+	<healthy	0.0147	-0.0051>
+	<heaven	0.0056	-0.0063>
+	<hex	-0.0053	0.0180>
+	<ideal	0.0159	-0.0067>
+	<improve	0.0067	-0.0072>
+	<ineptitude	-0.0053	0.0292>
+	<infernal	-0.0054	0.0190>
+	<jinx	-0.0054	0.0172>
+	<lousy	-0.0057	0.0348>
+	<lovely	0.0123	-0.0052>
+	<lubber	-0.0052	0.0180>
+	<lummox	-0.0053	0.0174>
+	<lump	-0.0063	0.0209>
+	<maestro	0.0126	-0.0054>
+	<maladroitness	-0.0053	0.0174>
+	<marvellous	0.0130	-0.0059>
+	<marvellously	0.0130	-0.0070>
+	<masterful	0.0126	-0.0076>
+	<masterly	0.0126	-0.0076>
+	<merry	0.0067	-0.0051>
+	<metier	0.0126	-0.0054>
+	<miserable	-0.0071	0.0198>
+	<mishandle	-0.0099	0.0174>
+	<muff	-0.0108	0.0181>
+	<neat	0.0266	-0.0128>
+	<nice	0.0298	-0.0059>
+	<nifty	0.0160	-0.0123>
+	<okay	0.0289	-0.0056>
+	<old	0.0153	-0.0082>
+	<panache	0.0117	-0.0054>
+	<paradise	0.0059	-0.0061>
+	<peach	0.0130	-0.0059>
+	<peachy	0.0130	-0.0124>
+	<pearl	0.0123	-0.0058>
+	<piddle	-0.0053	0.0141>
+	<pitiful	-0.0072	0.0182>
+	<please	0.0073	-0.0061>
+	<plum	0.0130	-0.0059>
+	<polish	0.0307	-0.0064>
+	<prime	0.0202	-0.0051>
+	<prize	0.0402	-0.0068>
+	<proficient	0.0129	-0.0073>
+	<properly	0.0111	-0.0052>
+	<prowess	0.0130	-0.0054>
+	<quality	0.0183	-0.0071>
+	<rag	-0.0077	0.0168>
+	<rareness	0.0137	-0.0055>
+	<rectify	0.0055	-0.0060>
+	<refinement	0.0169	-0.0056>
+	<right	0.0276	-0.0068>
+	<rightness	0.0113	-0.0057>
+	<ripping	0.0179	-0.0051>
+	<rotten	-0.0071	0.0334>
+	<rum	0.0130	-0.0059>
+	<scab	-0.0054	0.0146>
+	<select	0.0130	-0.0081>
+	<sensation	0.0130	-0.0085>
+	<shitty	-0.0072	0.0183>
+	<skilful	0.0134	-0.0073>
+	<skill	0.0129	-0.0052>
+	<sleazy	-0.0064	0.0210>
+	<smashing	0.0130	-0.0124>
+	<splendid	0.0228	-0.0080>
+	<splendiferous	0.0130	-0.0059>
+	<spoil	-0.0105	0.0054>
+	<style	0.0223	-0.0058>
+	<super	0.0180	-0.0078>
+	<superbly	0.0238	-0.0070>
+	<sweet	0.0093	-0.0064>
+	<sweeten	0.0057	-0.0051>
+	<swell	0.0193	-0.0091>
+	<tacky	-0.0051	0.0197>
+	<talented	0.0126	-0.0054>
+	<thrive	0.0056	-0.0051>
+	<tiptop	0.0123	-0.0113>
+	<topnotch	0.0120	-0.0092>
+	<treasure	0.0237	-0.0064>
+	<ugly	-0.0051	0.0121>
+	<unwieldy	-0.0053	0.0174>
+	<unworthy	-0.0052	0.0261>
+	<virtue	0.0198	-0.0058>
+	<virtuoso	0.0156	-0.0105>
+	<whiz	0.0133	-0.0072>
+	<wicked	-0.0070	0.0345>
+	<wizard	0.0253	-0.0091>
+	<wizardly	0.0130	-0.0059>
+	<wonderful	0.0130	-0.0059>
+	<wonderfully	0.0130	-0.0070>
+	<workmanship	0.0134	-0.0053>
+	<wretched	-0.0076	0.0228>
+====
+
+[good and excellent]:
+	<awful	0.0162	-0.0386>
+	<awfully	0.0199	-0.0258>
+	<bad	0.0108	-0.0253>
+	<badly	0.0093	-0.0258>
+	<damned	0.0119	-0.0167>
+	<devilish	0.0084	-0.0258>
+	<dread	0.0069	-0.0129>
+	<enormous	0.0121	-0.0172>
+	<fearful	0.0071	-0.0129>
+	<frightfully	0.0130	-0.0090>
+	<grievous	0.0126	-0.0202>
+	<lilliputian	-0.0059	0.0060>
+	<midget	-0.0057	0.0064>
+	<monstrous	0.0105	-0.0215>
+	<portentous	0.0140	-0.0129>
+	<stinking	0.0085	-0.0275>
+	<subservient	0.0081	-0.0155>
+	<terrible	0.0094	-0.0300>
+	<terribly	0.0104	-0.0258>
+====
+
+[good and decent]:
+	<bad	0.0108	-0.0088>
+	<badly	0.0093	-0.0091>
+	<devilish	0.0084	-0.0075>
+	<gross	0.0132	-0.0058>
+	<inadequacy	0.0056	-0.0051>
+	<monster	0.0131	-0.0051>
+	<monstrous	0.0105	-0.0061>
+	<naught	0.0055	-0.0053>
+	<portentous	0.0140	-0.0051>
+	<stinking	0.0085	-0.0072>
+	<terrible	0.0094	-0.0087>
+	<terribly	0.0104	-0.0072>
+	<vain	0.0056	-0.0064>
+	<vanity	0.0052	-0.0067>
+====
+
+[good and great]:
+====
+
+[good and solid]:
+	<check	0.0068	-0.0082>
+	<ethereal	0.0099	-0.0059>
+	<hollow	0.0167	-0.0197>
+	<naught	0.0055	-0.0133>
+====
+
+[good and strong]:
+	<blemish	-0.0068	0.0050>
+	<botch	-0.0105	0.0051>
+	<breeding	0.0160	-0.0053>
+	<bungle	-0.0105	0.0051>
+	<classy	0.0086	-0.0054>
+	<fulfil	0.0073	-0.0053>
+	<gentility	0.0073	-0.0053>
+	<gentle	0.0077	-0.0061>
+	<goon	-0.0067	0.0113>
+	<tinny	-0.0055	0.0064>
+====
+
+[good and poor]:
+	<abundance	0.0177	-0.0068>
+	<acme	0.0158	-0.0108>
+	<advantage	0.0255	-0.0090>
+	<advantageously	0.0197	-0.0094>
+	<aggrandise	0.0051	-0.0065>
+	<amazing	0.0130	-0.0108>
+	<aristocrat	0.0134	-0.0089>
+	<awesome	0.0379	-0.0073>
+	<beauty	0.0393	-0.0093>
+	<benefaction	0.0142	-0.0089>
+	<beneficial	0.0242	-0.0085>
+	<benefit	0.0213	-0.0099>
+	<benevolent	0.0142	-0.0093>
+	<benign	0.0086	-0.0075>
+	<best	0.0448	-0.0061>
+	<better	0.0204	-0.0082>
+	<blemish	-0.0068	0.0258>
+	<blessing	0.0135	-0.0123>
+	<bloom	0.0163	-0.0161>
+	<blooming	0.0286	-0.0076>
+	<boon	0.0140	-0.0092>
+	<botch	-0.0105	0.0259>
+	<brave	0.0210	-0.0144>
+	<braveness	0.0095	-0.0082>
+	<bravery	0.0095	-0.0096>
+	<bright	0.0148	-0.0077>
+	<bully	0.0279	-0.0173>
+	<bungle	-0.0105	0.0259>
+	<capital	0.0167	-0.0090>
+	<champion	0.0152	-0.0090>
+	<cheer	0.0169	-0.0061>
+	<choice	0.0160	-0.0127>
+	<chosen	0.0056	-0.0054>
+	<class	0.0165	-0.0083>
+	<climax	0.0152	-0.0080>
+	<clumsy	-0.0065	0.0097>
+	<commonwealth	0.0130	-0.0089>
+	<competency	0.0142	-0.0051>
+	<contemptibility	-0.0059	0.0241>
+	<cool	0.0144	-0.0072>
+	<corking	0.0130	-0.0193>
+	<crack	0.0192	-0.0054>
+	<cracking	0.0184	-0.0190>
+	<crummy	-0.0054	0.0238>
+	<culmination	0.0169	-0.0092>
+	<curse	-0.0055	0.0070>
+	<daisy	0.0130	-0.0094>
+	<dandy	0.0127	-0.0176>
+	<decent	0.0300	-0.0070>
+	<deluxe	0.0204	-0.0110>
+	<deplorable	-0.0063	0.0379>
+	<desirability	0.0195	-0.0092>
+	<desirable	0.0195	-0.0092>
+	<despicability	-0.0058	0.0258>
+	<despicableness	-0.0058	0.0258>
+	<detestable	-0.0059	0.0244>
+	<dire	-0.0060	0.0310>
+	<direful	-0.0053	0.0241>
+	<divine	0.0179	-0.0092>
+	<dreamy	0.0220	-0.0068>
+	<elect	0.0183	-0.0090>
+	<elegance	0.0339	-0.0082>
+	<elegant	0.0231	-0.0083>
+	<evil	-0.0122	0.0311>
+	<exceed	0.0056	-0.0096>
+	<excel	0.0180	-0.0065>
+	<excellence	0.0179	-0.0092>
+	<excellent	0.0179	-0.0092>
+	<exceptional	0.0130	-0.0090>
+	<execrable	-0.0059	0.0385>
+	<exquisite	0.0385	-0.0086>
+	<extra	0.0334	-0.0072>
+	<extremely	0.0283	-0.0097>
+	<fabulous	0.0301	-0.0076>
+	<famous	0.0162	-0.0062>
+	<famously	0.0146	-0.0093>
+	<fantastic	0.0285	-0.0100>
+	<favour	0.0324	-0.0087>
+	<finesse	0.0271	-0.0083>
+	<finish	0.0265	-0.0094>
+	<finished	0.0170	-0.0058>
+	<flourish	0.0057	-0.0131>
+	<flower	0.0154	-0.0173>
+	<gallant	0.0059	-0.0052>
+	<gas	0.0145	-0.0092>
+	<gem	0.0130	-0.0108>
+	<glory	0.0269	-0.0059>
+	<golden	0.0131	-0.0107>
+	<good	0.1342	-0.0107>
+	<goodness	0.0435	-0.0086>
+	<gorgeous	0.0222	-0.0087>
+	<gracious	0.0076	-0.0079>
+	<grand	0.0398	-0.0134>
+	<great	0.0481	-0.0189>
+	<greatest	0.0056	-0.0068>
+	<grim	-0.0056	0.0059>
+	<grouse	0.0130	-0.0087>
+	<happily	0.0054	-0.0096>
+	<happiness	0.0056	-0.0096>
+	<happy	0.0057	-0.0094>
+	<healthful	0.0147	-0.0090>
+	<healthy	0.0147	-0.0090>
+	<heavenly	0.0247	-0.0087>
+	<hex	-0.0053	0.0306>
+	<honey	0.0152	-0.0093>
+	<idea	0.0160	-0.0083>
+	<ideal	0.0159	-0.0115>
+	<immense	0.0283	-0.0083>
+	<ineptitude	-0.0053	0.0068>
+	<infernal	-0.0054	0.0252>
+	<insane	0.0130	-0.0086>
+	<irreplaceable	0.0156	-0.0093>
+	<jake	0.0154	-0.0092>
+	<jewel	0.0138	-0.0094>
+	<jinx	-0.0054	0.0238>
+	<keen	0.0306	-0.0190>
+	<knockout	0.0216	-0.0077>
+	<lilliputian	-0.0059	0.0117>
+	<lousy	-0.0057	0.0252>
+	<luxuriant	0.0167	-0.0072>
+	<magnificent	0.0265	-0.0089>
+	<marvellous	0.0130	-0.0108>
+	<marvellously	0.0130	-0.0123>
+	<masterpiece	0.0200	-0.0090>
+	<masterwork	0.0179	-0.0092>
+	<mercy	0.0142	-0.0087>
+	<merit	0.0158	-0.0092>
+	<midget	-0.0057	0.0137>
+	<mint	0.0179	-0.0054>
+	<miracle	0.0130	-0.0094>
+	<miserable	-0.0071	0.1501>
+	<neat	0.0266	-0.0193>
+	<nice	0.0298	-0.0086>
+	<niceness	0.0297	-0.0082>
+	<nifty	0.0160	-0.0183>
+	<nonesuch	0.0056	-0.0054>
+	<nonpareil	0.0056	-0.0054>
+	<okay	0.0289	-0.0103>
+	<old	0.0153	-0.0069>
+	<olympian	0.0082	-0.0052>
+	<optimum	0.0130	-0.0094>
+	<outdo	0.0056	-0.0054>
+	<outstanding	0.0134	-0.0085>
+	<palatial	0.0167	-0.0058>
+	<peach	0.0130	-0.0108>
+	<peachy	0.0130	-0.0193>
+	<pearl	0.0123	-0.0089>
+	<perfect	0.0303	-0.0065>
+	<perfection	0.0173	-0.0089>
+	<pie	0.0265	-0.0092>
+	<pile	0.0169	-0.0059>
+	<pink	0.0131	-0.0090>
+	<pitiful	-0.0072	0.1365>
+	<plenty	0.0188	-0.0141>
+	<plum	0.0130	-0.0094>
+	<polish	0.0307	-0.0114>
+	<polished	0.0270	-0.0073>
+	<precedence	0.0056	-0.0052>
+	<premium	0.0152	-0.0085>
+	<pretty	0.0395	-0.0085>
+	<pride	0.0144	-0.0089>
+	<prime	0.0202	-0.0159>
+	<priority	0.0080	-0.0051>
+	<privilege	0.0062	-0.0054>
+	<prize	0.0402	-0.0132>
+	<profit	0.0078	-0.0054>
+	<proper	0.0311	-0.0076>
+	<quality	0.0183	-0.0144>
+	<rag	-0.0077	0.0349>
+	<rare	0.0137	-0.0052>
+	<rareness	0.0137	-0.0096>
+	<rarity	0.0138	-0.0092>
+	<recherche	0.0130	-0.0094>
+	<refinement	0.0169	-0.0082>
+	<remarkably	0.0286	-0.0082>
+	<richly	0.0215	-0.0061>
+	<right	0.0276	-0.0070>
+	<ripping	0.0179	-0.0106>
+	<rosy	0.0115	-0.0080>
+	<rotten	-0.0071	0.0231>
+	<royal	0.0134	-0.0089>
+	<rube	0.0125	-0.0090>
+	<rum	0.0130	-0.0094>
+	<satisfactory	0.0182	-0.0087>
+	<select	0.0130	-0.0151>
+	<sensation	0.0130	-0.0106>
+	<sensational	0.0130	-0.0092>
+	<shining	0.0132	-0.0089>
+	<shitty	-0.0072	0.0230>
+	<showpiece	0.0130	-0.0094>
+	<sleazy	-0.0064	0.0245>
+	<smashing	0.0130	-0.0193>
+	<sound	0.0211	-0.0073>
+	<soundness	0.0066	-0.0056>
+	<speed	0.0051	-0.0080>
+	<splendid	0.0228	-0.0132>
+	<splendiferous	0.0130	-0.0108>
+	<sterling	0.0130	-0.0123>
+	<stout	0.0174	-0.0054>
+	<sublime	0.0228	-0.0080>
+	<substantial	0.0169	-0.0075>
+	<sumptuous	0.0106	-0.0094>
+	<sumptuousness	0.0106	-0.0080>
+	<super	0.0180	-0.0137>
+	<superb	0.0238	-0.0092>
+	<superbly	0.0238	-0.0120>
+	<superior	0.0185	-0.0106>
+	<superlative	0.0056	-0.0096>
+	<superordinate	0.0066	-0.0051>
+	<supreme	0.0326	-0.0068>
+	<surpass	0.0056	-0.0110>
+	<surpassing	0.0207	-0.0058>
+	<swan	0.0212	-0.0092>
+	<swell	0.0193	-0.0169>
+	<swinging	0.0135	-0.0092>
+	<tacky	-0.0051	0.0238>
+	<terrific	0.0284	-0.0106>
+	<thrive	0.0056	-0.0132>
+	<tiptop	0.0123	-0.0165>
+	<titbit	0.0130	-0.0094>
+	<top	0.0488	-0.0090>
+	<topnotch	0.0120	-0.0151>
+	<topping	0.0188	-0.0090>
+	<transcend	0.0059	-0.0075>
+	<treasure	0.0237	-0.0115>
+	<tremendously	0.0283	-0.0083>
+	<trim	0.0173	-0.0055>
+	<ugly	-0.0051	0.0051>
+	<ultimate	0.0123	-0.0082>
+	<ultra	0.0130	-0.0087>
+	<unbeatable	0.0179	-0.0092>
+	<uncommon	0.0284	-0.0083>
+	<unequalled	0.0056	-0.0054>
+	<unmatched	0.0056	-0.0054>
+	<unparalleled	0.0081	-0.0054>
+	<unworthy	-0.0052	0.0241>
+	<utility	0.0068	-0.0055>
+	<value	0.0477	-0.0101>
+	<vantage	0.0056	-0.0054>
+	<vintage	0.0142	-0.0083>
+	<virtue	0.0198	-0.0104>
+	<virtuous	0.0180	-0.0085>
+	<wealth	0.0180	-0.0072>
+	<welfare	0.0156	-0.0101>
+	<well	0.0517	-0.0097>
+	<wholesomeness	0.0147	-0.0090>
+	<wicked	-0.0070	0.0241>
+	<wizard	0.0253	-0.0103>
+	<wizardly	0.0130	-0.0108>
+	<wonderful	0.0130	-0.0108>
+	<wonderfully	0.0130	-0.0123>
+	<worth	0.0361	-0.0085>
+	<wretched	-0.0076	0.1503>
+====
+
+[good and tough]:
+	<abuse	-0.0051	0.0061>
+	<acceptable	0.0185	-0.0087>
+	<agreeable	0.0064	-0.0084>
+	<agreeableness	0.0054	-0.0116>
+	<amiability	0.0071	-0.0116>
+	<amiable	0.0071	-0.0116>
+	<amiableness	0.0071	-0.0087>
+	<attract	0.0056	-0.0087>
+	<attractive	0.0129	-0.0087>
+	<attractively	0.0123	-0.0087>
+	<attractiveness	0.0129	-0.0087>
+	<beautiful	0.0149	-0.0081>
+	<benign	0.0086	-0.0084>
+	<blemish	-0.0068	0.0072>
+	<charm	0.0140	-0.0110>
+	<charming	0.0123	-0.0087>
+	<cheerful	0.0067	-0.0075>
+	<cheerfulness	0.0067	-0.0075>
+	<clumsy	-0.0065	0.0090>
+	<comfort	0.0061	-0.0171>
+	<comfortable	0.0070	-0.0075>
+	<compatible	0.0077	-0.0087>
+	<courteous	0.0091	-0.0081>
+	<delicate	0.0139	-0.0055>
+	<delicious	0.0067	-0.0145>
+	<delight	0.0056	-0.0142>
+	<detestable	-0.0059	0.0252>
+	<dire	-0.0060	0.0246>
+	<dulcet	0.0057	-0.0113>
+	<easement	0.0070	-0.0075>
+	<eden	0.0056	-0.0084>
+	<enjoyable	0.0107	-0.0072>
+	<execrable	-0.0059	0.0252>
+	<facility	0.0149	-0.0081>
+	<failure	0.0056	-0.0072>
+	<fairly	0.0128	-0.0070>
+	<fat	0.0190	-0.0067>
+	<flat	0.0067	-0.0067>
+	<fleshiness	0.0161	-0.0055>
+	<fleshy	0.0161	-0.0055>
+	<flexible	0.0056	-0.0055>
+	<flowing	0.0127	-0.0075>
+	<fluency	0.0116	-0.0081>
+	<fluent	0.0113	-0.0081>
+	<genial	0.0089	-0.0072>
+	<gift	0.0154	-0.0067>
+	<glorious	0.0150	-0.0087>
+	<gorgeous	0.0222	-0.0078>
+	<grace	0.0254	-0.0078>
+	<graceful	0.0132	-0.0087>
+	<gracefulness	0.0142	-0.0087>
+	<grim	-0.0056	0.0293>
+	<handiness	0.0141	-0.0081>
+	<handy	0.0201	-0.0070>
+	<heaven	0.0056	-0.0142>
+	<heavenly	0.0247	-0.0072>
+	<jolly	0.0259	-0.0107>
+	<kindly	0.0076	-0.0075>
+	<likeable	0.0056	-0.0084>
+	<lousy	-0.0057	0.0261>
+	<lovely	0.0123	-0.0116>
+	<luscious	0.0071	-0.0113>
+	<mellifluous	0.0055	-0.0084>
+	<mellow	0.0056	-0.0067>
+	<merry	0.0067	-0.0104>
+	<mild	0.0078	-0.0055>
+	<mildness	0.0071	-0.0061>
+	<miserable	-0.0071	0.0067>
+	<nice	0.0298	-0.0090>
+	<nicely	0.0060	-0.0087>
+	<palatable	0.0067	-0.0087>
+	<paradise	0.0059	-0.0142>
+	<piquant	0.0054	-0.0113>
+	<pleasant	0.0145	-0.0072>
+	<pleasantness	0.0073	-0.0072>
+	<please	0.0073	-0.0142>
+	<pleasing	0.0056	-0.0084>
+	<pretty	0.0395	-0.0070>
+	<prostration	0.0104	-0.0067>
+	<readiness	0.0080	-0.0072>
+	<ready	0.0099	-0.0055>
+	<rest	0.0056	-0.0090>
+	<rotten	-0.0071	0.0249>
+	<sapid	0.0067	-0.0087>
+	<slack	0.0084	-0.0101>
+	<smooth	0.0077	-0.0081>
+	<spoil	-0.0105	0.0064>
+	<supple	0.0117	-0.0061>
+	<sweet	0.0093	-0.0168>
+	<sweeten	0.0057	-0.0113>
+	<sweetly	0.0072	-0.0110>
+	<sweetness	0.0072	-0.0081>
+	<sympathetic	0.0170	-0.0058>
+	<taking	0.0054	-0.0078>
+	<ugly	-0.0051	0.0252>
+	<unwieldy	-0.0053	0.0052>
+	<weak	0.0070	-0.0151>
+	<welcome	0.0110	-0.0078>
+	<wicked	-0.0070	0.0241>
+	<winning	0.0107	-0.0101>
+	<wretched	-0.0076	0.0070>
+	<zest	0.0204	-0.0070>
+====
+
+[good and outstanding]:
+	<apply	0.0074	-0.0063>
+	<awful	0.0162	-0.0176>
+	<awfully	0.0199	-0.0101>
+	<bad	0.0108	-0.0093>
+	<badly	0.0093	-0.0101>
+	<devilish	0.0084	-0.0098>
+	<dread	0.0069	-0.0075>
+	<enormous	0.0121	-0.0050>
+	<expenditure	0.0054	-0.0095>
+	<fearful	0.0071	-0.0073>
+	<frightfully	0.0130	-0.0060>
+	<grievous	0.0126	-0.0053>
+	<living	0.0176	-0.0080>
+	<monstrous	0.0105	-0.0075>
+	<plug	0.0155	-0.0055>
+	<satisfaction	0.0053	-0.0053>
+	<shred	-0.0057	0.0302>
+	<stinking	0.0085	-0.0113>
+	<terrible	0.0094	-0.0126>
+	<terribly	0.0104	-0.0101>
+	<tip	0.0054	-0.0065>
+	<tributary	0.0229	-0.0078>
+	<tribute	0.0225	-0.0065>
+	<wedded	0.0065	-0.0068>
+====
+
+[good and terrific]:
+	<forward	0.0055	-0.0056>
+	<grim	-0.0056	0.0050>
+====
+
+===> Questions: good
+===>poor	[-0.1271]
+===>bad	[-0.0524]
+===>tough	[-0.0230]
+===>excellent	[-0.0066]
+===>outstanding	[-0.0054]
+===>decent	[-0.0025]
+===>strong	[-0.0018]
+===>solid	[-0.0013]
+===>terrific	[-0.0001]
+===>great	[0.0000]
+[fine and penalty]:
+	<advantage	0.0129	-0.0062>
+	<advantageous	0.0051	-0.0062>
+	<advantageously	0.0117	-0.0081>
+	<altruism	0.0056	-0.0070>
+	<angel	0.0096	-0.0092>
+	<artful	0.0106	-0.0081>
+	<artifice	0.0106	-0.0081>
+	<benefaction	0.0116	-0.0081>
+	<beneficial	0.0181	-0.0062>
+	<benefit	0.0188	-0.0089>
+	<botch	-0.0087	0.0084>
+	<bungle	-0.0087	0.0084>
+	<buoy	0.0068	-0.0079>
+	<champion	0.0131	-0.0146>
+	<clumsy	-0.0056	0.0320>
+	<comfortable	0.0058	-0.0076>
+	<craft	0.0103	-0.0054>
+	<craftiness	0.0106	-0.0108>
+	<crafty	0.0106	-0.0081>
+	<cultivate	0.0082	-0.0079>
+	<cunning	0.0106	-0.0136>
+	<desirability	0.0124	-0.0062>
+	<desirable	0.0124	-0.0062>
+	<facilitate	0.0085	-0.0076>
+	<facility	0.0130	-0.0076>
+	<fit	0.0314	-0.0098>
+	<fitness	0.0204	-0.0079>
+	<handy	0.0125	-0.0076>
+	<help	0.0068	-0.0271>
+	<knack	0.0106	-0.0081>
+	<lubber	-0.0053	0.0054>
+	<lump	-0.0056	0.0051>
+	<mercy	0.0120	-0.0081>
+	<pilot	0.0058	-0.0079>
+	<practical	0.0116	-0.0079>
+	<pragmatic	0.0116	-0.0070>
+	<pragmatism	0.0056	-0.0073>
+	<promotion	0.0071	-0.0081>
+	<proper	0.0266	-0.0073>
+	<rally	0.0270	-0.0070>
+	<resource	0.0116	-0.0081>
+	<resourceful	0.0106	-0.0081>
+	<resourcefulness	0.0106	-0.0081>
+	<rotten	-0.0053	0.0060>
+	<satisfactory	0.0126	-0.0081>
+	<scholarship	0.0054	-0.0081>
+	<settlement	0.0136	-0.0057>
+	<spot	0.0099	-0.0070>
+	<stay	0.0063	-0.0051>
+	<trim	0.0154	-0.0054>
+	<utilitarian	0.0052	-0.0073>
+	<warm	0.0073	-0.0065>
+	<wretched	-0.0056	0.0051>
+====
+
+[fine and fee]:
+	<break	0.0110	-0.0514>
+	<bunco	0.0074	-0.0286>
+	<butt	0.0116	-0.0100>
+	<come	0.0088	-0.0143>
+	<con	0.0075	-0.0243>
+	<crack	0.0152	-0.0100>
+	<dead	0.0107	-0.0100>
+	<defraud	0.0078	-0.0543>
+	<diddle	0.0074	-0.0286>
+	<discontinuance	0.0119	-0.0129>
+	<doctor	0.0145	-0.0100>
+	<drop	0.0133	-0.0129>
+	<exact	0.0076	-0.0143>
+	<fix	0.0066	-0.0086>
+	<float	0.0061	-0.0114>
+	<floater	0.0059	-0.0400>
+	<foot	0.0104	-0.0143>
+	<gift	0.0118	-0.0129>
+	<goldbrick	0.0074	-0.0286>
+	<grip	0.0105	-0.0143>
+	<hornswoggle	0.0074	-0.0286>
+	<light	0.0211	-0.0114>
+	<mend	0.0079	-0.0100>
+	<mulct	0.0297	-0.0286>
+	<nobble	0.0077	-0.0286>
+	<outstanding	0.0109	-0.0543>
+	<patch	0.0079	-0.0100>
+	<pink	0.0104	-0.0129>
+	<prime	0.0111	-0.0114>
+	<prize	0.0130	-0.0114>
+	<recover	0.0238	-0.0071>
+	<recovery	0.0245	-0.0071>
+	<recruit	0.0185	-0.0229>
+	<recruitment	0.0205	-0.0086>
+	<reduce	0.0093	-0.0086>
+	<refurbish	0.0081	-0.0100>
+	<regenerate	0.0091	-0.0086>
+	<rehabilitate	0.0205	-0.0100>
+	<rehabilitation	0.0205	-0.0100>
+	<renovation	0.0081	-0.0100>
+	<repair	0.0079	-0.0100>
+	<revive	0.0067	-0.0071>
+	<rook	0.0078	-0.0286>
+	<scam	0.0074	-0.0286>
+	<scrap	0.0070	-0.0100>
+	<spare	0.0117	-0.0086>
+	<sponge	0.0095	-0.0143>
+	<strip	0.0064	-0.0143>
+	<swindle	0.0082	-0.0543>
+	<tail	0.0113	-0.0271>
+	<tape	0.0080	-0.0143>
+	<tonic	0.0213	-0.0057>
+	<victimize	0.0074	-0.0286>
+	<virgin	0.0057	-0.0100>
+	<well	0.0306	-0.0129>
+	<win	0.0089	-0.0114>
+	<winning	0.0059	-0.0114>
+====
+
+[fine and probation]:
+====
+
+[fine and sentence]:
+	<advantage	0.0129	-0.0079>
+	<advantageous	0.0051	-0.0079>
+	<advantageously	0.0117	-0.0079>
+	<appreciative	0.0107	-0.0079>
+	<approve	0.0163	-0.0056>
+	<beauty	0.0188	-0.0071>
+	<beneficial	0.0181	-0.0079>
+	<break	0.0110	-0.0056>
+	<bull	0.0090	-0.0262>
+	<bully	0.0096	-0.0071>
+	<compact	0.0084	-0.0056>
+	<constitution	0.0193	-0.0056>
+	<craftsman	0.0119	-0.0063>
+	<craftsmanship	0.0119	-0.0063>
+	<creativity	0.0119	-0.0063>
+	<develop	0.0076	-0.0071>
+	<developer	0.0068	-0.0071>
+	<development	0.0068	-0.0071>
+	<do	0.0065	-0.0135>
+	<engineer	0.0123	-0.0063>
+	<erect	0.0050	-0.0071>
+	<evolve	0.0068	-0.0071>
+	<favour	0.0136	-0.0079>
+	<fresh	0.0199	-0.0063>
+	<handy	0.0125	-0.0063>
+	<improve	0.0062	-0.0079>
+	<improvement	0.0059	-0.0079>
+	<incubate	0.0072	-0.0071>
+	<lighten	0.0061	-0.0063>
+	<live	0.0093	-0.0151>
+	<living	0.0080	-0.0143>
+	<nihilist	0.0053	-0.0190>
+	<okay	0.0485	-0.0056>
+	<pie	0.0109	-0.0079>
+	<polish	0.0168	-0.0063>
+	<practical	0.0116	-0.0071>
+	<prize	0.0130	-0.0056>
+	<raise	0.0060	-0.0071>
+	<revive	0.0067	-0.0135>
+	<rise	0.0053	-0.0079>
+	<scrap	0.0070	-0.0071>
+	<sensitivity	0.0102	-0.0079>
+	<set	0.0075	-0.0071>
+	<superficial	0.0067	-0.0310>
+	<sure	0.0119	-0.0127>
+	<suspicion	0.0051	-0.0349>
+	<tap	0.0064	-0.0071>
+	<tip	0.0122	-0.0079>
+	<workmanship	0.0119	-0.0063>
+====
+
+[fine and punishment]:
+	<ace	0.0242	-0.0385>
+	<advantage	0.0129	-0.0083>
+	<advantageous	0.0051	-0.0094>
+	<advantageously	0.0117	-0.0094>
+	<altruism	0.0056	-0.0104>
+	<angel	0.0096	-0.0062>
+	<artful	0.0106	-0.0104>
+	<artifice	0.0106	-0.0104>
+	<beauty	0.0188	-0.0094>
+	<benefaction	0.0116	-0.0104>
+	<beneficial	0.0181	-0.0094>
+	<benefit	0.0188	-0.0104>
+	<botch	-0.0087	0.0104>
+	<bumble	-0.0087	0.0052>
+	<bungle	-0.0087	0.0104>
+	<buoy	0.0068	-0.0094>
+	<champion	0.0131	-0.0490>
+	<clumsy	-0.0056	0.0083>
+	<come	0.0088	-0.0073>
+	<comfortable	0.0058	-0.0104>
+	<control	0.0101	-0.0104>
+	<crack	0.0152	-0.0333>
+	<craftiness	0.0106	-0.0104>
+	<crafty	0.0106	-0.0104>
+	<cultivate	0.0082	-0.0094>
+	<cunning	0.0106	-0.0104>
+	<desirability	0.0124	-0.0104>
+	<desirable	0.0124	-0.0104>
+	<dish	0.0086	-0.0083>
+	<do	0.0065	-0.0479>
+	<facilitate	0.0085	-0.0104>
+	<facility	0.0130	-0.0094>
+	<favour	0.0136	-0.0052>
+	<fit	0.0314	-0.0062>
+	<fitness	0.0204	-0.0094>
+	<flub	-0.0087	0.0052>
+	<fumble	-0.0102	0.0052>
+	<gawk	-0.0056	0.0052>
+	<go	0.0193	-0.0250>
+	<handy	0.0125	-0.0094>
+	<help	0.0068	-0.0104>
+	<knack	0.0106	-0.0104>
+	<knockout	0.0173	-0.0292>
+	<looker	0.0073	-0.0104>
+	<lubber	-0.0053	0.0052>
+	<lummox	-0.0057	0.0052>
+	<lump	-0.0056	0.0052>
+	<maestro	0.0101	-0.0104>
+	<main	0.0051	-0.0083>
+	<mastery	0.0116	-0.0281>
+	<mercy	0.0120	-0.0104>
+	<miserable	-0.0056	0.0083>
+	<mishandle	-0.0087	0.0052>
+	<muff	-0.0094	0.0083>
+	<peach	0.0104	-0.0104>
+	<pilot	0.0058	-0.0104>
+	<practical	0.0116	-0.0094>
+	<pragmatic	0.0116	-0.0104>
+	<pragmatism	0.0056	-0.0104>
+	<prime	0.0111	-0.0073>
+	<prodigy	0.0111	-0.0292>
+	<promotion	0.0071	-0.0104>
+	<proper	0.0266	-0.0104>
+	<radiance	0.0096	-0.0104>
+	<rally	0.0270	-0.0094>
+	<resource	0.0116	-0.0104>
+	<resourceful	0.0106	-0.0104>
+	<resourcefulness	0.0106	-0.0104>
+	<rise	0.0053	-0.0250>
+	<satisfactory	0.0126	-0.0104>
+	<scholarship	0.0054	-0.0094>
+	<settlement	0.0136	-0.0052>
+	<severe	0.0059	-0.0052>
+	<snip	0.0056	-0.0281>
+	<spot	0.0099	-0.0052>
+	<stay	0.0063	-0.0083>
+	<super	0.0124	-0.0208>
+	<superior	0.0116	-0.0104>
+	<tiptop	0.0111	-0.0208>
+	<topnotch	0.0104	-0.0208>
+	<triumphant	0.0080	-0.0292>
+	<utilitarian	0.0052	-0.0104>
+	<warm	0.0073	-0.0083>
+	<win	0.0089	-0.0490>
+	<winning	0.0059	-0.0396>
+	<wretched	-0.0056	0.0083>
+====
+
+[fine and restitution]:
+	<break	0.0110	-0.0234>
+	<burn	0.0067	-0.0119>
+	<crack	0.0152	-0.0102>
+	<defraud	0.0078	-0.0074>
+	<feather	0.0056	-0.0119>
+	<mangle	0.0080	-0.0164>
+	<nobble	0.0077	-0.0123>
+	<old	0.0145	-0.0094>
+	<swindle	0.0082	-0.0074>
+====
+
+[fine and suspension]:
+	<botch	-0.0087	0.0060>
+	<bungle	-0.0087	0.0060>
+	<lump	-0.0056	0.0052>
+====
+
+[fine and taxis]:
+	<balmy	0.0053	-0.0070>
+====
+
+[fine and reprimand]:
+	<alright	0.0445	-0.0053>
+	<appreciation	0.0125	-0.0468>
+	<appreciative	0.0107	-0.0474>
+	<approve	0.0163	-0.0684>
+	<beauty	0.0188	-0.0474>
+	<blemish	-0.0052	0.0058>
+	<blessing	0.0112	-0.0100>
+	<botch	-0.0087	0.0053>
+	<brilliance	0.0129	-0.0053>
+	<bully	0.0096	-0.0468>
+	<bungle	-0.0087	0.0053>
+	<champion	0.0131	-0.0100>
+	<choice	0.0201	-0.0053>
+	<classic	0.0070	-0.0053>
+	<clear	0.0081	-0.0084>
+	<corking	0.0096	-0.0053>
+	<disapprove	-0.0148	0.0232>
+	<fabulous	0.0119	-0.0053>
+	<famously	0.0108	-0.0053>
+	<favour	0.0136	-0.0453>
+	<form	0.0251	-0.0053>
+	<glorious	0.0113	-0.0053>
+	<glory	0.0104	-0.0474>
+	<gloss	0.0092	-0.0053>
+	<good	0.0308	-0.0468>
+	<great	0.0133	-0.0521>
+	<lion	0.0056	-0.0053>
+	<miserable	-0.0056	0.0063>
+	<nifty	0.0193	-0.0053>
+	<o.k.	0.0371	-0.0053>
+	<ok	0.0371	-0.0053>
+	<okay	0.0485	-0.0684>
+	<peachy	0.0096	-0.0053>
+	<pie	0.0109	-0.0474>
+	<pitiful	-0.0055	0.0053>
+	<polish	0.0168	-0.0474>
+	<prize	0.0130	-0.0500>
+	<quality	0.0113	-0.0053>
+	<radiance	0.0096	-0.0053>
+	<rotten	-0.0053	0.0058>
+	<sanction	0.0157	-0.0684>
+	<select	0.0105	-0.0053>
+	<shitty	-0.0055	0.0058>
+	<smashing	0.0096	-0.0053>
+	<splendid	0.0174	-0.0053>
+	<splendour	0.0096	-0.0053>
+	<stately	0.0086	-0.0053>
+	<tacky	-0.0052	0.0053>
+	<treasure	0.0113	-0.0053>
+	<value	0.0158	-0.0568>
+	<well	0.0306	-0.0053>
+	<wretched	-0.0056	0.0063>
+====
+
+[fine and surcharge]:
+	<aerial	0.0133	-0.0395>
+	<aery	0.0059	-0.0315>
+	<afloat	0.0050	-0.0234>
+	<agile	0.0068	-0.0298>
+	<agility	0.0059	-0.0234>
+	<airy	0.0067	-0.0363>
+	<alert	0.0062	-0.0234>
+	<alright	0.0445	-0.0081>
+	<amercement	0.0297	-0.0081>
+	<blemish	-0.0052	0.0073>
+	<bob	0.0091	-0.0226>
+	<buoy	0.0068	-0.0234>
+	<buoyancy	0.0082	-0.0210>
+	<buoyant	0.0082	-0.0290>
+	<clumsy	-0.0056	0.0065>
+	<cut	0.0050	-0.0121>
+	<delicate	0.0267	-0.0202>
+	<ethereal	0.0130	-0.0395>
+	<feathery	0.0058	-0.0234>
+	<film	0.0058	-0.0234>
+	<filmy	0.0050	-0.0315>
+	<fine	0.1534	-0.0153>
+	<fineness	0.0380	-0.0194>
+	<flimsy	0.0059	-0.0234>
+	<float	0.0061	-0.0306>
+	<floater	0.0059	-0.0234>
+	<floating	0.0059	-0.0234>
+	<floaty	0.0058	-0.0315>
+	<flossy	0.0065	-0.0315>
+	<fluffy	0.0062	-0.0298>
+	<foam	0.0058	-0.0234>
+	<fuzz	0.0050	-0.0234>
+	<gauze	0.0061	-0.0234>
+	<gauzy	0.0050	-0.0315>
+	<gleam	0.0062	-0.0065>
+	<go	0.0193	-0.0194>
+	<gossamer	0.0096	-0.0395>
+	<hover	0.0061	-0.0234>
+	<insubstantial	0.0053	-0.0065>
+	<lambency	0.0070	-0.0234>
+	<lambent	0.0070	-0.0234>
+	<levity	0.0080	-0.0210>
+	<light	0.0211	-0.0274>
+	<lightly	0.0093	-0.0290>
+	<lightness	0.0251	-0.0282>
+	<lightsome	0.0100	-0.0210>
+	<lightsomeness	0.0089	-0.0290>
+	<lightweight	0.0108	-0.0218>
+	<lump	-0.0056	0.0056>
+	<miserable	-0.0056	0.0113>
+	<mulct	0.0297	-0.0081>
+	<nimble	0.0173	-0.0298>
+	<nimbleness	0.0172	-0.0298>
+	<o.k.	0.0371	-0.0081>
+	<ok	0.0371	-0.0081>
+	<picture	0.0075	-0.0081>
+	<raft	0.0069	-0.0202>
+	<rare	0.0166	-0.0290>
+	<rarefied	0.0058	-0.0234>
+	<rareness	0.0163	-0.0290>
+	<rarity	0.0165	-0.0290>
+	<reduce	0.0093	-0.0306>
+	<sparing	0.0055	-0.0056>
+	<spiritual	0.0061	-0.0234>
+	<swinging	0.0107	-0.0056>
+	<tenuous	0.0113	-0.0210>
+	<thin	0.0110	-0.0226>
+	<thinly	0.0102	-0.0315>
+	<thinness	0.0109	-0.0234>
+	<ticket	0.0222	-0.0081>
+	<trim	0.0154	-0.0129>
+	<tripping	0.0059	-0.0315>
+	<waft	0.0064	-0.0234>
+	<weightless	0.0058	-0.0234>
+	<wretched	-0.0056	0.0113>
+====
+
+===> Questions: fine
+===>surcharge	[-0.0572]
+===>reprimand	[-0.0265]
+===>punishment	[-0.0214]
+===>fee	[-0.0198]
+===>penalty	[-0.0130]
+===>sentence	[-0.0117]
+===>restitution	[-0.0022]
+===>suspension	[-0.0006]
+===>taxis	[-0.0001]
+===>probation	[0.0000]
+[sure and glad]:
+	<ambivalent	-0.0104	0.0054>
+	<idea	-0.0062	0.0068>
+	<scrupulous	0.0060	-0.0097>
+====
+
+[sure and confident]:
+	<acceptance	-0.0062	0.0188>
+	<adventure	-0.0074	0.0143>
+	<agnostic	0.0060	-0.0112>
+	<agnosticism	0.0060	-0.0157>
+	<assume	-0.0060	0.0188>
+	<balls	0.0167	-0.0117>
+	<believable	-0.0058	0.0202>
+	<bullshit	0.0185	-0.0117>
+	<challenge	0.0181	-0.0126>
+	<close	0.0078	-0.0103>
+	<credence	-0.0064	0.0188>
+	<credibility	-0.0064	0.0188>
+	<credible	-0.0058	0.0202>
+	<credibleness	-0.0064	0.0188>
+	<credo	-0.0064	0.0188>
+	<creed	-0.0064	0.0188>
+	<denial	0.0165	-0.0121>
+	<denier	0.0163	-0.0126>
+	<deny	0.0181	-0.0126>
+	<dependence	-0.0092	0.0063>
+	<diffident	0.0161	-0.0170>
+	<disbelief	0.0181	-0.0215>
+	<disbelieve	0.0181	-0.0170>
+	<disbelieving	0.0181	-0.0126>
+	<discredit	0.0183	-0.0215>
+	<distrust	0.0181	-0.0170>
+	<distrustful	0.0181	-0.0126>
+	<doctrine	-0.0084	0.0188>
+	<dogma	-0.0064	0.0188>
+	<doubter	0.0161	-0.0215>
+	<doubting	0.0181	-0.0170>
+	<eh	0.0181	-0.0126>
+	<gamble	-0.0064	0.0179>
+	<hold	-0.0072	0.0161>
+	<idea	-0.0062	0.0193>
+	<impression	-0.0058	0.0188>
+	<incredulity	0.0181	-0.0170>
+	<incredulous	0.0181	-0.0126>
+	<infidel	0.0181	-0.0126>
+	<ism	-0.0084	0.0188>
+	<measured	0.0062	-0.0081>
+	<misgiving	0.0060	-0.0202>
+	<mistrust	0.0181	-0.0170>
+	<mistrustful	0.0181	-0.0126>
+	<mythical	-0.0078	0.0188>
+	<nihilism	0.0185	-0.0117>
+	<nihilist	0.0185	-0.0117>
+	<notion	-0.0056	0.0224>
+	<opinion	-0.0070	0.0188>
+	<philosophy	-0.0084	0.0188>
+	<plausible	-0.0080	0.0188>
+	<position	-0.0054	0.0206>
+	<preconception	-0.0052	0.0188>
+	<prepossession	-0.0052	0.0188>
+	<presume	-0.0068	0.0188>
+	<risk	-0.0175	0.0143>
+	<safe	0.0165	-0.0094>
+	<safely	0.0165	-0.0094>
+	<sceptic	0.0181	-0.0170>
+	<sceptical	0.0181	-0.0215>
+	<scepticism	0.0181	-0.0126>
+	<sentiment	-0.0064	0.0188>
+	<standpoint	-0.0064	0.0188>
+	<suicidal	-0.0054	0.0143>
+	<suspect	0.0183	-0.0215>
+	<suspicion	0.0189	-0.0211>
+	<tenet	-0.0064	0.0188>
+	<think	-0.0084	0.0188>
+	<thought	-0.0090	0.0193>
+	<trustful	-0.0064	0.0188>
+	<trusting	-0.0064	0.0188>
+	<um	0.0181	-0.0126>
+	<unbelief	0.0181	-0.0126>
+	<unbeliever	0.0181	-0.0126>
+	<unbelieving	0.0181	-0.0170>
+	<unwariness	-0.0058	0.0103>
+	<unwary	-0.0058	0.0058>
+	<view	-0.0054	0.0206>
+	<viewpoint	-0.0064	0.0188>
+====
+
+[sure and wont]:
+====
+
+[sure and lead]:
+	<bad	-0.0088	0.0075>
+	<badly	-0.0072	0.0060>
+	<beginner	-0.0058	0.0141>
+	<blow	-0.0070	0.0120>
+	<complete	0.0287	-0.0080>
+	<credo	-0.0064	0.0087>
+	<dynamite	-0.0054	0.0101>
+	<elephantine	-0.0072	0.0055>
+	<finish	0.0066	-0.0135>
+	<hulk	-0.0066	0.0062>
+	<idea	-0.0062	0.0123>
+	<misgiving	0.0060	-0.0060>
+	<novice	-0.0072	0.0131>
+	<open	-0.0088	0.0175>
+	<pull	-0.0056	0.0106>
+====
+
+[sure and didnt]:
+====
+
+[sure and wouldnt]:
+====
+
+[sure and cant]:
+	<accuracy	0.0056	-0.0236>
+	<accurate	0.0056	-0.0236>
+	<accurately	0.0056	-0.0236>
+	<adulterer	-0.0072	0.0071>
+	<adulterous	-0.0090	0.0606>
+	<adultery	-0.0072	0.0071>
+	<ambiguity	-0.0098	0.0157>
+	<ambiguous	-0.0120	0.0157>
+	<apostate	-0.0088	0.0071>
+	<armour	0.0157	-0.0079>
+	<armoured	0.0157	-0.0079>
+	<art	0.0275	-0.0079>
+	<authentic	0.0086	-0.0236>
+	<authenticity	0.0114	-0.0236>
+	<backyard	-0.0058	0.0055>
+	<bad	-0.0088	0.0197>
+	<badness	-0.0074	0.0173>
+	<belie	-0.0068	0.0071>
+	<betray	-0.0072	0.0071>
+	<betrayal	-0.0062	0.0071>
+	<betrayer	-0.0062	0.0071>
+	<blackleg	-0.0110	0.0268>
+	<boggle	-0.0088	0.0606>
+	<buffer	0.0157	-0.0079>
+	<casual	-0.0118	0.0055>
+	<certain	0.0948	-0.0213>
+	<certainly	0.1050	-0.0236>
+	<changeling	-0.0088	0.0071>
+	<collaborate	-0.0064	0.0071>
+	<collaboration	-0.0072	0.0071>
+	<collaborator	-0.0072	0.0071>
+	<conditional	-0.0108	0.0055>
+	<contingent	-0.0102	0.0063>
+	<correct	0.0084	-0.0315>
+	<correctness	0.0076	-0.0236>
+	<crack	0.0295	-0.0063>
+	<cryptic	-0.0114	0.0157>
+	<deceive	-0.0070	0.0252>
+	<defection	-0.0072	0.0071>
+	<definite	0.0249	-0.0236>
+	<dilemma	-0.0094	0.0055>
+	<disloyal	-0.0070	0.0071>
+	<disloyalty	-0.0072	0.0150>
+	<enigmatic	-0.0094	0.0157>
+	<equivocal	-0.0129	0.0157>
+	<express	0.0056	-0.0079>
+	<faithless	-0.0129	0.0071>
+	<faithlessly	-0.0149	0.0071>
+	<faithlessness	-0.0066	0.0252>
+	<false	-0.0163	0.0606>
+	<falsely	-0.0072	0.0071>
+	<falseness	-0.0131	0.0606>
+	<falsity	-0.0110	0.0606>
+	<fink	-0.0112	0.0071>
+	<flat	0.0080	-0.0071>
+	<frame	-0.0052	0.0606>
+	<frank	0.0050	-0.0315>
+	<genuine	0.0131	-0.0394>
+	<genuineness	0.0114	-0.0315>
+	<gospel	0.0187	-0.0236>
+	<grate	0.0163	-0.0071>
+	<hypothetical	-0.0108	0.0055>
+	<incompetent	-0.0080	0.0063>
+	<indefensible	-0.0074	0.0165>
+	<indefinite	-0.0108	0.0157>
+	<indistinct	-0.0102	0.0157>
+	<inept	-0.0070	0.0079>
+	<infidelity	-0.0088	0.0071>
+	<just	0.0088	-0.0213>
+	<lifeguard	0.0157	-0.0079>
+	<literal	0.0056	-0.0236>
+	<literally	0.0056	-0.0236>
+	<marginal	-0.0120	0.0063>
+	<mask	0.0177	-0.0079>
+	<mysterious	-0.0127	0.0157>
+	<mythical	-0.0078	0.0606>
+	<obnoxious	-0.0054	0.0165>
+	<obscure	-0.0098	0.0157>
+	<obscureness	-0.0112	0.0157>
+	<obscurity	-0.0088	0.0165>
+	<paradoxical	-0.0074	0.0087>
+	<perfidious	-0.0090	0.0606>
+	<perfidiousness	-0.0112	0.0071>
+	<perfidy	-0.0133	0.0071>
+	<perplexed	-0.0106	0.0071>
+	<plausible	-0.0080	0.0606>
+	<pretend	-0.0054	0.0606>
+	<problem	-0.0104	0.0055>
+	<protection	0.0159	-0.0079>
+	<protective	0.0157	-0.0079>
+	<provisional	-0.0108	0.0055>
+	<quandary	-0.0149	0.0055>
+	<questionable	-0.0098	0.0205>
+	<random	-0.0100	0.0102>
+	<ratter	-0.0082	0.0071>
+	<recreant	-0.0120	0.0071>
+	<regular	0.0052	-0.0079>
+	<reliable	0.0088	-0.0079>
+	<renegade	-0.0133	0.0071>
+	<right	0.0157	-0.0465>
+	<rightness	0.0056	-0.0315>
+	<rigorous	0.0056	-0.0236>
+	<safeguard	0.0157	-0.0079>
+	<scab	-0.0112	0.0102>
+	<sconce	0.0165	-0.0079>
+	<screen	0.0169	-0.0079>
+	<security	0.0157	-0.0079>
+	<shield	0.0157	-0.0079>
+	<shop	-0.0070	0.0071>
+	<sincerity	0.0094	-0.0236>
+	<slippery	-0.0090	0.0291>
+	<snake	-0.0068	0.0079>
+	<snitch	-0.0092	0.0071>
+	<snitcher	-0.0112	0.0071>
+	<sound	0.0070	-0.0236>
+	<soundness	0.0052	-0.0236>
+	<straight	0.0167	-0.0228>
+	<stumble	-0.0054	0.0165>
+	<suppositious	-0.0056	0.0606>
+	<supposititious	-0.0056	0.0606>
+	<sure	0.1723	-0.0063>
+	<surely	0.1030	-0.0079>
+	<top	0.0289	-0.0063>
+	<tortoise	0.0157	-0.0079>
+	<traitor	-0.0066	0.0071>
+	<traitorous	-0.0131	0.0071>
+	<traitorously	-0.0153	0.0071>
+	<treacherous	-0.0090	0.0071>
+	<treacherously	-0.0153	0.0071>
+	<treacherousness	-0.0072	0.0071>
+	<treachery	-0.0133	0.0071>
+	<treason	-0.0092	0.0071>
+	<treasonable	-0.0129	0.0071>
+	<treasonably	-0.0149	0.0071>
+	<treasonous	-0.0129	0.0071>
+	<true	0.0177	-0.0394>
+	<trueness	0.0080	-0.0315>
+	<truth	0.0151	-0.0472>
+	<uncertain	-0.0108	0.0157>
+	<uncertainty	-0.0060	0.0165>
+	<undefined	-0.0108	0.0157>
+	<undeniable	0.0247	-0.0236>
+	<unfaithful	-0.0171	0.0606>
+	<unfaithfulness	-0.0092	0.0071>
+	<unfit	-0.0052	0.0079>
+	<unfitness	-0.0052	0.0079>
+	<unmeasured	-0.0108	0.0055>
+	<unprofessional	-0.0056	0.0165>
+	<unreliable	-0.0118	0.0102>
+	<unsealed	-0.0199	0.0079>
+	<unsettled	-0.0108	0.0055>
+	<untrue	-0.0090	0.0606>
+	<vague	-0.0149	0.0157>
+	<vagueness	-0.0100	0.0157>
+	<valid	0.0056	-0.0236>
+	<veiled	-0.0094	0.0157>
+	<veracity	0.0064	-0.0236>
+	<very	0.0060	-0.0299>
+	<weasel	-0.0072	0.0071>
+====
+
+[sure and hopeful]:
+	<gamble	-0.0064	0.0419>
+	<inevitable	0.0241	-0.0581>
+	<open	-0.0088	0.0058>
+	<unavoidable	0.0241	-0.0581>
+====
+
+===> Questions: sure
+===>cant	[-0.0586]
+===>confident	[-0.0445]
+===>lead	[-0.0040]
+===>hopeful	[-0.0033]
+===>glad	[-0.0004]
+===>q	[0.0000]
+===>wont	[0.0000]
+===>didnt	[0.0000]
+===>ldquo	[0.0000]
+===>wouldnt	[0.0000]
+[cold and chill]:
+	<endure	-0.0069	0.0052>
+	<set	-0.0080	0.0107>
+====
+
+[cold and cough]:
+	<cook	-0.0061	0.0144>
+	<fresh	0.0190	-0.0378>
+	<freshly	0.0165	-0.0389>
+	<go	0.0127	-0.0289>
+====
+
+[cold and flu]:
+	<cook	-0.0061	0.0130>
+	<fresh	0.0190	-0.0540>
+	<freshly	0.0165	-0.0550>
+	<go	0.0127	-0.0460>
+====
+
+[cold and fever]:
+	<afire	-0.0053	0.0090>
+	<aflame	-0.0073	0.0090>
+	<alive	-0.0069	0.0057>
+	<animation	-0.0063	0.0439>
+	<ardent	-0.0149	0.0094>
+	<ardour	-0.0073	0.0090>
+	<calm	0.0069	-0.0392>
+	<calmness	0.0059	-0.0307>
+	<combustion	-0.0073	0.0443>
+	<cook	-0.0061	0.0071>
+	<cool	0.0459	-0.0151>
+	<coolness	0.0455	-0.0255>
+	<detached	0.0076	-0.0170>
+	<detachment	0.0055	-0.0170>
+	<devotion	-0.0053	0.0080>
+	<dull	0.0129	-0.0132>
+	<easy	0.0061	-0.0203>
+	<flat	0.0106	-0.0222>
+	<fresh	0.0190	-0.0269>
+	<freshly	0.0165	-0.0283>
+	<go	0.0127	-0.0203>
+	<heart	-0.0063	0.0085>
+	<indifference	0.0053	-0.0274>
+	<life	-0.0082	0.0443>
+	<live	-0.0082	0.0090>
+	<passive	0.0069	-0.0165>
+	<phlegmatic	0.0069	-0.0165>
+	<phlegmy	0.0069	-0.0160>
+	<practice	-0.0076	0.0052>
+	<pushing	-0.0053	0.0052>
+	<quiet	0.0084	-0.0184>
+	<relax	0.0069	-0.0137>
+	<renascent	-0.0067	0.0057>
+	<repose	0.0186	-0.0151>
+	<sedate	0.0059	-0.0160>
+	<spirit	-0.0073	0.0066>
+	<spiritless	0.0055	-0.0170>
+	<still	0.0098	-0.0090>
+	<subdued	0.0055	-0.0146>
+	<sweat	-0.0053	0.0075>
+	<torpid	0.0096	-0.0160>
+	<untouched	0.0067	-0.0165>
+	<warm	-0.0080	0.0118>
+	<warmly	-0.0061	0.0118>
+====
+
+[cold and headache]:
+	<chafe	-0.0065	0.0476>
+	<easy	0.0061	-0.0203>
+	<flat	0.0106	-0.0113>
+	<free	0.0096	-0.0108>
+	<grease	0.0157	-0.0132>
+	<involved	-0.0057	0.0061>
+	<light	0.0078	-0.0349>
+	<rest	0.0214	-0.0094>
+	<spare	0.0063	-0.0108>
+	<squeeze	-0.0078	0.0396>
+====
+
+[cold and weather]:
+	<abeyance	0.0071	-0.0098>
+	<arrest	0.0090	-0.0137>
+	<assiduous	-0.0053	0.0314>
+	<associate	-0.0094	0.0086>
+	<becalm	0.0073	-0.0108>
+	<befriend	-0.0055	0.0076>
+	<blooming	-0.0051	0.0060>
+	<break	0.0131	-0.0063>
+	<breakdown	0.0202	-0.0073>
+	<bug	0.0180	-0.0070>
+	<catch	0.0167	-0.0105>
+	<cease	0.0159	-0.0200>
+	<check	0.0069	-0.0175>
+	<clammy	0.0241	-0.0105>
+	<companion	-0.0073	0.0076>
+	<cut	0.0124	-0.0060>
+	<damp	0.0098	-0.0175>
+	<dampen	0.0067	-0.0102>
+	<deadlock	0.0051	-0.0149>
+	<discontinuance	0.0065	-0.0117>
+	<end	0.0304	-0.0098>
+	<endure	-0.0069	0.1587>
+	<feather	0.0063	-0.0089>
+	<finish	0.0155	-0.0067>
+	<foil	0.0051	-0.0114>
+	<forbearance	0.0063	-0.0111>
+	<freeze	0.0392	-0.0060>
+	<friend	-0.0055	0.0076>
+	<heart	-0.0063	0.0092>
+	<hinder	0.0055	-0.0086>
+	<impediment	0.0071	-0.0063>
+	<inactivation	0.0063	-0.0111>
+	<lapse	0.0065	-0.0067>
+	<living	-0.0055	0.0060>
+	<muddy	0.0063	-0.0184>
+	<on	-0.0053	0.0314>
+	<pal	-0.0137	0.0076>
+	<perfect	0.0065	-0.0054>
+	<preventive	0.0053	-0.0073>
+	<progressive	0.0151	-0.0076>
+	<revive	-0.0065	0.0067>
+	<set	-0.0080	0.0070>
+	<sidekick	-0.0137	0.0076>
+	<silence	0.0263	-0.0092>
+	<sloppiness	0.0055	-0.0067>
+	<sloppy	0.0055	-0.0225>
+	<snub	0.0257	-0.0086>
+	<soft	0.0071	-0.0073>
+	<sop	0.0057	-0.0143>
+	<spirit	-0.0073	0.0063>
+	<splash	0.0051	-0.0108>
+	<stagnancy	0.0086	-0.0127>
+	<stagnation	0.0086	-0.0127>
+	<stand	0.0067	-0.0098>
+	<stick	0.0069	-0.0073>
+	<stop	0.0120	-0.0270>
+	<sun	-0.0063	0.0333>
+	<suspension	0.0076	-0.0156>
+	<swamp	0.0055	-0.0140>
+	<swimming	0.0155	-0.0102>
+	<torrid	-0.0149	0.0333>
+	<train	-0.0086	0.0286>
+	<warm	-0.0080	0.0051>
+	<watery	0.0169	-0.0054>
+====
+
+[cold and diarrhea]:
+	<convalescent	0.0098	-0.0333>
+	<cruel	0.0057	-0.0333>
+	<dead	0.0147	-0.0333>
+	<down	0.0218	-0.0333>
+	<flat	0.0106	-0.0333>
+	<flush	0.0102	-0.0333>
+	<fresh	0.0190	-0.0333>
+	<freshly	0.0165	-0.0333>
+	<go	0.0127	-0.0333>
+	<grievous	0.0067	-0.0333>
+	<hard	0.0059	-0.0333>
+	<harsh	0.0076	-0.0333>
+	<harshness	0.0067	-0.0333>
+	<oppress	0.0247	-0.0333>
+	<perfect	0.0065	-0.0333>
+	<rigour	0.0382	-0.0333>
+	<rude	0.0178	-0.0333>
+	<rudeness	0.0151	-0.0333>
+	<rugged	0.0067	-0.0333>
+	<sharp	0.0296	-0.0333>
+	<sharpness	0.0257	-0.0333>
+	<snowy	0.0241	-0.0333>
+	<square	0.0059	-0.0333>
+	<stay	0.0061	-0.0333>
+	<stiff	0.0327	-0.0333>
+	<strangle	0.0145	-0.0333>
+	<sturdy	0.0153	-0.0333>
+	<subject	0.0147	-0.0333>
+====
+
+[cold and bronchitis]:
+	<caustic	-0.0051	0.0050>
+	<china	-0.0051	0.0050>
+	<cook	-0.0061	0.0163>
+	<fresh	0.0190	-0.0425>
+	<freshly	0.0165	-0.0438>
+	<go	0.0127	-0.0325>
+====
+
+[cold and infection]:
+	<address	-0.0059	0.0090>
+	<anneal	-0.0053	0.0097>
+	<cook	-0.0061	0.0090>
+	<decrepit	0.0053	-0.0125>
+	<fresh	0.0190	-0.0174>
+	<freshly	0.0165	-0.0194>
+	<go	0.0127	-0.0146>
+	<live	-0.0082	0.0069>
+	<living	-0.0055	0.0062>
+	<obsolete	0.0065	-0.0090>
+	<pathetic	0.0057	-0.0125>
+	<prime	-0.0059	0.0056>
+	<revive	-0.0065	0.0056>
+	<unarmed	0.0127	-0.0201>
+	<wane	0.0059	-0.0174>
+	<weak	0.0061	-0.0076>
+====
+
+===> Questions: cold
+===>weather	[-0.0238]
+===>fever	[-0.0132]
+===>diarrhea	[-0.0105]
+===>headache	[-0.0040]
+===>infection	[-0.0034]
+===>flu	[-0.0032]
+===>bronchitis	[-0.0025]
+===>cough	[-0.0023]
+===>chill	[-0.0004]
+===>pneumonia	[0.0000]
+[authentic and genuine]:
+====
+
+[authentic and sumptuous]:
+	<break	0.0080	-0.0106>
+	<cracker	0.0050	-0.0070>
+	<doctor	-0.0075	0.0056>
+	<dolly	-0.0057	0.0345>
+	<double	-0.0057	0.0056>
+	<plain	0.0185	-0.0197>
+	<plainly	0.0180	-0.0165>
+	<racket	-0.0077	0.0060>
+====
+
+[authentic and exquisite]:
+	<bad	-0.0050	0.0210>
+	<craftiness	-0.0093	0.0056>
+	<crafty	-0.0093	0.0056>
+	<cunning	-0.0093	0.0053>
+	<doctor	-0.0075	0.0092>
+	<dolly	-0.0057	0.0188>
+	<double	-0.0057	0.0332>
+	<fix	-0.0080	0.0066>
+	<hollow	-0.0059	0.0328>
+	<plainly	0.0180	-0.0062>
+	<racket	-0.0077	0.0053>
+	<sharp	-0.0064	0.0544>
+====
+
+[authentic and compelling]:
+	<break	0.0080	-0.0055>
+	<cheap	-0.0100	0.0152>
+	<check	0.0303	-0.0124>
+	<choice	0.0057	-0.0103>
+	<elect	0.0050	-0.0138>
+	<frank	0.0474	-0.0069>
+	<job	-0.0050	0.0062>
+	<open	0.0203	-0.0062>
+	<ordain	0.0073	-0.0131>
+	<outspoken	0.0180	-0.0069>
+	<outspokenness	0.0173	-0.0069>
+	<presumption	0.0105	-0.0255>
+	<sharp	-0.0064	0.0055>
+	<sycophant	-0.0075	0.0255>
+	<unfasten	0.0052	-0.0069>
+	<unreserved	0.0173	-0.0069>
+====
+
+[authentic and distinctive]:
+	<bold	0.0109	-0.0500>
+	<character	0.0052	-0.0500>
+====
+
+[authentic and fake]:
+	<aberrance	-0.0114	0.0135>
+	<aberrancy	-0.0114	0.0135>
+	<aberrant	-0.0068	0.0135>
+	<aberration	-0.0114	0.0130>
+	<abuse	-0.0066	0.0184>
+	<accuracy	0.0321	-0.0386>
+	<accurate	0.0321	-0.0386>
+	<accurately	0.0321	-0.0386>
+	<actual	0.0321	-0.0478>
+	<actuality	0.0319	-0.0386>
+	<adulterer	-0.0087	0.0087>
+	<adulterous	-0.0109	0.0415>
+	<adultery	-0.0087	0.0087>
+	<adventurer	-0.0091	0.0338>
+	<aggrieve	-0.0068	0.0130>
+	<alias	-0.0057	0.0386>
+	<amiss	-0.0068	0.0130>
+	<apostate	-0.0107	0.0092>
+	<aright	0.0617	-0.0435>
+	<artificial	-0.0068	0.0372>
+	<artificiality	-0.0068	0.0372>
+	<assumed	-0.0114	0.0855>
+	<authentic	0.1410	-0.0386>
+	<authenticate	0.0617	-0.0386>
+	<authenticity	0.0426	-0.0386>
+	<available	-0.0091	0.0338>
+	<axiom	0.0319	-0.0386>
+	<bad	-0.0050	0.0164>
+	<badness	-0.0075	0.0140>
+	<base	-0.0052	0.0150>
+	<baseness	-0.0134	0.0135>
+	<bastard	-0.0153	0.3290>
+	<bent	-0.0077	0.0353>
+	<betray	-0.0087	0.0087>
+	<betrayal	-0.0073	0.0087>
+	<betrayer	-0.0073	0.0087>
+	<bilk	-0.0082	0.0343>
+	<black	-0.0073	0.0121>
+	<blackguard	-0.0062	0.0135>
+	<blackleg	-0.0132	0.0357>
+	<blameworthiness	-0.0066	0.0140>
+	<blunt	0.0185	-0.0232>
+	<boggle	-0.0052	0.0382>
+	<bogus	-0.0137	0.3271>
+	<canard	-0.0066	0.0372>
+	<candid	0.0499	-0.0435>
+	<candidly	0.0483	-0.0483>
+	<candidness	0.0187	-0.0242>
+	<candour	0.0515	-0.0478>
+	<cant	-0.0068	0.0372>
+	<celluloid	-0.0068	0.0372>
+	<censurable	-0.0066	0.0135>
+	<certain	0.0431	-0.0353>
+	<certainly	0.0333	-0.0382>
+	<changeling	-0.0082	0.0087>
+	<cheap	-0.0100	0.0135>
+	<cheat	-0.0180	0.0565>
+	<cheater	-0.0091	0.0338>
+	<cheating	-0.0091	0.0338>
+	<cheesy	-0.0068	0.0372>
+	<chicane	-0.0137	0.0338>
+	<chicanery	-0.0112	0.0362>
+	<clean	0.0301	-0.0188>
+	<collaborate	-0.0077	0.0087>
+	<collaboration	-0.0087	0.0087>
+	<collaborator	-0.0087	0.0087>
+	<confess	0.0189	-0.0126>
+	<conscienceless	-0.0091	0.0130>
+	<contemptibility	-0.0134	0.0140>
+	<cook	-0.0082	0.0372>
+	<correct	0.0620	-0.0435>
+	<correctly	0.0617	-0.0435>
+	<correctness	0.0620	-0.0386>
+	<corrupt	-0.0189	0.0406>
+	<corruptibility	-0.0091	0.0338>
+	<corruption	-0.0103	0.0348>
+	<corruptness	-0.0109	0.0348>
+	<counterfeit	-0.0068	0.1821>
+	<craftiness	-0.0093	0.0372>
+	<crafty	-0.0093	0.0372>
+	<crime	-0.0084	0.0425>
+	<criminal	-0.0098	0.0164>
+	<criminality	-0.0064	0.0164>
+	<crook	-0.0128	0.0367>
+	<crooked	-0.0087	0.0367>
+	<crookedness	-0.0112	0.0367>
+	<cross	-0.0066	0.0338>
+	<debauch	-0.0173	0.0145>
+	<debauched	-0.0059	0.0145>
+	<deceit	-0.0114	0.0372>
+	<deceitful	-0.0082	0.0372>
+	<deceitfulness	-0.0068	0.0372>
+	<deceive	-0.0087	0.0348>
+	<deception	-0.0091	0.0372>
+	<deceptive	-0.0089	0.0372>
+	<defection	-0.0087	0.0087>
+	<definite	0.0344	-0.0382>
+	<delinquency	-0.0064	0.0164>
+	<delinquent	-0.0064	0.0140>
+	<dependability	0.0123	-0.0097>
+	<depraved	-0.0064	0.0135>
+	<depravity	-0.0087	0.0135>
+	<despicability	-0.0134	0.0140>
+	<despicableness	-0.0134	0.0140>
+	<devious	-0.0059	0.0377>
+	<dishonest	-0.0114	0.0565>
+	<dishonesty	-0.0091	0.0338>
+	<disinformation	-0.0068	0.0372>
+	<disingenuous	-0.0068	0.0372>
+	<disingenuousness	-0.0068	0.0372>
+	<disinterested	0.0194	-0.0145>
+	<disloyal	-0.0087	0.0087>
+	<disloyalty	-0.0087	0.0135>
+	<dissemble	-0.0125	0.0386>
+	<dissembler	-0.0125	0.1353>
+	<dissimulator	-0.0125	0.1353>
+	<distort	-0.0103	0.0333>
+	<distortion	-0.0057	0.0333>
+	<doctor	-0.0075	0.0377>
+	<dodge	-0.0082	0.0338>
+	<dodger	-0.0077	0.0343>
+	<dolly	-0.0057	0.0382>
+	<double	-0.0057	0.0425>
+	<downright	0.0474	-0.0377>
+	<duplicity	-0.0091	0.0372>
+	<earnest	0.0175	-0.0145>
+	<effectively	0.0321	-0.0386>
+	<empiric	-0.0068	0.0372>
+	<equivocation	-0.0089	0.0372>
+	<error	-0.0089	0.0159>
+	<ersatz	-0.0068	0.0372>
+	<essentially	0.0319	-0.0386>
+	<evasion	-0.0084	0.0382>
+	<evasive	-0.0068	0.0372>
+	<evil	-0.0100	0.0150>
+	<evildoer	-0.0087	0.0135>
+	<evildoing	-0.0087	0.0135>
+	<evilness	-0.0064	0.0135>
+	<exaggerate	-0.0089	0.0372>
+	<exaggeration	-0.0052	0.0324>
+	<fable	-0.0066	0.0372>
+	<fabricate	-0.0064	0.0372>
+	<fabrication	-0.0109	0.0372>
+	<fact	0.0467	-0.0386>
+	<factual	0.0617	-0.0386>
+	<fair	0.0246	-0.0174>
+	<fairly	0.0467	-0.0237>
+	<fairness	0.0194	-0.0135>
+	<faithless	-0.0153	0.0092>
+	<faithlessly	-0.0175	0.0092>
+	<faithlessness	-0.0084	0.0348>
+	<fake	-0.0364	0.4430>
+	<faker	-0.0157	0.0565>
+	<fallacious	-0.0112	0.0159>
+	<false	-0.0267	0.0899>
+	<falsehood	-0.0082	0.0324>
+	<falsely	-0.0087	0.0087>
+	<falseness	-0.0155	0.0415>
+	<falsify	-0.0128	0.0324>
+	<falsity	-0.0155	0.0415>
+	<fault	-0.0080	0.0155>
+	<faulty	-0.0052	0.0155>
+	<feign	-0.0159	0.0855>
+	<felony	-0.0066	0.0155>
+	<fiction	-0.0114	0.0372>
+	<fictitious	-0.0137	0.0855>
+	<fictive	-0.0068	0.0483>
+	<fiddle	-0.0080	0.0382>
+	<fix	-0.0080	0.0348>
+	<flagitious	-0.0091	0.0130>
+	<flash	-0.0057	0.0372>
+	<flat	0.0196	-0.0135>
+	<fleece	-0.0091	0.0338>
+	<foul	-0.0052	0.0222>
+	<foulness	-0.0059	0.0140>
+	<frailty	-0.0087	0.0130>
+	<frame	-0.0064	0.0372>
+	<frank	0.0474	-0.0435>
+	<frankly	0.0467	-0.0483>
+	<frankness	0.0467	-0.0531>
+	<fraud	-0.0180	0.0565>
+	<fraudulence	-0.0137	0.0565>
+	<fraudulent	-0.0112	0.0565>
+	<fudge	-0.0066	0.0372>
+	<garble	-0.0103	0.0324>
+	<genuine	0.0859	-0.0483>
+	<genuineness	0.0565	-0.0435>
+	<gospel	0.0421	-0.0382>
+	<graft	-0.0087	0.0338>
+	<grieve	-0.0062	0.0159>
+	<griffin	0.0319	-0.0386>
+	<guile	-0.0159	0.0372>
+	<harm	-0.0062	0.0135>
+	<harmful	-0.0062	0.0130>
+	<heinous	-0.0087	0.0140>
+	<heinousness	-0.0064	0.0140>
+	<historical	0.0617	-0.0372>
+	<hollow	-0.0059	0.0377>
+	<honest	0.0487	-0.0386>
+	<honestly	0.0467	-0.0483>
+	<honesty	0.0472	-0.0386>
+	<honour	0.0337	-0.0145>
+	<humbug	-0.0068	0.0372>
+	<hustle	-0.0084	0.0338>
+	<hypocrisy	-0.0068	0.0372>
+	<hypocrite	-0.0137	0.1338>
+	<hypocritical	-0.0068	0.0372>
+	<ignominious	-0.0089	0.0140>
+	<illegal	-0.0066	0.0155>
+	<illegality	-0.0066	0.0155>
+	<imitation	-0.0091	0.0372>
+	<immoral	-0.0064	0.0135>
+	<immorality	-0.0109	0.0135>
+	<impartiality	0.0187	-0.0145>
+	<impersonation	-0.0068	0.0372>
+	<impersonator	-0.0068	0.0372>
+	<impostor	-0.0137	0.0372>
+	<imposture	-0.0068	0.0372>
+	<improbity	-0.0091	0.0338>
+	<improper	-0.0068	0.0184>
+	<improperness	-0.0087	0.0140>
+	<impropriety	-0.0068	0.0140>
+	<incorrect	-0.0089	0.0159>
+	<incorrectness	-0.0068	0.0130>
+	<incorrigible	-0.0059	0.0164>
+	<incorruptness	0.0185	-0.0145>
+	<indefensible	-0.0087	0.0130>
+	<infidelity	-0.0107	0.0092>
+	<insidious	-0.0068	0.0386>
+	<insincere	-0.0068	0.0372>
+	<insincerity	-0.0091	0.0565>
+	<integrity	0.0285	-0.0145>
+	<invention	-0.0062	0.0377>
+	<irregular	-0.0057	0.0174>
+	<irregularity	-0.0059	0.0155>
+	<job	-0.0050	0.0343>
+	<jolly	0.0050	-0.0087>
+	<juggle	-0.0068	0.0372>
+	<just	0.0629	-0.0406>
+	<knave	-0.0137	0.0338>
+	<knavish	-0.0130	0.0348>
+	<lamb	-0.0073	0.0338>
+	<lawless	-0.0066	0.0155>
+	<lawlessness	-0.0089	0.0367>
+	<legit	0.0517	-0.0386>
+	<legitimacy	0.0415	-0.0435>
+	<legitimate	0.0435	-0.0386>
+	<liar	-0.0091	0.0372>
+	<lie	-0.0109	0.0372>
+	<literal	0.0321	-0.0386>
+	<literally	0.0321	-0.0386>
+	<low	-0.0057	0.0140>
+	<lurk	-0.0080	0.0338>
+	<lying	-0.0068	0.0372>
+	<malpractice	-0.0066	0.0155>
+	<mendacious	-0.0068	0.0372>
+	<mendacity	-0.0068	0.0372>
+	<meretricious	-0.0091	0.0372>
+	<misbehaviour	-0.0089	0.0130>
+	<misdeed	-0.0089	0.0155>
+	<misdemeanour	-0.0066	0.0155>
+	<misinformation	-0.0068	0.0372>
+	<misleading	-0.0066	0.0372>
+	<misreport	-0.0059	0.0324>
+	<misrepresentation	-0.0082	0.0324>
+	<misstatement	-0.0068	0.0372>
+	<misstep	-0.0068	0.0130>
+	<naughty	-0.0062	0.0135>
+	<nepotism	-0.0091	0.0357>
+	<obnoxious	-0.0064	0.0130>
+	<offence	-0.0080	0.0155>
+	<offend	-0.0107	0.0164>
+	<offensive	-0.0084	0.0140>
+	<open	0.0203	-0.0121>
+	<openly	0.0171	-0.0145>
+	<openness	0.0185	-0.0145>
+	<outrage	-0.0089	0.0159>
+	<outrageous	-0.0066	0.0140>
+	<outrageousness	-0.0068	0.0130>
+	<outspoken	0.0180	-0.0242>
+	<outspokenness	0.0173	-0.0145>
+	<overstate	-0.0068	0.0372>
+	<painted	-0.0068	0.0372>
+	<palmer	-0.0091	0.0338>
+	<peccant	-0.0064	0.0135>
+	<perfidious	-0.0087	0.0415>
+	<perfidiousness	-0.0132	0.0087>
+	<perfidy	-0.0155	0.0087>
+	<perjury	-0.0068	0.0372>
+	<perverse	-0.0084	0.0159>
+	<perverseness	-0.0091	0.0130>
+	<perversity	-0.0091	0.0130>
+	<pervert	-0.0182	0.0372>
+	<perverted	-0.0091	0.0135>
+	<pettifog	-0.0091	0.0343>
+	<pettifoggery	-0.0091	0.0343>
+	<phoney	-0.0205	0.3271>
+	<phony	-0.0159	0.2899>
+	<plain	0.0185	-0.0174>
+	<plainly	0.0180	-0.0184>
+	<pretence	-0.0068	0.0372>
+	<pretend	-0.0137	0.0372>
+	<pretended	-0.0114	0.0855>
+	<pretender	-0.0251	0.1338>
+	<pretext	-0.0057	0.0386>
+	<pretty	0.0087	-0.0077>
+	<prevarication	-0.0137	0.0565>
+	<prevaricator	-0.0091	0.0372>
+	<probity	0.0285	-0.0145>
+	<proved	0.0319	-0.0386>
+	<pseud	-0.0137	0.0372>
+	<pseudo	-0.0137	0.0372>
+	<putrid	-0.0062	0.0145>
+	<questionable	-0.0064	0.0159>
+	<quibble	-0.0089	0.0372>
+	<racket	-0.0077	0.0367>
+	<racketeer	-0.0112	0.0367>
+	<racketeering	-0.0089	0.0367>
+	<ramp	-0.0084	0.0338>
+	<rascal	-0.0137	0.0338>
+	<rascality	-0.0112	0.0338>
+	<rascally	-0.0112	0.0338>
+	<ratter	-0.0096	0.0087>
+	<real	0.0620	-0.0473>
+	<realistic	0.0319	-0.0386>
+	<realistically	0.0319	-0.0386>
+	<reality	0.0467	-0.0386>
+	<really	0.0319	-0.0483>
+	<recreant	-0.0155	0.0092>
+	<reliability	0.0285	-0.0193>
+	<reliable	0.0968	-0.0193>
+	<reliableness	0.0171	-0.0193>
+	<renegade	-0.0155	0.0087>
+	<reprehensible	-0.0089	0.0140>
+	<ridge	0.0617	-0.0386>
+	<rig	-0.0114	0.0565>
+	<right	0.0665	-0.0527>
+	<rightness	0.0631	-0.0435>
+	<rigorous	0.0321	-0.0386>
+	<rigorousness	0.0319	-0.0386>
+	<rogue	-0.0134	0.0338>
+	<roguery	-0.0089	0.0338>
+	<roguish	-0.0112	0.0338>
+	<rook	-0.0114	0.0338>
+	<round	0.0185	-0.0082>
+	<scab	-0.0132	0.0116>
+	<scabby	-0.0062	0.0140>
+	<scandalise	-0.0091	0.0130>
+	<scrupulous	0.0467	-0.0145>
+	<shabbiness	-0.0062	0.0135>
+	<shady	-0.0107	0.0338>
+	<sham	-0.0296	0.1821>
+	<shameful	-0.0089	0.0140>
+	<shammer	-0.0159	0.0372>
+	<shark	-0.0091	0.0338>
+	<sharp	-0.0064	0.0348>
+	<shop	-0.0082	0.0087>
+	<simulate	-0.0091	0.0855>
+	<sin	-0.0087	0.0135>
+	<sincere	0.0467	-0.0435>
+	<sincerity	0.0565	-0.0386>
+	<sinfulness	-0.0084	0.0140>
+	<single	0.0198	-0.0145>
+	<sinner	-0.0087	0.0135>
+	<skulduggery	-0.0114	0.0338>
+	<slippery	-0.0073	0.0372>
+	<snake	-0.0087	0.0097>
+	<snitch	-0.0109	0.0087>
+	<snitcher	-0.0132	0.0087>
+	<sordidness	-0.0155	0.0150>
+	<sound	0.0540	-0.0382>
+	<soundness	0.0476	-0.0386>
+	<spicy	-0.0091	0.0130>
+	<spurious	-0.0068	0.0372>
+	<spuriousness	-0.0068	0.0372>
+	<square	0.0207	-0.0087>
+	<steadfast	0.0285	-0.0145>
+	<story	-0.0114	0.0372>
+	<storyteller	-0.0068	0.0372>
+	<straight	0.0861	-0.0382>
+	<straightforward	0.0175	-0.0145>
+	<straightness	0.0763	-0.0386>
+	<stumble	-0.0098	0.0135>
+	<suppositious	-0.0091	0.0372>
+	<supposititious	-0.0091	0.0372>
+	<swindle	-0.0112	0.0338>
+	<sycophant	-0.0075	0.0338>
+	<tale	-0.0114	0.0372>
+	<tamper	-0.0091	0.0338>
+	<tarradiddle	-0.0089	0.0372>
+	<tenable	0.0335	-0.0386>
+	<theft	-0.0091	0.0338>
+	<tortuous	-0.0068	0.0372>
+	<tortuousness	-0.0091	0.0391>
+	<traitor	-0.0087	0.0087>
+	<traitorous	-0.0155	0.0087>
+	<traitorously	-0.0178	0.0087>
+	<transgression	-0.0084	0.0159>
+	<treacherous	-0.0107	0.0087>
+	<treacherously	-0.0175	0.0087>
+	<treacherousness	-0.0084	0.0087>
+	<treachery	-0.0155	0.0087>
+	<treason	-0.0109	0.0087>
+	<treasonable	-0.0155	0.0087>
+	<treasonably	-0.0178	0.0087>
+	<treasonous	-0.0155	0.0087>
+	<trespass	-0.0075	0.0159>
+	<trespasser	-0.0064	0.0155>
+	<trickery	-0.0159	0.0338>
+	<tricksy	-0.0107	0.0372>
+	<trip	-0.0082	0.0130>
+	<true	0.0861	-0.0483>
+	<trueness	0.0763	-0.0435>
+	<truism	0.0319	-0.0386>
+	<trustiness	0.0171	-0.0193>
+	<trustworthiness	0.0285	-0.0193>
+	<trustworthy	0.0380	-0.0193>
+	<trusty	0.0385	-0.0193>
+	<truth	0.0567	-0.0531>
+	<truthful	0.0467	-0.0386>
+	<truthfulness	0.0467	-0.0386>
+	<turpitude	-0.0064	0.0135>
+	<twist	-0.0059	0.0324>
+	<unacceptable	-0.0066	0.0135>
+	<unbecoming	-0.0068	0.0135>
+	<uncertainty	-0.0080	0.0126>
+	<unchristian	-0.0066	0.0140>
+	<unclean	-0.0059	0.0140>
+	<uncleanliness	-0.0059	0.0140>
+	<unconscionable	-0.0089	0.0135>
+	<undeniable	0.0344	-0.0382>
+	<undue	-0.0089	0.0135>
+	<unethical	-0.0068	0.0130>
+	<unfaithful	-0.0178	0.0415>
+	<unfaithfulness	-0.0109	0.0087>
+	<unfeigned	0.0467	-0.0386>
+	<unjust	-0.0091	0.0357>
+	<unjustified	-0.0066	0.0184>
+	<unlawful	-0.0066	0.0155>
+	<unprincipled	-0.0064	0.0135>
+	<unprofessional	-0.0055	0.0135>
+	<unregenerate	-0.0055	0.0140>
+	<unreliable	-0.0107	0.0106>
+	<unrepentant	-0.0066	0.0135>
+	<unreserved	0.0173	-0.0145>
+	<unscrupulous	-0.0068	0.0130>
+	<untrue	-0.0087	0.0415>
+	<untruth	-0.0091	0.0372>
+	<untruthful	-0.0068	0.0372>
+	<untruthfulness	-0.0068	0.0372>
+	<unwarrantable	-0.0068	0.0184>
+	<unworthy	-0.0066	0.0188>
+	<upright	0.0465	-0.0145>
+	<valid	0.0412	-0.0386>
+	<validity	0.0401	-0.0386>
+	<venal	-0.0091	0.0338>
+	<venality	-0.0091	0.0338>
+	<veracious	0.0761	-0.0386>
+	<veracity	0.0469	-0.0386>
+	<verbal	-0.0052	0.0372>
+	<verifiable	0.0319	-0.0386>
+	<verified	0.0319	-0.0386>
+	<verify	0.0319	-0.0435>
+	<veritable	0.0617	-0.0386>
+	<verity	0.0319	-0.0435>
+	<very	0.0638	-0.0425>
+	<vice	-0.0064	0.0150>
+	<vicious	-0.0107	0.0155>
+	<viciousness	-0.0064	0.0140>
+	<villain	-0.0068	0.0130>
+	<villainous	-0.0064	0.0135>
+	<virtue	0.0501	-0.0232>
+	<virtuous	0.0467	-0.0188>
+	<virtuousness	0.0465	-0.0193>
+	<wangle	-0.0105	0.0338>
+	<weakness	-0.0059	0.0159>
+	<weasel	-0.0087	0.0087>
+	<whoreson	-0.0089	0.0618>
+	<wicked	-0.0084	0.0140>
+	<wickedness	-0.0132	0.0135>
+	<wile	-0.0114	0.0338>
+	<wrong	-0.0121	0.0217>
+	<wrongdoer	-0.0062	0.0135>
+	<wrongfulness	-0.0089	0.0155>
+====
+
+[authentic and soulful]:
+====
+
+[authentic and traditional]:
+	<ace	0.0068	-0.0100>
+	<base	-0.0052	0.0714>
+	<check	0.0303	-0.0100>
+	<crack	0.0055	-0.0500>
+	<doctor	-0.0075	0.0086>
+	<double	-0.0057	0.0714>
+	<fiddle	-0.0080	0.0714>
+	<fix	-0.0080	0.0100>
+	<hollow	-0.0059	0.0086>
+	<invention	-0.0062	0.0714>
+	<irregular	-0.0057	0.0057>
+	<irregularity	-0.0059	0.0057>
+	<low	-0.0057	0.0114>
+	<racket	-0.0077	0.0071>
+	<sharp	-0.0064	0.0271>
+	<slippery	-0.0073	0.0157>
+	<super	0.0064	-0.0114>
+====
+
+[authentic and true]:
+	<sharp	-0.0064	0.0083>
+	<verbal	-0.0052	0.0072>
+====
+
+[authentic and vivid]:
+	<affect	-0.0091	0.0056>
+	<bad	-0.0050	0.0412>
+	<base	-0.0052	0.0068>
+	<certain	0.0431	-0.0052>
+	<doctor	-0.0075	0.0052>
+	<double	-0.0057	0.0412>
+	<finish	0.0125	-0.0059>
+	<fix	-0.0080	0.0054>
+	<flash	-0.0057	0.0198>
+	<hollow	-0.0059	0.0400>
+	<just	0.0629	-0.0120>
+	<racket	-0.0077	0.0073>
+	<sharp	-0.0064	0.0464>
+	<thought	0.0114	-0.0059>
+	<verbal	-0.0052	0.0061>
+====
+
+===> Questions: authentic
+===>fake	[-0.4281]
+===>vivid	[-0.0043]
+===>traditional	[-0.0032]
+===>compelling	[-0.0032]
+===>exquisite	[-0.0025]
+===>sumptuous	[-0.0020]
+===>distinctive	[-0.0006]
+===>true	[-0.0003]
+===>genuine	[0.0000]
+===>soulful	[0.0000]
+[hot and warm]:
+	<beat	0.0070	-0.0062>
+	<flurry	-0.0107	0.0227>
+	<freshly	0.0075	-0.0059>
+	<lightness	-0.0075	0.0075>
+	<obsolete	-0.0079	0.0051>
+	<raw	0.0089	-0.0057>
+	<sharpness	-0.0065	0.0126>
+	<slack	0.0051	-0.0082>
+	<still	0.0140	-0.0093>
+====
+
+[hot and cold]:
+	<about	0.0248	-0.0094>
+	<accessibility	0.0234	-0.0061>
+	<accessible	0.0234	-0.0082>
+	<acquaintance	0.0093	-0.0073>
+	<adjacency	0.0234	-0.0082>
+	<adjacent	0.0248	-0.0053>
+	<advanced	-0.0140	0.0135>
+	<afar	-0.0140	0.0135>
+	<affability	0.0079	-0.0100>
+	<affable	0.0079	-0.0100>
+	<affableness	0.0079	-0.0100>
+	<afire	0.0299	-0.0053>
+	<aflame	0.0299	-0.0073>
+	<ague	-0.0121	0.0373>
+	<alive	0.0061	-0.0069>
+	<aloof	-0.0131	0.0363>
+	<aloofness	-0.0131	0.0363>
+	<amiability	0.0098	-0.0114>
+	<amiable	0.0098	-0.0114>
+	<amiableness	0.0098	-0.0094>
+	<amity	0.0079	-0.0080>
+	<anaemia	-0.0126	0.0051>
+	<anaemic	-0.0117	0.0169>
+	<animate	0.0051	-0.0137>
+	<animation	0.0098	-0.0063>
+	<anneal	0.0318	-0.0053>
+	<antiquated	-0.0150	0.0059>
+	<apogee	-0.0140	0.0141>
+	<apposition	0.0234	-0.0082>
+	<approach	0.0332	-0.0108>
+	<approachable	0.0276	-0.0059>
+	<approaching	0.0234	-0.0082>
+	<approximate	0.0248	-0.0053>
+	<approximately	0.0248	-0.0073>
+	<approximation	0.0248	-0.0053>
+	<archaic	-0.0140	0.0061>
+	<arctic	-0.0178	0.0237>
+	<ardent	0.0327	-0.0149>
+	<ardour	0.0299	-0.0073>
+	<around	0.0234	-0.0108>
+	<assiduous	0.0089	-0.0053>
+	<associate	0.0103	-0.0094>
+	<association	0.0084	-0.0055>
+	<attainable	0.0238	-0.0057>
+	<avalanche	-0.0121	0.0255>
+	<away	-0.0229	0.0137>
+	<bake	0.0290	-0.0073>
+	<baking	0.0280	-0.0057>
+	<balmy	0.0285	-0.0051>
+	<bask	0.0280	-0.0053>
+	<be	0.0051	-0.0094>
+	<befriend	0.0079	-0.0055>
+	<being	0.0070	-0.0065>
+	<blanch	-0.0215	0.0057>
+	<blank	-0.0103	0.0055>
+	<blaze	0.0327	-0.0071>
+	<blazing	0.0280	-0.0078>
+	<bleak	-0.0131	0.0245>
+	<blistering	0.0285	-0.0065>
+	<blizzard	-0.0178	0.0237>
+	<bloodless	-0.0112	0.0063>
+	<bloom	0.0271	-0.0053>
+	<blooming	0.0107	-0.0051>
+	<blue	-0.0089	0.0294>
+	<border	0.0234	-0.0082>
+	<bosh	0.0280	-0.0057>
+	<bosom	0.0079	-0.0100>
+	<boyfriend	0.0079	-0.0059>
+	<brash	-0.0131	0.0243>
+	<brother	0.0079	-0.0161>
+	<brotherhood	0.0079	-0.0059>
+	<brumal	-0.0131	0.0237>
+	<buddy	0.0079	-0.0141>
+	<burning	0.0280	-0.0098>
+	<cadaverous	-0.0103	0.0180>
+	<cal	0.0280	-0.0057>
+	<caloric	0.0280	-0.0098>
+	<calorie	0.0280	-0.0057>
+	<camaraderie	0.0079	-0.0080>
+	<caustic	0.0308	-0.0051>
+	<cease	-0.0084	0.0159>
+	<chafe	0.0280	-0.0065>
+	<chill	-0.0336	0.0618>
+	<chilled	-0.0131	0.0237>
+	<chilly	-0.0131	0.0451>
+	<china	0.0079	-0.0051>
+	<chum	0.0079	-0.0141>
+	<clammy	-0.0131	0.0241>
+	<closeness	0.0276	-0.0090>
+	<cluster	0.0238	-0.0057>
+	<cockle	0.0280	-0.0055>
+	<cold	-0.0210	0.1367>
+	<coldness	-0.0121	0.0802>
+	<colourless	-0.0126	0.0051>
+	<combustion	0.0290	-0.0073>
+	<coming	0.0238	-0.0076>
+	<companion	0.0079	-0.0073>
+	<companionship	0.0093	-0.0059>
+	<compatible	0.0103	-0.0055>
+	<comrade	0.0079	-0.0080>
+	<comradeship	0.0093	-0.0080>
+	<confidant	0.0079	-0.0080>
+	<confront	0.0234	-0.0061>
+	<congress	0.0234	-0.0051>
+	<conjunction	0.0248	-0.0053>
+	<contact	0.0290	-0.0051>
+	<conterminous	0.0248	-0.0053>
+	<contiguous	0.0248	-0.0073>
+	<contiguousness	0.0234	-0.0082>
+	<conversation	0.0079	-0.0051>
+	<converter	0.0280	-0.0057>
+	<cook	0.0280	-0.0061>
+	<cooking	0.0280	-0.0057>
+	<cool	-0.0098	0.0459>
+	<coolness	-0.0112	0.0455>
+	<cordial	0.0103	-0.0098>
+	<cordiality	0.0103	-0.0078>
+	<cornice	-0.0131	0.0237>
+	<crony	0.0079	-0.0141>
+	<crucible	0.0280	-0.0057>
+	<crumble	-0.0117	0.0059>
+	<cultivate	0.0112	-0.0053>
+	<cupola	0.0280	-0.0057>
+	<darling	0.0079	-0.0055>
+	<decrepit	-0.0117	0.0053>
+	<deeply	-0.0159	0.0149>
+	<devious	-0.0140	0.0143>
+	<devoted	0.0084	-0.0059>
+	<devotion	0.0093	-0.0053>
+	<devout	0.0084	-0.0059>
+	<distance	-0.0178	0.0349>
+	<distant	-0.0229	0.0347>
+	<dull	-0.0084	0.0129>
+	<dullness	-0.0093	0.0069>
+	<embrace	0.0079	-0.0080>
+	<end	-0.0117	0.0304>
+	<endearment	0.0079	-0.0059>
+	<endure	0.0070	-0.0069>
+	<enliven	0.0070	-0.0114>
+	<entertain	0.0093	-0.0059>
+	<equatorial	0.0280	-0.0057>
+	<exist	0.0051	-0.0053>
+	<existence	0.0070	-0.0065>
+	<existent	0.0051	-0.0053>
+	<extinct	-0.0103	0.0188>
+	<extreme	-0.0178	0.0165>
+	<fade	-0.0192	0.0218>
+	<familiar	0.0107	-0.0084>
+	<familiarise	0.0079	-0.0059>
+	<familiarity	0.0098	-0.0088>
+	<far	-0.0126	0.0139>
+	<farness	-0.0187	0.0135>
+	<favourite	0.0084	-0.0094>
+	<fellow	0.0098	-0.0108>
+	<fellowship	0.0093	-0.0080>
+	<fervent	0.0280	-0.0159>
+	<fervid	0.0280	-0.0159>
+	<fervidness	0.0280	-0.0057>
+	<fervour	0.0280	-0.0078>
+	<fiery	0.0519	-0.0157>
+	<fireplace	0.0280	-0.0078>
+	<firing	0.0285	-0.0053>
+	<fit	0.0093	-0.0065>
+	<flashing	0.0313	-0.0053>
+	<flashpoint	0.0280	-0.0057>
+	<flourish	0.0061	-0.0096>
+	<flourishing	0.0051	-0.0059>
+	<flurry	-0.0107	0.0243>
+	<folksy	0.0093	-0.0059>
+	<former	-0.0093	0.0053>
+	<forth	-0.0136	0.0141>
+	<fraternal	0.0079	-0.0059>
+	<fraternity	0.0079	-0.0059>
+	<freeze	-0.0206	0.0392>
+	<freezing	-0.0178	0.0237>
+	<friend	0.0079	-0.0055>
+	<friendliness	0.0079	-0.0057>
+	<friendly	0.0079	-0.0057>
+	<frigid	-0.0271	0.0451>
+	<frost	-0.0318	0.0241>
+	<frosty	-0.0164	0.0455>
+	<frozen	-0.0215	0.0616>
+	<further	-0.0140	0.0135>
+	<gelid	-0.0131	0.0237>
+	<gelidity	-0.0224	0.0237>
+	<genial	0.0341	-0.0090>
+	<ghastly	-0.0107	0.0190>
+	<girlfriend	0.0079	-0.0059>
+	<glacial	-0.0271	0.0237>
+	<glaze	-0.0131	0.0237>
+	<glow	0.0519	-0.0071>
+	<godforsaken	-0.0140	0.0178>
+	<goodwill	0.0098	-0.0055>
+	<gossip	0.0079	-0.0053>
+	<grill	0.0280	-0.0055>
+	<hail	-0.0126	0.0243>
+	<healthful	0.0051	-0.0059>
+	<healthy	0.0051	-0.0059>
+	<heart	0.0089	-0.0063>
+	<hearth	0.0280	-0.0078>
+	<heat	0.0290	-0.0318>
+	<heated	0.0280	-0.0057>
+	<heater	0.0280	-0.0078>
+	<heating	0.0280	-0.0078>
+	<high	-0.0121	0.0165>
+	<hoar	-0.0266	0.0239>
+	<hoarfrost	-0.0271	0.0237>
+	<hobnob	0.0079	-0.0059>
+	<homey	0.0079	-0.0059>
+	<hospitable	0.0093	-0.0051>
+	<hospitality	0.0093	-0.0051>
+	<hot	0.1888	-0.0051>
+	<hotness	0.0093	-0.0612>
+	<hug	0.0079	-0.0059>
+	<hyperborean	-0.0131	0.0237>
+	<ice	-0.0164	0.0241>
+	<iciness	-0.0224	0.0239>
+	<icy	-0.0224	0.0451>
+	<immediacy	0.0336	-0.0067>
+	<immediate	0.0336	-0.0061>
+	<immediateness	0.0336	-0.0067>
+	<inaccessible	-0.0140	0.0139>
+	<incubate	0.0290	-0.0051>
+	<incubation	0.0280	-0.0057>
+	<inseparable	0.0098	-0.0051>
+	<inspire	0.0051	-0.0116>
+	<inspirit	0.0257	-0.0092>
+	<insulation	0.0285	-0.0051>
+	<intimacy	0.0089	-0.0073>
+	<intimate	0.0098	-0.0071>
+	<involved	0.0084	-0.0057>
+	<involvement	0.0084	-0.0059>
+	<jazz	0.0056	-0.0055>
+	<juxtapose	0.0234	-0.0061>
+	<juxtaposition	0.0234	-0.0061>
+	<kindling	0.0280	-0.0057>
+	<kiss	0.0098	-0.0051>
+	<length	-0.0126	0.0149>
+	<life	0.0089	-0.0082>
+	<live	0.0743	-0.0082>
+	<living	0.0425	-0.0055>
+	<loneliness	-0.0131	0.0196>
+	<lonely	-0.0131	0.0196>
+	<long	-0.0140	0.0135>
+	<longevity	0.0056	-0.0051>
+	<lover	0.0079	-0.0055>
+	<lustiness	0.0079	-0.0057>
+	<marathon	-0.0121	0.0139>
+	<marble	-0.0121	0.0237>
+	<mate	0.0103	-0.0063>
+	<melt	0.0140	-0.0071>
+	<miles	-0.0140	0.0135>
+	<minion	0.0089	-0.0059>
+	<muddy	-0.0098	0.0063>
+	<musty	-0.0159	0.0061>
+	<near	0.0332	-0.0124>
+	<nearby	0.0234	-0.0061>
+	<nearness	0.0234	-0.0061>
+	<neighbour	0.0276	-0.0080>
+	<neighbourhood	0.0276	-0.0080>
+	<neighbouring	0.0248	-0.0053>
+	<neighbourly	0.0093	-0.0059>
+	<next	0.0336	-0.0059>
+	<nigh	0.0332	-0.0084>
+	<nip	-0.0121	0.0255>
+	<nipping	-0.0131	0.0237>
+	<obsolete	-0.0079	0.0065>
+	<off	-0.0117	0.0310>
+	<offshore	-0.0140	0.0135>
+	<old	-0.0079	0.0076>
+	<on	0.0238	-0.0053>
+	<oncoming	0.0234	-0.0061>
+	<out	-0.0168	0.0151>
+	<outback	-0.0126	0.0135>
+	<outer	-0.0136	0.0143>
+	<outgoing	0.0098	-0.0073>
+	<outing	-0.0140	0.0135>
+	<outlandish	-0.0136	0.0139>
+	<outlandishness	-0.0136	0.0139>
+	<outpost	-0.0140	0.0139>
+	<outward	-0.0136	0.0143>
+	<overseas	-0.0140	0.0135>
+	<overtake	0.0234	-0.0082>
+	<pal	0.0079	-0.0137>
+	<pale	-0.0308	0.0053>
+	<partner	0.0098	-0.0051>
+	<perfervid	0.0290	-0.0155>
+	<perigee	0.0234	-0.0061>
+	<pet	0.0084	-0.0076>
+	<preparation	0.0051	-0.0153>
+	<presence	0.0243	-0.0059>
+	<prime	0.0056	-0.0059>
+	<propinquity	0.0234	-0.0082>
+	<proximity	0.0234	-0.0082>
+	<pulse	0.0061	-0.0055>
+	<pushing	0.0248	-0.0053>
+	<quicken	0.0051	-0.0073>
+	<race	0.0051	-0.0053>
+	<radiant	0.0332	-0.0051>
+	<range	-0.0121	0.0137>
+	<reach	0.0238	-0.0071>
+	<ready	0.0056	-0.0084>
+	<receive	0.0093	-0.0055>
+	<recover	0.0103	-0.0055>
+	<recovery	0.0103	-0.0076>
+	<regard	0.0098	-0.0067>
+	<remote	-0.0187	0.0347>
+	<remoteness	-0.0187	0.0345>
+	<removed	-0.0140	0.0147>
+	<renascent	0.0257	-0.0067>
+	<resurgence	0.0070	-0.0071>
+	<resurrect	0.0089	-0.0051>
+	<resurrection	0.0089	-0.0051>
+	<reverberate	0.0280	-0.0057>
+	<reverberation	0.0280	-0.0057>
+	<revival	0.0262	-0.0067>
+	<revive	0.0285	-0.0065>
+	<rigour	-0.0107	0.0382>
+	<rime	-0.0271	0.0237>
+	<ringside	0.0234	-0.0061>
+	<roast	0.0280	-0.0067>
+	<roasted	0.0280	-0.0078>
+	<robustness	0.0079	-0.0057>
+	<ruin	-0.0112	0.0086>
+	<sad	-0.0103	0.0092>
+	<see	0.0103	-0.0071>
+	<seethe	0.0280	-0.0053>
+	<set	0.0070	-0.0080>
+	<sharpness	-0.0065	0.0257>
+	<shave	0.0238	-0.0057>
+	<shiver	-0.0210	0.0251>
+	<shudder	-0.0224	0.0241>
+	<sick	-0.0206	0.0173>
+	<sidekick	0.0079	-0.0137>
+	<simmer	0.0280	-0.0057>
+	<sludge	-0.0131	0.0237>
+	<slushy	-0.0117	0.0253>
+	<snappy	0.0051	-0.0073>
+	<snow	-0.0173	0.0245>
+	<snowfall	-0.0178	0.0237>
+	<snowflake	-0.0131	0.0237>
+	<snowman	-0.0131	0.0237>
+	<snowstorm	-0.0178	0.0237>
+	<snowy	-0.0126	0.0241>
+	<society	0.0103	-0.0076>
+	<solidarity	0.0079	-0.0059>
+	<solstice	-0.0140	0.0135>
+	<spirit	0.0084	-0.0073>
+	<square	-0.0079	0.0059>
+	<stew	0.0280	-0.0057>
+	<subdued	-0.0107	0.0055>
+	<sultry	0.0280	-0.0057>
+	<summery	0.0280	-0.0057>
+	<sun	0.0322	-0.0063>
+	<sunbathe	0.0280	-0.0078>
+	<sunny	0.0322	-0.0051>
+	<surrounding	0.0234	-0.0053>
+	<sweat	0.0285	-0.0053>
+	<sweetheart	0.0079	-0.0059>
+	<sympathetic	0.0084	-0.0053>
+	<sympathy	0.0089	-0.0055>
+	<tarnish	-0.0117	0.0071>
+	<temp	0.0280	-0.0057>
+	<temperament	0.0285	-0.0053>
+	<temperature	0.0280	-0.0057>
+	<tepid	0.0280	-0.0078>
+	<terminal	-0.0154	0.0306>
+	<thaw	0.0280	-0.0073>
+	<thermal	0.0280	-0.0098>
+	<thermic	0.0280	-0.0098>
+	<thermometer	0.0280	-0.0057>
+	<thin	-0.0168	0.0053>
+	<thrive	0.0061	-0.0100>
+	<thriving	0.0051	-0.0061>
+	<togetherness	0.0084	-0.0059>
+	<torrid	0.0290	-0.0149>
+	<tremble	-0.0159	0.0243>
+	<tremor	-0.0131	0.0269>
+	<tropic	0.0280	-0.0078>
+	<tropical	0.0280	-0.0073>
+	<ultimate	-0.0121	0.0155>
+	<unapproachable	-0.0136	0.0345>
+	<understanding	0.0107	-0.0063>
+	<untouchable	-0.0136	0.0161>
+	<utmost	-0.0220	0.0139>
+	<uttermost	-0.0220	0.0139>
+	<verge	0.0234	-0.0061>
+	<viability	0.0070	-0.0055>
+	<viable	0.0070	-0.0055>
+	<vicinity	0.0234	-0.0082>
+	<vivacious	0.0070	-0.0053>
+	<wan	-0.0159	0.0180>
+	<warm	0.0528	-0.0080>
+	<warmer	0.0280	-0.0078>
+	<warming	0.0280	-0.0078>
+	<warmly	0.0332	-0.0061>
+	<watery	-0.0093	0.0169>
+	<welcome	0.0126	-0.0061>
+	<welcoming	0.0093	-0.0059>
+	<white	-0.0206	0.0253>
+	<whole	0.0056	-0.0061>
+	<wide	-0.0112	0.0137>
+	<winter	-0.0131	0.0237>
+	<wintry	-0.0224	0.0237>
+	<zippy	0.0051	-0.0053>
+====
+
+[hot and dry]:
+	<away	-0.0229	0.0083>
+	<bath	0.0285	-0.0052>
+	<before	0.0061	-0.0083>
+	<beneficial	0.0056	-0.0060>
+	<blank	-0.0103	0.0126>
+	<blood	0.0061	-0.0138>
+	<bloom	0.0271	-0.0097>
+	<by	0.0238	-0.0083>
+	<carouse	0.0065	-0.0109>
+	<chill	-0.0336	0.0054>
+	<chlorine	-0.0117	0.0052>
+	<cool	-0.0098	0.0057>
+	<coolness	-0.0112	0.0054>
+	<dull	-0.0084	0.0060>
+	<dullness	-0.0093	0.0069>
+	<flourish	0.0061	-0.0069>
+	<front	0.0084	-0.0072>
+	<gay	0.0262	-0.0092>
+	<humid	0.0280	-0.0080>
+	<lightness	-0.0075	0.0074>
+	<nip	-0.0121	0.0052>
+	<off	-0.0117	0.0123>
+	<out	-0.0168	0.0083>
+	<overseas	-0.0140	0.0080>
+	<presence	0.0243	-0.0083>
+	<present	0.0182	-0.0052>
+	<racket	0.0093	-0.0092>
+	<reduce	-0.0084	0.0264>
+	<rich	0.0266	-0.0054>
+	<richly	0.0266	-0.0060>
+	<richness	0.0248	-0.0077>
+	<rigour	-0.0107	0.0052>
+	<rinse	0.0248	-0.0052>
+	<sad	-0.0103	0.0052>
+	<saturation	0.0243	-0.0077>
+	<sharpness	-0.0065	0.0146>
+	<sick	-0.0206	0.0241>
+	<sober	-0.0168	0.0261>
+	<soberness	-0.0168	0.0261>
+	<sobriety	-0.0168	0.0261>
+	<sprinkle	0.0051	-0.0074>
+	<squirt	0.0051	-0.0052>
+	<stuff	0.0070	-0.0275>
+	<subdue	-0.0159	0.0052>
+	<sweat	0.0285	-0.0072>
+	<swinger	0.0229	-0.0112>
+	<thin	-0.0168	0.0072>
+	<top	0.0098	-0.0069>
+	<wanton	0.0051	-0.0089>
+	<white	-0.0206	0.0066>
+====
+
+[hot and cool]:
+	<acquaintance	0.0093	-0.0074>
+	<affability	0.0079	-0.0089>
+	<affable	0.0079	-0.0089>
+	<affableness	0.0079	-0.0089>
+	<afire	0.0299	-0.0055>
+	<aflame	0.0299	-0.0071>
+	<ague	-0.0121	0.0187>
+	<aloof	-0.0131	0.0203>
+	<aloofness	-0.0131	0.0203>
+	<amicable	0.0084	-0.0052>
+	<amity	0.0079	-0.0072>
+	<approachable	0.0276	-0.0057>
+	<arctic	-0.0178	0.0182>
+	<ardent	0.0327	-0.0126>
+	<ardour	0.0299	-0.0071>
+	<assiduous	0.0089	-0.0052>
+	<associate	0.0103	-0.0071>
+	<association	0.0084	-0.0057>
+	<avalanche	-0.0121	0.0184>
+	<bake	0.0290	-0.0068>
+	<baking	0.0280	-0.0057>
+	<bask	0.0280	-0.0050>
+	<blazing	0.0280	-0.0072>
+	<bleak	-0.0131	0.0184>
+	<blistering	0.0285	-0.0061>
+	<blizzard	-0.0178	0.0182>
+	<bloodless	-0.0112	0.0055>
+	<blue	-0.0089	0.0152>
+	<bosh	0.0280	-0.0053>
+	<bosom	0.0079	-0.0074>
+	<brash	-0.0131	0.0185>
+	<brother	0.0079	-0.0137>
+	<brotherhood	0.0079	-0.0058>
+	<brumal	-0.0131	0.0182>
+	<buddy	0.0079	-0.0121>
+	<burn	0.0565	-0.0060>
+	<burning	0.0280	-0.0088>
+	<cal	0.0280	-0.0057>
+	<caloric	0.0280	-0.0088>
+	<calorie	0.0280	-0.0057>
+	<camaraderie	0.0079	-0.0074>
+	<caustic	0.0308	-0.0064>
+	<chafe	0.0280	-0.0077>
+	<chill	-0.0336	0.0818>
+	<chilled	-0.0131	0.0182>
+	<chilly	-0.0131	0.0347>
+	<china	0.0079	-0.0055>
+	<chum	0.0079	-0.0121>
+	<clammy	-0.0131	0.0184>
+	<classical	-0.0140	0.0110>
+	<closeness	0.0276	-0.0063>
+	<cold	-0.0210	0.0353>
+	<coldness	-0.0121	0.0350>
+	<combustion	0.0290	-0.0069>
+	<companion	0.0079	-0.0061>
+	<companionship	0.0093	-0.0058>
+	<comrade	0.0079	-0.0074>
+	<comradeship	0.0093	-0.0074>
+	<condition	0.0051	-0.0052>
+	<confidant	0.0079	-0.0074>
+	<contact	0.0290	-0.0050>
+	<conversation	0.0079	-0.0050>
+	<converter	0.0280	-0.0057>
+	<cook	0.0280	-0.0072>
+	<cooking	0.0280	-0.0057>
+	<cool	-0.0098	0.1283>
+	<coolness	-0.0112	0.0619>
+	<cordial	0.0103	-0.0063>
+	<cornice	-0.0131	0.0182>
+	<crony	0.0079	-0.0121>
+	<crucible	0.0280	-0.0057>
+	<cupola	0.0280	-0.0057>
+	<darling	0.0079	-0.0055>
+	<devout	0.0084	-0.0055>
+	<distance	-0.0178	0.0179>
+	<distant	-0.0229	0.0187>
+	<dull	-0.0084	0.0338>
+	<dullness	-0.0093	0.0198>
+	<embrace	0.0079	-0.0053>
+	<endearment	0.0079	-0.0058>
+	<entertain	0.0093	-0.0058>
+	<equatorial	0.0280	-0.0057>
+	<fade	-0.0192	0.0053>
+	<familiar	0.0107	-0.0052>
+	<familiarise	0.0079	-0.0058>
+	<familiarity	0.0098	-0.0083>
+	<favourite	0.0084	-0.0064>
+	<fellow	0.0098	-0.0093>
+	<fellowship	0.0093	-0.0071>
+	<fervent	0.0280	-0.0135>
+	<fervid	0.0280	-0.0135>
+	<fervidness	0.0280	-0.0057>
+	<fervour	0.0280	-0.0072>
+	<feverish	0.0290	-0.0075>
+	<fiery	0.0519	-0.0132>
+	<fire	0.0332	-0.0094>
+	<fireplace	0.0280	-0.0072>
+	<firing	0.0285	-0.0053>
+	<flashing	0.0313	-0.0050>
+	<flashpoint	0.0280	-0.0057>
+	<flurry	-0.0107	0.0124>
+	<folksy	0.0093	-0.0058>
+	<found	0.0308	-0.0052>
+	<fraternal	0.0079	-0.0058>
+	<fraternity	0.0079	-0.0058>
+	<freeze	-0.0206	0.0190>
+	<freezing	-0.0178	0.0182>
+	<friendship	0.0084	-0.0052>
+	<frigid	-0.0271	0.0347>
+	<frost	-0.0318	0.0182>
+	<frosty	-0.0164	0.0347>
+	<frozen	-0.0215	0.0350>
+	<gelid	-0.0131	0.0182>
+	<gelidity	-0.0224	0.0339>
+	<glacial	-0.0271	0.0182>
+	<glaze	-0.0131	0.0198>
+	<glow	0.0519	-0.0064>
+	<gossip	0.0079	-0.0055>
+	<grill	0.0280	-0.0053>
+	<hail	-0.0126	0.0190>
+	<hearth	0.0280	-0.0072>
+	<heat	0.0290	-0.0093>
+	<heated	0.0280	-0.0057>
+	<heater	0.0280	-0.0072>
+	<heating	0.0280	-0.0072>
+	<hectic	0.0299	-0.0053>
+	<high	-0.0121	0.0061>
+	<hoar	-0.0266	0.0184>
+	<hoarfrost	-0.0271	0.0182>
+	<hobnob	0.0079	-0.0058>
+	<homey	0.0079	-0.0058>
+	<hospitable	0.0093	-0.0053>
+	<hospitality	0.0093	-0.0053>
+	<hyperborean	-0.0131	0.0182>
+	<ice	-0.0164	0.0201>
+	<iciness	-0.0224	0.0341>
+	<icy	-0.0224	0.0363>
+	<incubation	0.0280	-0.0057>
+	<inseparable	0.0098	-0.0052>
+	<intimacy	0.0089	-0.0071>
+	<intimate	0.0098	-0.0071>
+	<involvement	0.0084	-0.0058>
+	<kindling	0.0280	-0.0057>
+	<kiss	0.0098	-0.0052>
+	<life	0.0089	-0.0053>
+	<lightness	-0.0075	0.0063>
+	<loggerhead	0.0299	-0.0053>
+	<loneliness	-0.0131	0.0057>
+	<lonely	-0.0131	0.0057>
+	<mad	0.0051	-0.0053>
+	<marble	-0.0121	0.0199>
+	<mate	0.0103	-0.0061>
+	<melt	0.0140	-0.0071>
+	<neighbour	0.0276	-0.0057>
+	<neighbourhood	0.0276	-0.0057>
+	<neighbourly	0.0093	-0.0058>
+	<nip	-0.0121	0.0220>
+	<nipping	-0.0131	0.0182>
+	<off	-0.0117	0.0060>
+	<outgoing	0.0098	-0.0057>
+	<pal	0.0079	-0.0110>
+	<partner	0.0098	-0.0052>
+	<perfervid	0.0290	-0.0124>
+	<pet	0.0084	-0.0052>
+	<platonic	0.0079	-0.0053>
+	<range	-0.0121	0.0100>
+	<receive	0.0093	-0.0053>
+	<reduce	-0.0084	0.0074>
+	<remote	-0.0187	0.0179>
+	<remoteness	-0.0187	0.0176>
+	<retort	0.0280	-0.0053>
+	<reverberate	0.0280	-0.0057>
+	<reverberation	0.0280	-0.0057>
+	<rigour	-0.0107	0.0193>
+	<rime	-0.0271	0.0182>
+	<roast	0.0280	-0.0063>
+	<roasted	0.0280	-0.0072>
+	<see	0.0103	-0.0069>
+	<seethe	0.0280	-0.0052>
+	<shake	-0.0079	0.0082>
+	<sharpness	-0.0065	0.0273>
+	<shiver	-0.0210	0.0155>
+	<shudder	-0.0224	0.0166>
+	<sidekick	0.0079	-0.0110>
+	<simmer	0.0280	-0.0057>
+	<sludge	-0.0131	0.0182>
+	<slushy	-0.0117	0.0182>
+	<snow	-0.0173	0.0185>
+	<snowfall	-0.0178	0.0182>
+	<snowflake	-0.0131	0.0182>
+	<snowman	-0.0131	0.0182>
+	<snowstorm	-0.0178	0.0182>
+	<snowy	-0.0126	0.0224>
+	<sober	-0.0168	0.0075>
+	<society	0.0103	-0.0063>
+	<solidarity	0.0079	-0.0057>
+	<steam	0.0150	-0.0053>
+	<stew	0.0280	-0.0057>
+	<stuff	0.0070	-0.0094>
+	<subdued	-0.0107	0.0151>
+	<sultry	0.0280	-0.0057>
+	<summery	0.0280	-0.0057>
+	<sun	0.0322	-0.0058>
+	<sunbathe	0.0280	-0.0072>
+	<sweat	0.0285	-0.0055>
+	<temp	0.0280	-0.0057>
+	<temperature	0.0280	-0.0057>
+	<tepid	0.0280	-0.0072>
+	<thaw	0.0280	-0.0066>
+	<thermal	0.0280	-0.0088>
+	<thermic	0.0280	-0.0088>
+	<thermometer	0.0280	-0.0057>
+	<togetherness	0.0084	-0.0053>
+	<torrid	0.0290	-0.0127>
+	<tremble	-0.0159	0.0137>
+	<tremor	-0.0131	0.0190>
+	<tropic	0.0280	-0.0072>
+	<tropical	0.0280	-0.0068>
+	<ultimate	-0.0121	0.0239>
+	<unapproachable	-0.0136	0.0187>
+	<understanding	0.0107	-0.0066>
+	<vintage	-0.0098	0.0229>
+	<warm	0.0528	-0.0060>
+	<warmer	0.0280	-0.0072>
+	<warming	0.0280	-0.0072>
+	<welcoming	0.0093	-0.0058>
+	<white	-0.0206	0.0215>
+	<winter	-0.0131	0.0182>
+	<wintry	-0.0224	0.0182>
+====
+
+[hot and sweet]:
+	<bad	0.0070	-0.0076>
+	<blare	0.0271	-0.0070>
+	<chafe	0.0280	-0.0127>
+	<clash	0.0061	-0.0094>
+	<classical	-0.0140	0.0107>
+	<cool	-0.0098	0.0193>
+	<crack	0.0065	-0.0051>
+	<dullness	-0.0093	0.0058>
+	<ex	-0.0093	0.0144>
+	<foul	0.0061	-0.0175>
+	<green	0.0145	-0.0058>
+	<hard	0.0065	-0.0136>
+	<harsh	0.0056	-0.0055>
+	<heavy	0.0065	-0.0111>
+	<high	-0.0121	0.0053>
+	<ice	-0.0164	0.0107>
+	<lightness	-0.0075	0.0097>
+	<meanness	0.0065	-0.0058>
+	<muck	0.0061	-0.0135>
+	<oppressive	0.0313	-0.0064>
+	<range	-0.0121	0.0111>
+	<rough	0.0061	-0.0086>
+	<rugged	0.0089	-0.0055>
+	<salty	0.0056	-0.0076>
+	<shake	-0.0079	0.0111>
+	<snowy	-0.0126	0.0053>
+	<square	-0.0079	0.0068>
+	<stiff	0.0051	-0.0068>
+	<tough	0.0051	-0.0113>
+	<ultimate	-0.0121	0.0086>
+	<vintage	-0.0098	0.0092>
+====
+
+[hot and spicy]:
+	<actual	0.0117	-0.0091>
+	<deep	0.0117	-0.0081>
+	<devious	-0.0140	0.0111>
+	<directly	0.0112	-0.0091>
+	<existent	0.0051	-0.0101>
+	<fit	0.0093	-0.0101>
+	<freshness	0.0276	-0.0202>
+	<green	0.0145	-0.0101>
+	<home	0.0061	-0.0101>
+	<jolly	0.0098	-0.0091>
+	<just	0.0070	-0.0384>
+	<lurid	0.0112	-0.0101>
+	<merely	0.0051	-0.0081>
+	<off	-0.0117	0.0081>
+	<only	0.0051	-0.0081>
+	<pretty	0.0056	-0.0091>
+	<proper	0.0051	-0.0293>
+	<recognise	0.0061	-0.0101>
+	<right	0.0210	-0.0788>
+	<sickly	0.0121	-0.0081>
+	<simply	0.0070	-0.0081>
+	<slow	0.0178	-0.0091>
+	<steam	0.0150	-0.0091>
+	<straight	0.0140	-0.0283>
+====
+
+[hot and greasy]:
+	<chlorine	-0.0117	0.0271>
+	<classic	-0.0145	0.0068>
+	<classical	-0.0140	0.0087>
+	<cool	-0.0098	0.0060>
+	<dullness	-0.0093	0.0070>
+	<glaze	-0.0131	0.0198>
+	<ground	0.0065	-0.0054>
+	<harsh	0.0056	-0.0070>
+	<ice	-0.0164	0.0201>
+	<icy	-0.0224	0.0198>
+	<lightness	-0.0075	0.0062>
+	<marble	-0.0121	0.0198>
+	<muddy	-0.0098	0.0255>
+	<pristine	-0.0079	0.0276>
+	<range	-0.0121	0.0100>
+	<rough	0.0061	-0.0122>
+	<sharpness	-0.0065	0.0054>
+	<slushy	-0.0117	0.0295>
+	<snowy	-0.0126	0.0065>
+	<square	-0.0079	0.0073>
+	<watery	-0.0093	0.0051>
+====
+
+[hot and wet]:
+	<ague	-0.0121	0.0084>
+	<anaemia	-0.0126	0.0624>
+	<anaemic	-0.0117	0.0629>
+	<anneal	0.0318	-0.0225>
+	<ardent	0.0327	-0.0051>
+	<arm	0.0075	-0.0140>
+	<athleticism	0.0051	-0.0169>
+	<beef	0.0061	-0.0163>
+	<behemoth	0.0051	-0.0225>
+	<bleak	-0.0131	0.0051>
+	<blot	0.0103	-0.0174>
+	<bull	0.0084	-0.0101>
+	<bullish	0.0079	-0.0169>
+	<chill	-0.0336	0.0112>
+	<clammy	-0.0131	0.0275>
+	<cold	-0.0210	0.0118>
+	<coldness	-0.0121	0.0056>
+	<colourless	-0.0126	0.0624>
+	<cool	-0.0098	0.0062>
+	<coolness	-0.0112	0.0051>
+	<decrepit	-0.0117	0.0567>
+	<dull	-0.0084	0.0051>
+	<durability	0.0051	-0.0157>
+	<fade	-0.0192	0.0629>
+	<fair	0.0336	-0.0124>
+	<fervent	0.0280	-0.0056>
+	<fervid	0.0280	-0.0056>
+	<fiery	0.0519	-0.0056>
+	<fine	0.0393	-0.0163>
+	<freeze	-0.0206	0.0067>
+	<frosty	-0.0164	0.0051>
+	<frozen	-0.0215	0.0056>
+	<giant	0.0065	-0.0275>
+	<glaze	-0.0131	0.0056>
+	<goliath	0.0051	-0.0225>
+	<harden	0.0061	-0.0169>
+	<hefty	0.0065	-0.0219>
+	<husky	0.0056	-0.0213>
+	<ice	-0.0164	0.0067>
+	<icy	-0.0224	0.0067>
+	<imperishable	0.0051	-0.0163>
+	<lion	0.0070	-0.0146>
+	<lustiness	0.0079	-0.0275>
+	<lusty	0.0079	-0.0163>
+	<main	0.0075	-0.0157>
+	<man	0.0126	-0.0146>
+	<marble	-0.0121	0.0056>
+	<marrow	0.0098	-0.0163>
+	<mealy	-0.0107	0.0073>
+	<mightily	0.0051	-0.0281>
+	<mighty	0.0051	-0.0225>
+	<muddy	-0.0098	0.0281>
+	<nip	-0.0121	0.0118>
+	<off	-0.0117	0.0107>
+	<pale	-0.0308	0.0629>
+	<parch	0.0290	-0.0225>
+	<perfervid	0.0290	-0.0056>
+	<pile	0.0070	-0.0140>
+	<pith	0.0103	-0.0163>
+	<power	0.0065	-0.0213>
+	<powerful	0.0056	-0.0382>
+	<proof	0.0051	-0.0146>
+	<rally	0.0117	-0.0129>
+	<reinforce	0.0056	-0.0169>
+	<right	0.0210	-0.0067>
+	<rigour	-0.0107	0.0090>
+	<robust	0.0079	-0.0163>
+	<robustness	0.0079	-0.0275>
+	<rub	0.0051	-0.0208>
+	<rudeness	0.0061	-0.0129>
+	<rugged	0.0089	-0.0140>
+	<serviceability	0.0065	-0.0225>
+	<serviceable	0.0065	-0.0163>
+	<serviceableness	0.0065	-0.0225>
+	<shake	-0.0079	0.0624>
+	<sharpness	-0.0065	0.0056>
+	<sick	-0.0206	0.0056>
+	<slushy	-0.0117	0.0062>
+	<staunch	0.0140	-0.0202>
+	<stay	0.0098	-0.0118>
+	<stocky	0.0075	-0.0140>
+	<stout	0.0070	-0.0326>
+	<strapping	0.0051	-0.0219>
+	<strength	0.0079	-0.0219>
+	<strong	0.0285	-0.0197>
+	<sturdy	0.0056	-0.0208>
+	<sun	0.0322	-0.0219>
+	<sunbathe	0.0280	-0.0056>
+	<support	0.0051	-0.0219>
+	<sustain	0.0051	-0.0208>
+	<temper	0.0065	-0.0191>
+	<tireless	0.0056	-0.0219>
+	<titan	0.0051	-0.0169>
+	<torrid	0.0290	-0.0225>
+	<tough	0.0051	-0.0157>
+	<tremor	-0.0131	0.0652>
+	<vigorous	0.0093	-0.0157>
+	<vigour	0.0093	-0.0140>
+	<wan	-0.0159	0.0062>
+	<watery	-0.0093	0.0326>
+	<wiry	0.0056	-0.0213>
+====
+
+[hot and fresh]:
+	<acquaintance	0.0093	-0.0051>
+	<ague	-0.0121	0.0068>
+	<arctic	-0.0178	0.0115>
+	<ardent	0.0327	-0.0064>
+	<avalanche	-0.0121	0.0126>
+	<bleak	-0.0131	0.0115>
+	<blizzard	-0.0178	0.0115>
+	<blue	-0.0089	0.0142>
+	<brash	-0.0131	0.0181>
+	<brumal	-0.0131	0.0115>
+	<burning	0.0280	-0.0050>
+	<caloric	0.0280	-0.0050>
+	<chill	-0.0336	0.0096>
+	<chilled	-0.0131	0.0115>
+	<chilly	-0.0131	0.0123>
+	<chlorine	-0.0117	0.0133>
+	<clammy	-0.0131	0.0118>
+	<cold	-0.0210	0.0082>
+	<coldness	-0.0121	0.0095>
+	<continue	0.0070	-0.0067>
+	<cool	-0.0098	0.0154>
+	<coolness	-0.0112	0.0132>
+	<cornice	-0.0131	0.0115>
+	<dull	-0.0084	0.0078>
+	<dullness	-0.0093	0.0063>
+	<fervent	0.0280	-0.0080>
+	<fervid	0.0280	-0.0080>
+	<fiery	0.0519	-0.0069>
+	<flurry	-0.0107	0.0135>
+	<freeze	-0.0206	0.0092>
+	<freezing	-0.0178	0.0105>
+	<frigid	-0.0271	0.0113>
+	<frost	-0.0318	0.0119>
+	<frosty	-0.0164	0.0097>
+	<frozen	-0.0215	0.0087>
+	<further	-0.0140	0.0072>
+	<gelid	-0.0131	0.0115>
+	<gelidity	-0.0224	0.0105>
+	<glacial	-0.0271	0.0105>
+	<glaze	-0.0131	0.0117>
+	<hail	-0.0126	0.0125>
+	<heat	0.0290	-0.0053>
+	<hoar	-0.0266	0.0109>
+	<hoarfrost	-0.0271	0.0115>
+	<hyperborean	-0.0131	0.0115>
+	<ice	-0.0164	0.0126>
+	<iciness	-0.0224	0.0105>
+	<icy	-0.0224	0.0115>
+	<marble	-0.0121	0.0121>
+	<nip	-0.0121	0.0117>
+	<nipping	-0.0131	0.0115>
+	<perfervid	0.0290	-0.0073>
+	<pristine	-0.0079	0.0089>
+	<rigour	-0.0107	0.0088>
+	<rime	-0.0271	0.0115>
+	<salty	0.0056	-0.0295>
+	<sharpness	-0.0065	0.0135>
+	<shiver	-0.0210	0.0125>
+	<shudder	-0.0224	0.0117>
+	<sludge	-0.0131	0.0095>
+	<slushy	-0.0117	0.0084>
+	<snow	-0.0173	0.0125>
+	<snowfall	-0.0178	0.0115>
+	<snowflake	-0.0131	0.0115>
+	<snowman	-0.0131	0.0115>
+	<snowstorm	-0.0178	0.0115>
+	<snowy	-0.0126	0.0141>
+	<thermal	0.0280	-0.0050>
+	<thermic	0.0280	-0.0050>
+	<torrid	0.0290	-0.0068>
+	<tremble	-0.0159	0.0123>
+	<tremor	-0.0131	0.0118>
+	<white	-0.0206	0.0138>
+	<winter	-0.0131	0.0115>
+	<wintry	-0.0224	0.0115>
+====
+
+===> Questions: hot
+===>cold	[-0.2416]
+===>cool	[-0.1371]
+===>fresh	[-0.0458]
+===>wet	[-0.0413]
+===>dry	[-0.0215]
+===>greasy	[-0.0083]
+===>sweet	[-0.0073]
+===>spicy	[-0.0068]
+===>warm	[-0.0020]
+===>sizzlin	[0.0000]
+Total=	6
